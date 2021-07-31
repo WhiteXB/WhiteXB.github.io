@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
-  <title>linux操作 | o(=•ェ•=)m白筱の猫舍o(=•ェ•=)m</title>
+  <title>linux+kali+burp | o(=•ェ•=)m白筱の猫舍o(=•ェ•=)m</title>
   <meta name="author" content="white-x" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -17,14 +17,14 @@
   
   <meta name="description" content="linux下安装阿帕奇  yum install httpd httpd-devel -y #安装  systemctl  start  httpd.service #启动  systemctl enable  httpd.service #执行  firewall-cmd –zone&#x3D;public –add-port&#x3D;80&#x2F;tcp –permanent #打开80防火墙  firewall-cm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux操作">
-<meta property="og:url" content="https://whitexb.github.io.git/2021/07/30/%E6%93%8D%E4%BD%9C/index.html">
+<meta property="og:title" content="linux+kali+burp">
+<meta property="og:url" content="https://whitexb.github.io.git/2021/07/30/linux+kali+burp/index.html">
 <meta property="og:site_name" content="o(&#x3D;•ェ•&#x3D;)m白筱の猫舍o(&#x3D;•ェ•&#x3D;)m">
 <meta property="og:description" content="linux下安装阿帕奇  yum install httpd httpd-devel -y #安装  systemctl  start  httpd.service #启动  systemctl enable  httpd.service #执行  firewall-cmd –zone&#x3D;public –add-port&#x3D;80&#x2F;tcp –permanent #打开80防火墙  firewall-cm">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-07-30T00:31:43.000Z">
-<meta property="article:modified_time" content="2021-07-30T02:11:47.503Z">
+<meta property="article:modified_time" content="2021-07-31T09:49:23.062Z">
 <meta property="article:author" content="white-x">
 <meta property="article:tag" content="服务器">
 <meta name="twitter:card" content="summary">
@@ -147,7 +147,7 @@
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center">linux操作</h1>
+                <h1 class="kratos-entry-title text-center">linux+kali+burp</h1>
             
             
             <ul class="kratos-post-meta text-center">
@@ -157,7 +157,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        215
+                        685
                     
                     字
                 </li>
@@ -166,7 +166,7 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1627611107503"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1627724963062"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
@@ -183,6 +183,36 @@
 <li><p>firewall-cmd –reload 确认</p>
 </li>
 </ol>
+<h1 id="kali-root-密码"><a href="#kali-root-密码" class="headerlink" title="kali root 密码"></a>kali root 密码</h1><ol>
+<li><p>开机e进入单用户模式</p>
+</li>
+<li><p>在Kali GNU GRUB页面，选择linux那一行，将ro 改为 rw 在此行末尾增加 init=/bin/bash 修改完毕以后按Ctrl+X 键进入单用户模式</p>
+</li>
+<li><p>passwd命令重置root账号密码</p>
+</li>
+</ol>
+<h1 id="kali-xshell-连接"><a href="#kali-xshell-连接" class="headerlink" title="kali xshell 连接"></a>kali xshell 连接</h1><ol>
+<li><p>打开kali的终端 输入:leafpad /etc/ssh/sshd_config 打开配置文件</p>
+</li>
+<li><p>找到#PermitRootLogin prohibit-password</p>
+</li>
+<li><p>将后面的(prohibit-password )改成yes去掉#</p>
+</li>
+<li><p>#passwordAuthentication 去掉#号</p>
+</li>
+<li><p>然后保存关闭</p>
+</li>
+<li><p>打开终端输入:service ssh start开启服务</p>
+</li>
+<li><p>然后再输入:service ssh status 确认开启状态</p>
+</li>
+<li><p>出现下面的提示就是服务开启成功了</p>
+</li>
+</ol>
+<h1 id="kali-burp-suite-安装"><a href="#kali-burp-suite-安装" class="headerlink" title="kali burp suite 安装"></a>kali burp suite 安装</h1><p>1.jdk环境最重要 1.8 </p>
+<p>2.修改文件名可以做到快速替换</p>
+<p>3.java -jar b【tap】执行破解软件</p>
+<p>4.开始使用</p>
 
         </div>
         
@@ -236,7 +266,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "https://whitexb.github.io.git/2021/07/30/%E6%93%8D%E4%BD%9C/",
+                text: "https://whitexb.github.io.git/2021/07/30/linux+kali+burp/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -248,8 +278,8 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "https://whitexb.github.io.git/2021/07/30/%E6%93%8D%E4%BD%9C/";
-            const title         = "「linux操作」";
+            const hostUrl       = "https://whitexb.github.io.git/2021/07/30/linux+kali+burp/";
+            const title         = "「linux+kali+burp」";
             const excerpt       = `linux下安装阿帕奇
 
 yum install httpd httpd-devel -y #安装
@@ -278,7 +308,7 @@ systemctl enable  httpd.servi...`;
                     <a class="tag-none-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">服务器</a>
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2021-07-30</span>
+                <span>最后编辑：2021-07-31</span>
                 </div>
             </div>
         </footer>
@@ -344,7 +374,7 @@ systemctl enable  httpd.servi...`;
         
           
           
-            <a class="list-group-item" href="/2021/07/30/%E6%93%8D%E4%BD%9C/"><i class="fa  fa-book"></i> linux操作</a>
+            <a class="list-group-item" href="/2021/07/30/linux+kali+burp/"><i class="fa  fa-book"></i> linux+kali+burp</a>
             
           
         
