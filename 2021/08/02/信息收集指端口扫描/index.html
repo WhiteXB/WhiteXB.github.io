@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  <link rel="icon" href="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
+  <title>信息收集指端口扫描 | (*´∇｀*)白筱の猫舍</title>
+  <meta name="author" content="white-x" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="服务器, 网络安全" />
+  
+  <meta name="description" content="nmap命令对指定ip进行端口扫描 12nmap -p[端口]-[端口] [ip]  linux kali环境下端口范围 1-65535 nmap命令常见端口1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465">
+<meta property="og:type" content="article">
+<meta property="og:title" content="信息收集指端口扫描">
+<meta property="og:url" content="https://whitexb.github.io.git/2021/08/02/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E6%8C%87%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F/index.html">
+<meta property="og:site_name" content="(*´∇｀*)白筱の猫舍">
+<meta property="og:description" content="nmap命令对指定ip进行端口扫描 12nmap -p[端口]-[端口] [ip]  linux kali环境下端口范围 1-65535 nmap命令常见端口1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
+<meta property="article:published_time" content="2021-08-01T17:41:56.000Z">
+<meta property="article:modified_time" content="2021-08-01T18:04:24.388Z">
+<meta property="article:author" content="white-x">
+<meta property="article:tag" content="服务器">
+<meta property="article:tag" content="网络安全">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
+<meta name="twitter:site" content="@null">
+  
+  <!-- 站点验证相关 -->
+  
+    
+    
+    
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/css/kratosr.min.css" type="text/css" media="all">
+  
+    <link rel="stylesheet" id="highlight-css" href="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/css/highlight/light.min.css" type="text/css" media="all">
+  
+  
+  <link rel="stylesheet" id="fontawe-css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="nprogress-css" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" type="text/css" media="all">
+  
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+  
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+    <link rel="stylesheet" id="darkmode-css" href="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/css/kr-dark.min.css" type="text/css" media="all">
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                                    
+                                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/archives/"><i class="fa fa-file"></i>猿の力</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/friends/"><i class="fa fa-paw"></i>喵喵喵</a></li>
+                                    
+                                
+                                    
+                                        <li>
+                                            <a><i class="fa fa-link"></i>链接</a>
+                                            <ul class="sub-menu">
+                                                
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://www.white-x.top/WhiteXB-old-html/">作者博客</a></li>
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://github.com/WhiteXB/WhiteXB.io">项目链接</a></li>
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">(*´∇｀*)白筱の猫舍</a></div>
+                    <div class="nav-toggle">
+                        <a class="kratos-nav-toggle js-kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>(*´∇｀*)白筱の猫舍</h2> <br />
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+                    
+
+        
+
+            <section class="col-md-8">
+
+        
+
+            <article>
+    <div class="kratos-hentry kratos-post-inner clearfix">
+        <header class="kratos-entry-header">
+            
+                <h1 class="kratos-entry-title text-center">信息收集指端口扫描</h1>
+            
+            
+            <ul class="kratos-post-meta text-center">
+                <li><i class="fa fa-calendar"></i> 2021-08-02</li>
+                <li><i class="fa fa-user"></i> 作者 white-x</li>
+                <li>
+                    <i class="fa fa-edit"></i> 
+                    
+                    
+                        ~7.82K
+                    
+                    字
+                </li>
+                
+            </ul>
+        </header>
+        <div class="kratos-post-content">
+            <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                本文最后编辑于 <time datetime="1627841064388"></time> 前，其中的内容可能需要更新。
+            </div>
+            
+            <hr />
+            <h1 id="nmap命令"><a href="#nmap命令" class="headerlink" title="nmap命令"></a>nmap命令</h1><p>对指定ip进行端口扫描</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nmap -p[端口]-[端口] [ip]  linux kali环境下</span><br><span class="line">端口范围 1-65535</span><br></pre></td></tr></table></figure>
+<h2 id="nmap命令常见端口"><a href="#nmap命令常见端口" class="headerlink" title="nmap命令常见端口"></a>nmap命令常见端口</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br><span class="line">417</span><br><span class="line">418</span><br><span class="line">419</span><br><span class="line">420</span><br><span class="line">421</span><br><span class="line">422</span><br><span class="line">423</span><br><span class="line">424</span><br><span class="line">425</span><br><span class="line">426</span><br><span class="line">427</span><br><span class="line">428</span><br><span class="line">429</span><br><span class="line">430</span><br><span class="line">431</span><br><span class="line">432</span><br><span class="line">433</span><br><span class="line">434</span><br><span class="line">435</span><br><span class="line">436</span><br><span class="line">437</span><br><span class="line">438</span><br><span class="line">439</span><br><span class="line">440</span><br><span class="line">441</span><br><span class="line">442</span><br><span class="line">443</span><br><span class="line">444</span><br><span class="line">445</span><br><span class="line">446</span><br><span class="line">447</span><br><span class="line">448</span><br><span class="line">449</span><br><span class="line">450</span><br><span class="line">451</span><br><span class="line">452</span><br><span class="line">453</span><br><span class="line">454</span><br><span class="line">455</span><br><span class="line">456</span><br><span class="line">457</span><br><span class="line">458</span><br><span class="line">459</span><br><span class="line">460</span><br><span class="line">461</span><br><span class="line">462</span><br><span class="line">463</span><br><span class="line">464</span><br><span class="line">465</span><br><span class="line">466</span><br><span class="line">467</span><br><span class="line">468</span><br><span class="line">469</span><br><span class="line">470</span><br><span class="line">471</span><br><span class="line">472</span><br><span class="line">473</span><br><span class="line">474</span><br><span class="line">475</span><br><span class="line">476</span><br><span class="line">477</span><br><span class="line">478</span><br><span class="line">479</span><br><span class="line">480</span><br><span class="line">481</span><br><span class="line">482</span><br><span class="line">483</span><br><span class="line">484</span><br><span class="line">485</span><br><span class="line">486</span><br><span class="line">487</span><br><span class="line">488</span><br><span class="line">489</span><br><span class="line">490</span><br><span class="line">491</span><br><span class="line">492</span><br><span class="line">493</span><br><span class="line">494</span><br><span class="line">495</span><br><span class="line">496</span><br><span class="line">497</span><br><span class="line">498</span><br><span class="line">499</span><br><span class="line">500</span><br><span class="line">501</span><br><span class="line">502</span><br><span class="line">503</span><br><span class="line">504</span><br><span class="line">505</span><br></pre></td><td class="code"><pre><span class="line">服务默认端口</span><br><span class="line">公认端口(Well Known Ports)：0-1023，他们紧密绑定了一些服务；</span><br><span class="line">注册端口(Registered Ports)：1024-49151，他们松散的绑定了一些服务；</span><br><span class="line">动态/私有：49152-65535，不为服务分配这些端口；</span><br><span class="line"></span><br><span class="line">## 实战测试</span><br><span class="line">### 文件共享服务端口渗透</span><br><span class="line">ftp服务</span><br><span class="line">FTP服务：ftp服务我分为两种情况，第一种是使用系统软件来配置，比如IIS中的FTP文件共享或Linux中的默认服务软件；第二种是通过第三方软件来配置，比如Serv-U还有一些网上写的简易ftp服务器等；</span><br><span class="line"></span><br><span class="line">默认端口：20（数据端口）；21（控制端口）；69（tftp小型文件传输协议）</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">爆破：ftp的爆破工具有很多，这里我推荐owasp的Bruter以及msf中ftp爆破模块；</span><br><span class="line"></span><br><span class="line">匿名访问：用户名：anonymous  密码：为空或任意邮箱</span><br><span class="line"></span><br><span class="line">用户名：FTP            密码：FTP或为空</span><br><span class="line"></span><br><span class="line">用户名：USET         密码：pass</span><br><span class="line"></span><br><span class="line">当然还有不需要用户名密码直接访问的，一般出现在局域网中；</span><br><span class="line"></span><br><span class="line">嗅探：ftp使用明文传输技术（但是嗅探给予局域网并需要欺骗或监听网关）</span><br><span class="line"></span><br><span class="line">后门技术：在linux的vsftp某一版本中，存在着一个后门程序，只要在用户名后面加上 就会在6200上打开一个监听Shell，我们可以使用telnet直接连接；详细请点击</span><br><span class="line"></span><br><span class="line">远程溢出漏洞：6.10.1 IIS FTP远程溢出漏洞，在IIS FTP服务器中NLST命令存在一个缓冲区溢出漏洞，这个漏洞可能是攻击者在服务器运行一条非法命令。</span><br><span class="line"></span><br><span class="line">跳转攻击：（Bounce Attacks）攻击者发送一个FTP”PORT”命令给目标FTP服务器，其中包含该主机的网络地址和被攻击的服务的端口号。这样，客户端就能命令FTP服务器发一个文件给被攻击的服务。这个文件可能包括根被攻击的服务有关的命令（如SMTP,NNTP等）。由于是命令第三方去连接到一种服务，而不是直接连接，就使得跟踪攻击者变得困难，并且还避开了基于网络地址的访问限制。（注：此种情况小白并没有遇到过，只是总结一下，欢迎大牛指教）</span><br><span class="line"></span><br><span class="line">### NFS服务</span><br><span class="line">nfs：网络文件系统，允许网络中的计算机通过TCP/IP网络共享资源。基于Linux系统，配置方面很简单，详细配置请参考案例分享。在nfs配置中，有不做任何限制的，有限制用户，有限制IP，以及在版本2.x中我们还可以使用证书来验证用户。当然不同的限制可以采用的攻击方式也不一样；就目前而言网上关于nfs的攻击还是比较少的!</span><br><span class="line"></span><br><span class="line">默认端口：2049</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">未授权访问：未限制IP以及用户权限设置错误</span><br><span class="line"></span><br><span class="line">### Samba服务</span><br><span class="line">Samba服务：对于这个可以在windows与Linux之间进行共享文件的服务同样是我们攻击的关注点；samba登录分为两种方式，一种是需要用户名口令；另一种是不需要用户名口令。在很多时候不光是pc机，还有一些服务器，网络设备都开放着此服务，方便进行文件共享，但是同时也给攻击者提供了便利。</span><br><span class="line"></span><br><span class="line">默认端口：137（主要用户NetBIOS Name Service；NetBIOS名称服务）、139（NetBIOS Session Service，主要提供samba服务）</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">爆破：弱口令（爆破工具采用hydra）hydra -l username -P</span><br><span class="line">PassFile IP smb</span><br><span class="line"></span><br><span class="line">未授权访问：给予public用户高权限</span><br><span class="line"></span><br><span class="line">远程代码执行漏洞：CVE-2015-0240等等</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### LDAP协议</span><br><span class="line">ldap：轻量级目录访问协议，最近几年随着ldap的广泛使用被发现的漏洞也越来越多。但是毕竟主流的攻击方式仍旧是那些，比如注入，未授权等等；这些问题的出现也都是因为配置不当而造成的。</span><br><span class="line"></span><br><span class="line">默认端口：389</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">注入攻击：盲注</span><br><span class="line"></span><br><span class="line">未授权访问：</span><br><span class="line"></span><br><span class="line">爆破：弱口令</span><br><span class="line"></span><br><span class="line">### 远程连接服务端口渗透</span><br><span class="line">SSH服务</span><br><span class="line">SSH服务：这个服务基本会出现在我们的Linux服务器，网络设备，安全设备等设备上，而且很多时候这个服务的配置都是默认的；对于SSH服务我们可能使用爆破攻击方式较多。</span><br><span class="line"></span><br><span class="line">默认端口：22</span><br><span class="line"></span><br><span class="line">攻击方式</span><br><span class="line"></span><br><span class="line">爆破：弱口令、</span><br><span class="line"></span><br><span class="line">漏洞：28退格漏洞、OpenSSL漏洞</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### Telnet服务</span><br><span class="line">Telnet服务：在SSH服务崛起的今天我们已经很难见到使用telnet的服务器，但是在很多设备上同样还是有这个服务的；比如cisco、华三，深信服等厂商的设备；我就有很多次通过telnet弱口令控制这些设备；</span><br><span class="line"></span><br><span class="line">默认端口：23</span><br><span class="line"></span><br><span class="line">攻击方式</span><br><span class="line"></span><br><span class="line">爆破：弱口令</span><br><span class="line"></span><br><span class="line">嗅探：此种情况一般发生在局域网；</span><br><span class="line"></span><br><span class="line">### Windows远程连接</span><br><span class="line">远程桌面连接：作为windows上进行远程连接的端口，很多时候我们在得到系统为windows的shell的时候我们总是希望可以登录3389实际操作对方电脑；这个时候我们一般的情况分为两种。一种是内网，需要先将目标机3389端口反弹到外网；另一种就是外网，我们可以直接访问；当然这两种情况我们利用起来可能需要很苛刻的条件，比如找到登录密码等等；</span><br><span class="line"></span><br><span class="line">默认端口：3389</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">爆破：3389端口爆破工具就有点多了</span><br><span class="line"></span><br><span class="line">Shift粘滞键后门：5次shift后门</span><br><span class="line"></span><br><span class="line">3389漏洞攻击：利用ms12-020攻击3389端口，导致服务器关机；请参考</span><br><span class="line"></span><br><span class="line">### VNC服务</span><br><span class="line">VNC：一款优秀的远控工具，常用语类UNIX系统上，简单功能强大；也</span><br><span class="line"></span><br><span class="line">默认端口：5900+桌面ID（5901；5902）</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">爆破：弱口令</span><br><span class="line"></span><br><span class="line">认证口令绕过：</span><br><span class="line"></span><br><span class="line">拒绝服务攻击：（CVE-2015-5239）</span><br><span class="line"></span><br><span class="line">权限提升：（CVE-2013-6886）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### Pcanywhere服务</span><br><span class="line">PyAnywhere服务：一款远控工具，有点类似vnc的功能；这个服务在以前很多黑客发的视频里面都有，利用pcanywhere来进行提权；</span><br><span class="line"></span><br><span class="line">默认端口：5632</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">提权控制服务：</span><br><span class="line"></span><br><span class="line">拒绝服务攻击：</span><br><span class="line"></span><br><span class="line">代码执行：请参考</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### Web应用服务端口渗透</span><br><span class="line">HTTP服务：对于http服务其实是我们目前这几年比较常见的攻击入口，所以这里会针对http服务进行一个详细的详解；</span><br><span class="line"></span><br><span class="line">注：这个板块的所有攻击方式，如果涉及到常规的web漏洞不会提出来，除非是特定的服务器才会产生的漏洞；</span><br><span class="line"></span><br><span class="line">IIS服务</span><br><span class="line">默认端口：80/81/443</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">IIS</span><br><span class="line">PUT写文件：利用IIS漏洞，put方法直接将文件放置到服务器上</span><br><span class="line"></span><br><span class="line">短文件名泄漏：这种一般没啥影响</span><br><span class="line"></span><br><span class="line">解析漏洞：详细见apache服务</span><br><span class="line"></span><br><span class="line">Apache/Tomcat/Nginx/Axis2</span><br><span class="line">默认端口：80/8080</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">爆破：弱口令（爆破manager后台）</span><br><span class="line"></span><br><span class="line">HTTP慢速攻击：可以把服务器打死，对一些大型的网站有影响；</span><br><span class="line"></span><br><span class="line">解析漏洞：请参考</span><br><span class="line"></span><br><span class="line">### WebLogic</span><br><span class="line">默认端口：7001</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">爆破：弱口令 4组：用户名密码均一致：system weblogic（密码可能weblogic123） portaladmin guest</span><br><span class="line"></span><br><span class="line">Congsole后台部署webshell：</span><br><span class="line"></span><br><span class="line">Java反序列化：</span><br><span class="line"></span><br><span class="line">泄漏源代码/列目录：这个太老了，估计网上都没有了吧！</span><br><span class="line"></span><br><span class="line">SSRF窥探内网：央视网SSRF可窥探内网</span><br><span class="line"></span><br><span class="line">利用Weblogic进行入侵的一些总结</span><br><span class="line"></span><br><span class="line">### Jboss</span><br><span class="line">默认端口8080；其他端口1098/1099/4444/4445/8080/8009/8083/8093</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">爆破：弱口令（爆破jboss系统后台）</span><br><span class="line"></span><br><span class="line">远程代码执行：由于配置不当造成</span><br><span class="line"></span><br><span class="line">Java反序列化：</span><br><span class="line"></span><br><span class="line">### Websphere</span><br><span class="line">默认端口：908*；第一个应用就是9080，第二个就是9081；控制台9090</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">爆破：弱口令（控制台）</span><br><span class="line"></span><br><span class="line">任意文件泄漏：（CVE-2014-0823）</span><br><span class="line"></span><br><span class="line">Java反序列化</span><br><span class="line"></span><br><span class="line">### GlassFish</span><br><span class="line">默认端口：http 8080；IIOP 3700；控制台4848</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">爆破：弱口令（对于控制台）</span><br><span class="line"></span><br><span class="line">任意文件读取：</span><br><span class="line"></span><br><span class="line">认证绕过：</span><br><span class="line"></span><br><span class="line">### Jenkins</span><br><span class="line">默认端口：8080、8089</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">爆破：弱口令（默认管理员）</span><br><span class="line"></span><br><span class="line">未授权访问：</span><br><span class="line"></span><br><span class="line">反序列化：</span><br><span class="line"></span><br><span class="line">### Resin</span><br><span class="line">默认端口：8080</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">目录遍历</span><br><span class="line"></span><br><span class="line">远程文件读取</span><br><span class="line"></span><br><span class="line">案例分享：</span><br><span class="line"></span><br><span class="line">### Jetty</span><br><span class="line">默认端口：8080</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">远程共享缓冲区溢出</span><br><span class="line"></span><br><span class="line">### Lotus</span><br><span class="line">影响的都是一些大型的企业，特别需要注意，经过以前的测试发现弱口令这个问题经常都存在，可能是很多管理员不知道如何去修改（不要打我）。</span><br><span class="line"></span><br><span class="line">默认端口：1352</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">爆破：弱口令（admin password）控制台</span><br><span class="line"></span><br><span class="line">信息泄露</span><br><span class="line"></span><br><span class="line">跨站脚本攻击</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">数据库服务端口渗透</span><br><span class="line">针对所有的数据库攻击方式都存在SQL注入，这里先提出来在下面就不一一写了免得大家说我占篇幅；当然不同的数据库注入技巧可能不一样，特别是NoSQL与传统的SQL数据库不太一样。但是这不是本文需要介绍的重点，后面有时间会写一篇不同数据库的渗透技巧。</span><br><span class="line"></span><br><span class="line">### MySQL数据库</span><br><span class="line">默认端口：3306</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">爆破：弱口令</span><br><span class="line"></span><br><span class="line">身份认证漏洞：CVE-2012-2122</span><br><span class="line"></span><br><span class="line">拒绝服务攻击：利用sql语句是服务器进行死循环打死服务器</span><br><span class="line"></span><br><span class="line">Phpmyadmin万能密码绕过：用户名：‘localhost’@’@”  密码任意</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">MySQL提权总结</span><br><span class="line"></span><br><span class="line">### MSSQL数据库</span><br><span class="line">默认端口：1433（Server 数据库服务）、1434（Monitor 数据库监控）</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">爆破：弱口令/使用系统用户</span><br><span class="line"></span><br><span class="line">Oracle数据库</span><br><span class="line">默认端口：1521（数据库端口）、1158（Oracle EMCTL端口）、8080（Oracle XDB数据库）、210（Oracle XDB FTP服务）</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">爆破：弱口令</span><br><span class="line"></span><br><span class="line">注入攻击；</span><br><span class="line"></span><br><span class="line">漏洞攻击；</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### PostgreSQL数据库</span><br><span class="line">PostgreSQL是一种特性非常齐全的自由软件的对象–关系型数据库管理系统，可以说是目前世界上最先进，功能最强大的自由数据库管理系统。包括我们kali系统中msf也使用这个数据库；浅谈postgresql数据库攻击技术  大部分关于它的攻击依旧是sql注入，所以注入才是数据库不变的话题。</span><br><span class="line"></span><br><span class="line">默认端口：5432</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">爆破：弱口令：postgres postgres</span><br><span class="line"></span><br><span class="line">缓冲区溢出：CVE-2014-2669</span><br><span class="line"></span><br><span class="line">### MongoDB数据库</span><br><span class="line">MongoDB：NoSQL数据库；攻击方法与其他数据库类似；关于它的安全讲解：请参考</span><br><span class="line"></span><br><span class="line">默认端口：27017</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">爆破：弱口令</span><br><span class="line"></span><br><span class="line">未授权访问；github有攻击代码；请点击</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### Redis数据库</span><br><span class="line">redis：是一个开源的使用c语言写的，支持网络、可基于内存亦可持久化的日志型、key-value数据库。关于这个数据库这两年还是很火的，暴露出来的问题也很多。特别是前段时间暴露的未授权访问。Exp：https://yunpan.cn/cYjzHxawFpyVt  访问密码 e547</span><br><span class="line"></span><br><span class="line">默认端口：6379</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">爆破：弱口令</span><br><span class="line"></span><br><span class="line">未授权访问+配合ssh key提权；</span><br><span class="line"></span><br><span class="line">### SysBase数据库</span><br><span class="line">默认端口：服务端口5000；监听端口4100；备份端口：4200</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">爆破：弱口令</span><br><span class="line"></span><br><span class="line">命令注入：</span><br><span class="line"></span><br><span class="line">Sybase EAServer命令注入漏洞</span><br><span class="line"></span><br><span class="line">### DB2数据库</span><br><span class="line">默认端口：5000</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">安全限制绕过：成功后可执行未授权操作（CVE-2015-1922）</span><br><span class="line"></span><br><span class="line">总结一下：对于数据库，我们得知端口很多时候可以帮助我们去渗透，比如得知mysql的 数据库，我们就可以使用SQL注入进行mof、udf等方式提权；如果是mssql我们就可以使用xp_cmdshell来进行提权；如果是其它的数据 库，我们也可以采用对应的方式；比如各大数据库对应它们的默认口令，版本对应的漏洞！</span><br><span class="line"></span><br><span class="line">顺便提一下：很多时候银行企业采用的都是oracle、db2等大型数据库；</span><br><span class="line"></span><br><span class="line">### 邮件服务端口渗透</span><br><span class="line">SMTP协议</span><br><span class="line">smtp：邮件协议，在linux中默认开启这个服务，可以向对方发送钓鱼邮件！</span><br><span class="line"></span><br><span class="line">默认端口：25（smtp）、465（smtps）</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">爆破：弱口令</span><br><span class="line"></span><br><span class="line">未授权访问</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">邮件伪造详解</span><br><span class="line"></span><br><span class="line">qq邮箱伪造发件地址，容易被钓鱼利用</span><br><span class="line"></span><br><span class="line">众多厂商邮件系统配置不当可伪造邮件人</span><br><span class="line"></span><br><span class="line">### POP3协议</span><br><span class="line">默认端口：109（POP2）、110（POP3）、995（POP3S）</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">爆破；弱口令</span><br><span class="line"></span><br><span class="line">未授权访问；</span><br><span class="line"></span><br><span class="line">### IMAP协议</span><br><span class="line">默认端口：143（imap）、993（imaps）</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">爆破：弱口令</span><br><span class="line"></span><br><span class="line">配置不当</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 网络常见协议端口渗透</span><br><span class="line">DNS服务</span><br><span class="line">默认端口：53</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">区域传输漏洞</span><br><span class="line"></span><br><span class="line">见2中的总结</span><br><span class="line"></span><br><span class="line">DNS泛解析与内容投毒</span><br><span class="line"></span><br><span class="line">### DHCP服务</span><br><span class="line">默认端口：67&amp;68、546（DHCP Failover做双机热备的）</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">DHCP劫持；</span><br><span class="line"></span><br><span class="line">见2中总结</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### SNMP协议</span><br><span class="line">默认端口：161</span><br><span class="line"></span><br><span class="line">攻击方式:</span><br><span class="line"></span><br><span class="line">爆破：弱口令</span><br><span class="line"></span><br><span class="line">基于snmp的反射攻击的理论及其实现</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">其他端口渗透</span><br><span class="line">### Hadoop文件服务</span><br><span class="line">默认端口：请参考</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### Zookeeper服务</span><br><span class="line">zookeeper：分布式的，开放源码的分布式应用程序协调服务；提供功能包括：配置维护、域名服务、分布式同步、组服务等。详情请参考百度百科</span><br><span class="line"></span><br><span class="line">默认端口：2181</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">未授权访问；</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">网上关于这方面的案例暂时不多，但是对于大数据逐渐泛滥的今天，这些漏洞未来会在乌云上出现一大波！</span><br><span class="line"></span><br><span class="line">### Zabbix服务</span><br><span class="line">zabbix：基于Web界面的提供分布式系统监视以及网络监视功能的企业级的开源解决方案。监视各种网络参数，保证服务器系统的安全运营。</span><br><span class="line"></span><br><span class="line">默认端口：8069</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">远程命令执行：</span><br><span class="line"></span><br><span class="line">### elasticsearch服务</span><br><span class="line">elasticsearch：请百度（因为我觉得我解释不清楚）</span><br><span class="line"></span><br><span class="line">默认端口：9200（）、9300（）</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">未授权访问；</span><br><span class="line"></span><br><span class="line">远程命令执行；</span><br><span class="line"></span><br><span class="line">文件遍历；</span><br><span class="line"></span><br><span class="line">低版本webshell植入；</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### memcache服务</span><br><span class="line">默认端口：11211</span><br><span class="line"></span><br><span class="line">Linux R服务</span><br><span class="line">R服务：TCP端口512,513和514为著名的rlogin提供服务。在系统中被错误配置从而允许远程访问者从任何地方访问（标准的，rhosts + +）。</span><br><span class="line"></span><br><span class="line">默认端口：512（remote process execution）；513（remote login a la</span><br><span class="line">telnet）；514（cmd）</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">使用rlogin直接登录对方系统；</span><br><span class="line"></span><br><span class="line">### RMI</span><br><span class="line">RMI：我们使用这两个端口很少的原因是因为必须是java，而且rmi穿越防火墙并不好穿越；这里我不会去涉及其他的东西，这里提出RMI只是因为在前段时间的java反序列化中，我们的小伙伴Bird写过一个weblogic利用工具，里面涉及到了RMI的一些东西，在有的时候使用socket不能成功时，我们可以使用RMI方式来进行利用；</span><br><span class="line"></span><br><span class="line">默认端口：1090（）、1099（）</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">远程命令执行（java反序列化，调用rmi方式执行命令）</span><br><span class="line"></span><br><span class="line">这就是RMI的魅力了！</span><br><span class="line"></span><br><span class="line">工具下载：请点我</span><br><span class="line"></span><br><span class="line">### Rsync服务</span><br><span class="line">Rsync：类UNIX系统下的数据备份工具（remote sync），属于增量备份；关于它的功能，大家自行百度百科吧，其实上面很多大家也看到了说是端口渗透，其实就是端口对应服务的渗透，服务一般出错就在配置或者版本问题上，rsync也不例外。Rsync默认允许匿名访问，如果在配置文件中没有相关的用户认证以及文件授权，就会触发隐患。</span><br><span class="line"></span><br><span class="line">默认端口：873</span><br><span class="line"></span><br><span class="line">攻击方式：</span><br><span class="line"></span><br><span class="line">未授权访问；</span><br><span class="line"></span><br><span class="line">本地提权：rsync默认以root运行，利用rsync上传一个文件，只要这个文件具有s权限，我们执行我们的攻击脚本就可以具有root权限。详细请参考和参考二</span><br><span class="line"></span><br><span class="line">### Socket代理</span><br><span class="line">默认端口：1080</span><br><span class="line"></span><br><span class="line">Socket代理针对代理来说没有什么漏洞，一般只是在渗透过程中作为我们的代理，进入内网，或者渗透域和林的时候有帮助。这里不做过多描述，但是可以尝试爆破一下代理的用户名和密码，万一运气好能登录，不也~~~~</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        </div>
+        
+            <div class="kratos-copyright text-center clearfix">
+                <h5>本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+            </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+                <div class="post-like-donate text-center clearfix" id="post-like-donate">
+                
+                
+                    <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                    <div class="share-wrap" style="display: none;">
+    <div class="share-group">
+        <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-qq"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain qzone" onclick="share('qzone');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-star"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weixin"></i>
+            </div>
+            <div class="share-int">
+                <div class="qrcode" id="wechat-qr"></div>
+                <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weibo" onclick="share('weibo');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weibo"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-facebook"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain twitter style-plain" onclick="share('twitter');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-twitter"></i>
+            </div>
+        </a>
+    </div>
+    <script type="text/javascript">
+        $(()=>{
+            new QRCode("wechat-qr", {
+                text: "https://whitexb.github.io.git/2021/08/02/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E6%8C%87%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F/",
+                width: 150,
+                height: 150,
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        });
+        function share(dest) {
+            const qqBase        = "https://connect.qq.com/widget/shareqq/index.html?";
+            const weiboBase     = "https://service.weibo.com/share/share.php?";
+            const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+            const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
+            const twitterBase   = "https://twitter.com/intent/tweet?";
+            const hostUrl       = "https://whitexb.github.io.git/2021/08/02/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E6%8C%87%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F/";
+            const title         = "「信息收集指端口扫描」";
+            const excerpt       = `nmap命令对指定ip进行端口扫描
+12nmap -p[端口]-[端口] [ip]  linux kali环境下端口范围 1-65535
+nmap命令常见端口12345678910111213141516171819202122232...`;
+            let _URL;
+            switch (dest) {
+                case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
+                case "weibo"    : _URL = weiboBase+"url="+hostUrl+"&title="+title+excerpt;                                 break;
+                case "qzone"    : _URL = qzoneBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
+                case "facebook" : _URL = facebookBase+"u="+hostUrl;                                                        break;
+                case "twitter"  : _URL = twitterBase+"text="+title+excerpt+"&url="+hostUrl;                                break;
+            }
+            window.open(_URL);
+        };
+    </script>
+</div>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">服务器</a>, <a class="tag-none-link" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" rel="tag">网络安全</a>
+                </div>
+                <div class="pull-date">
+                <span>最后编辑：2021-08-02</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" c语言2048小游戏" href="/2021/08/01/c语言2048小游戏/">&lt; 上一篇</a>
+            </div>
+            
+            
+        </nav>
+    
+    
+</article>
+
+        
+
+            </section>
+
+        
+
+                
+            
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/images/avatar.webp" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center"></p>
+    </div>
+</aside>
+            
+                    <div class="sticky-area">
+                
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix">
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar"></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#nmap%E5%91%BD%E4%BB%A4"><span class="toc-text">nmap命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#nmap%E5%91%BD%E4%BB%A4%E5%B8%B8%E8%A7%81%E7%AB%AF%E5%8F%A3"><span class="toc-text">nmap命令常见端口</span></a></li></ol></li></ol>
+    </div>
+</aside>
+                
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/">教程文档</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">1</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/c%E8%AF%AD%E8%A8%80/" style="font-size: 0.6em;">c语言</a> <a href="/tags/%E4%B8%BB%E9%A2%98/" style="font-size: 0.6em;">主题</a> <a href="/tags/%E5%92%95%E5%92%95%E5%92%95/" style="font-size: 0.6em;">咕咕咕</a> <a href="/tags/%E5%BF%83%E5%BE%97/" style="font-size: 0.6em;">心得</a> <a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 0.6em;">感悟</a> <a href="/tags/%E6%96%87%E6%A1%A3/" style="font-size: 0.6em;">文档</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 0.8em;">服务器</a> <a href="/tags/%E7%BB%8F%E9%AA%8C/" style="font-size: 0.6em;">经验</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 0.7em;">网络安全</a> <a href="/tags/%E9%A1%B9%E7%9B%AE/" style="font-size: 0.6em;">项目</a>
+      </div>
+  </aside>
+
+            
+                
+  <aside id="krw-posts" class="widget widget-kratos-posts">
+  <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
+  <div class="tab-content">
+      <ul class="list-group">
+        
+        
+          
+          
+            <a class="list-group-item" href="/2021/08/02/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E6%8C%87%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F/"><i class="fa  fa-book"></i> 信息收集指端口扫描</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/08/01/c%E8%AF%AD%E8%A8%802048%E5%B0%8F%E6%B8%B8%E6%88%8F/"><i class="fa  fa-book"></i> c语言2048小游戏</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/08/01/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92/"><i class="fa  fa-book"></i> 考研规划</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/07/30/linux+kali+burp/"><i class="fa  fa-book"></i> linux+kali+burp</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/07/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B%E5%9B%BD%E8%B5%9B%E7%AD%94%E8%BE%A9%E5%A4%8D%E7%9B%98/"><i class="fa  fa-book"></i> 计算机设计大赛国赛答辩复盘</a>
+            
+          
+        
+          
+            
+          
+            
+      </ul>
+  </div>
+  </aside>
+
+            
+    </div>
+</section>
+        
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="footer"  class="ap-lrc"  >
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search/">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="box theme-box" id="darkmode-switch">
+                        <span class="fa fa-adjust"></span>
+                    </div>
+                
+                
+                    <div class="box group-box">
+                        <a href="www.white-x.top" target="_blank" rel="nofollow">
+                            <span class="fa fa-users"></span>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                        <li><a href="mailto:www741740071@163.com"><i class="fa fa-envelope"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://t.me/18992210106"><i class="fa fa-telegram"></i></a></li>
+                        
+                        
+                        
+                        <li><a target="_blank" rel="me" href="https://nya.one/@WhiteXB"><i class="fa fa fa-share-alt-square"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://github.com/WhiteXB"><i class="fa fa-github"></i></a></li>
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2021 (*´∇｀*)白筱の猫舍 版权所有.</li>
+                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by white-x.</li>
+                        </div>
+                        <div>
+                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+                            <li>Hosted on <a href="https://www.white-x.top" target="_blank">Github Pages</a></li>
+                        </div>
+                        <div>
+                            
+                            
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
+<script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
+
+    <div>
+        <canvas id="snow"></canvas>
+        <script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/snow.min.js"></script>
+    </div>
+
+<script async src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/candy.min.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <meting-js
+        server="netease"
+        type="playlist"
+        id="6616775659"
+        order="random"
+        fixed="true"
+    >
+    </meting-js>
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/kratosr.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/pjax.min.js"></script>
+
+
+    <script defer src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/kr-dark.min.js"></script>
+
+
+
+<!-- Extra support for third-party plguins  -->
+
+
+    </body>
+</html>
