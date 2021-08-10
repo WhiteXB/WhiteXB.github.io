@@ -15,16 +15,16 @@
   
     <meta name="keywords" content="java, 经验" />
   
-  <meta name="description" content="端口占用问题win10netstat -ano | findstr 8080       指令的意思是找出占用8080端口的进程pid此时发现8080端口号的pid是11441（pid是会变化的）再次输入指令：taskkill -pid 11441 -f，回车 linux找到端口对应的进程的pid, 比如找到的PID是17413：netstat -anp |grep 8080kill -9 PID">
+  <meta name="description" content="端口占用问题win10123456789101112netstat -ano 查看全部端口CLOSED	没有使用这个套接字[netstat 无法显示closed状态]LISTEN	套接字正在监听连接[调用listen后]SYN_SENT	套接字正在试图主动建立连接[发送SYN后还没有收到ACK]SYN_RECEIVED	正在处于连接的初始同步状态[收到对方的SYN，但还没收到自己发过去的SYN的A">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java开发实战(第二天)">
 <meta property="og:url" content="https://whitexb.github.io/2021/08/06/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E4%BA%8C%E5%A4%A9)/index.html">
 <meta property="og:site_name" content="(*´∇｀*)白筱の猫舍">
-<meta property="og:description" content="端口占用问题win10netstat -ano | findstr 8080       指令的意思是找出占用8080端口的进程pid此时发现8080端口号的pid是11441（pid是会变化的）再次输入指令：taskkill -pid 11441 -f，回车 linux找到端口对应的进程的pid, 比如找到的PID是17413：netstat -anp |grep 8080kill -9 PID">
+<meta property="og:description" content="端口占用问题win10123456789101112netstat -ano 查看全部端口CLOSED	没有使用这个套接字[netstat 无法显示closed状态]LISTEN	套接字正在监听连接[调用listen后]SYN_SENT	套接字正在试图主动建立连接[发送SYN后还没有收到ACK]SYN_RECEIVED	正在处于连接的初始同步状态[收到对方的SYN，但还没收到自己发过去的SYN的A">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-08-06T12:10:43.000Z">
-<meta property="article:modified_time" content="2021-08-07T10:31:12.265Z">
+<meta property="article:modified_time" content="2021-08-10T08:21:34.704Z">
 <meta property="article:author" content="white-x">
 <meta property="article:tag" content="经验">
 <meta property="article:tag" content="java">
@@ -158,7 +158,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        953
+                        ~1.52K
                     
                     字
                 </li>
@@ -167,11 +167,12 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1628332272265"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1628583694704"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
-            <h1 id="端口占用问题"><a href="#端口占用问题" class="headerlink" title="端口占用问题"></a>端口占用问题</h1><h2 id="win10"><a href="#win10" class="headerlink" title="win10"></a>win10</h2><p>netstat -ano | findstr 8080       指令的意思是找出占用8080端口的进程pid<br>此时发现8080端口号的pid是11441（pid是会变化的）<br>再次输入指令：taskkill -pid 11441 -f，回车</p>
+            <h1 id="端口占用问题"><a href="#端口占用问题" class="headerlink" title="端口占用问题"></a>端口占用问题</h1><h2 id="win10"><a href="#win10" class="headerlink" title="win10"></a>win10</h2><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">netstat -ano 查看全部端口</span><br><span class="line">CLOSED	没有使用这个套接字[netstat 无法显示closed状态]</span><br><span class="line">LISTEN	套接字正在监听连接[调用listen后]</span><br><span class="line">SYN<span class="emphasis">_SENT	套接字正在试图主动建立连接[发送SYN后还没有收到ACK]</span></span><br><span class="line"><span class="emphasis">SYN_</span>RECEIVED	正在处于连接的初始同步状态[收到对方的SYN，但还没收到自己发过去的SYN的ACK]</span><br><span class="line">ESTABLISHED	连接已建立</span><br><span class="line">CLOSE<span class="emphasis">_WAIT	远程套接字已经关闭：正在等待关闭这个套接字[被动关闭的一方收到FIN]</span></span><br><span class="line"><span class="emphasis">FIN_</span>WAIT<span class="emphasis">_1	套接字已关闭，正在关闭连接[发送FIN，没有收到ACK也没有收到FIN]</span></span><br><span class="line"><span class="emphasis">CLOSING	套接字已关闭，远程套接字正在关闭，暂时挂起关闭确认[在FIN_</span>WAIT<span class="emphasis">_1状态下收到被动方的FIN]</span></span><br><span class="line"><span class="emphasis">LAST_</span>ACK	远程套接字已关闭，正在等待本地套接字的关闭确认[被动方在CLOSE<span class="emphasis">_WAIT状态下发送FIN]</span></span><br><span class="line"><span class="emphasis">FIN_</span>WAIT<span class="emphasis">_2	套接字已关闭，正在等待远程套接字关闭[在FIN_</span>WAIT<span class="emphasis">_1状态下收到发过去FIN对应的ACK]</span></span><br><span class="line"><span class="emphasis">TIME_</span>WAIT	这个套接字已经关闭，正在等待远程套接字的关闭传送[FIN、ACK、FIN、ACK都完毕，这是主动方的最后一个状态，在过了2MSL时间后变为CLOSED状态]</span><br></pre></td></tr></table></figure>
+<p>netstat -ano | findstr 8080       指令的意思是找出占用8080端口的进程pid<br>此时发现8080端口号的pid是11441（pid是会变化的）<br>再次输入指令：taskkill -pid 11441 -f，回车</p>
 <h2 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h2><p>找到端口对应的进程的pid, 比如找到的PID是17413：netstat -anp |grep 8080<br>kill -9 PID 17413</p>
 <h1 id="tomcat-配置问题"><a href="#tomcat-配置问题" class="headerlink" title="tomcat 配置问题"></a>tomcat 配置问题</h1><p><a target="_blank" rel="noopener" href="https://tomcat.apache.org/">https://tomcat.apache.org/</a>   tomcat官网<br>开启后访问自己的ip+:8080</p>
 <h2 id="start-bat-闪退"><a href="#start-bat-闪退" class="headerlink" title="start.bat 闪退"></a>start.bat 闪退</h2><p>pause加到start.bat末尾</p>
@@ -257,7 +258,7 @@
             const twitterBase   = "https://twitter.com/intent/tweet?";
             const hostUrl       = "https://whitexb.github.io/2021/08/06/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E4%BA%8C%E5%A4%A9)/";
             const title         = "「java开发实战(第二天)」";
-            const excerpt       = `端口占用问题win10netstat -ano | findstr 8080       指令的意思是找出占用8080端口的进程pid此时发现8080端口号的pid是11441（pid是会变化的）再次输入指令：taskkill -pi...`;
+            const excerpt       = `端口占用问题win10123456789101112netstat -ano 查看全部端口CLOSED	没有使用这个套接字[netstat 无法显示closed状态]LISTEN	套接字正在监听连接[调用listen后]SYN_SEN...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -279,7 +280,7 @@
                     <a class="tag-none-link" href="/tags/java/" rel="tag">java</a>, <a class="tag-none-link" href="/tags/%E7%BB%8F%E9%AA%8C/" rel="tag">经验</a>
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2021-08-07</span>
+                <span>最后编辑：2021-08-10</span>
                 </div>
             </div>
         </footer>
@@ -343,7 +344,7 @@
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/">教程文档</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">8</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/">教程文档</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">9</span></li></ul>
   </aside>
 
 
@@ -352,7 +353,7 @@
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
-        <a href="/tags/c%E8%AF%AD%E8%A8%80/" style="font-size: 0.6em;">c语言</a> <a href="/tags/java/" style="font-size: 0.75em;">java</a> <a href="/tags/linux/" style="font-size: 0.65em;">linux</a> <a href="/tags/win/" style="font-size: 0.6em;">win</a> <a href="/tags/%E4%B8%BB%E9%A2%98/" style="font-size: 0.6em;">主题</a> <a href="/tags/%E5%92%95%E5%92%95%E5%92%95/" style="font-size: 0.6em;">咕咕咕</a> <a href="/tags/%E5%BF%83%E5%BE%97/" style="font-size: 0.6em;">心得</a> <a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 0.6em;">感悟</a> <a href="/tags/%E6%96%87%E6%A1%A3/" style="font-size: 0.6em;">文档</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 0.7em;">服务器</a> <a href="/tags/%E7%BB%8F%E9%AA%8C/" style="font-size: 0.8em;">经验</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 0.65em;">网络</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 0.6em;">网络安全</a> <a href="/tags/%E9%A1%B9%E7%9B%AE/" style="font-size: 0.6em;">项目</a>
+        <a href="/tags/HTML/" style="font-size: 0.7em;">HTML</a> <a href="/tags/c%E8%AF%AD%E8%A8%80/" style="font-size: 0.6em;">c语言</a> <a href="/tags/java/" style="font-size: 0.75em;">java</a> <a href="/tags/javascript/" style="font-size: 0.6em;">javascript</a> <a href="/tags/linux/" style="font-size: 0.65em;">linux</a> <a href="/tags/win/" style="font-size: 0.6em;">win</a> <a href="/tags/%E4%B8%BB%E9%A2%98/" style="font-size: 0.6em;">主题</a> <a href="/tags/%E5%92%95%E5%92%95%E5%92%95/" style="font-size: 0.6em;">咕咕咕</a> <a href="/tags/%E5%BF%83%E5%BE%97/" style="font-size: 0.6em;">心得</a> <a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 0.6em;">感悟</a> <a href="/tags/%E6%96%87%E6%A1%A3/" style="font-size: 0.6em;">文档</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 0.7em;">服务器</a> <a href="/tags/%E7%BB%8F%E9%AA%8C/" style="font-size: 0.8em;">经验</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 0.65em;">网络</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 0.6em;">网络安全</a> <a href="/tags/%E9%A1%B9%E7%9B%AE/" style="font-size: 0.6em;">项目</a>
       </div>
   </aside>
 
@@ -363,6 +364,12 @@
   <div class="tab-content">
       <ul class="list-group">
         
+        
+          
+          
+            <a class="list-group-item" href="/2021/08/10/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E5%85%AD%E5%A4%A9)/"><i class="fa  fa-book"></i> java开发实战(第六天)</a>
+            
+          
         
           
           
@@ -389,11 +396,7 @@
           
         
           
-          
-            <a class="list-group-item" href="/2021/08/05/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E4%B8%80%E5%A4%A9)/"><i class="fa  fa-book"></i> java开发实战(第一天)</a>
             
-          
-        
           
             
           
