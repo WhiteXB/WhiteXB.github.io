@@ -64,7 +64,23 @@
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 
+    <link rel="stylesheet" href="./live2d/css/live2d.css" /><!-- live2d看板娘在themes的source中替换 -->
     <body class="custom-background">
+        <div id="landlord">
+            <div class="message" style="opacity:0"></div>
+            <canvas id="live2d" width="200" height="300" class="live2d"></canvas>
+            <div class="hide-button">隐藏</div>
+        </div>
+        <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            var message_Path = './live2d/'
+            var home_Path = 'https://white-x.top/'
+        </script>
+        <script type="text/javascript" src="./live2d/js/live2d.js"></script>
+        <script type="text/javascript" src="./live2d/js/message.js"></script>
+        <script type="text/javascript">
+            loadlive2d("live2d", "./live2d/model/leimu/leimu.model.json");
+        </script>
         <div id="kratos-wrapper">
     <div id="kratos-page">
         <div id="kratos-header">
@@ -345,7 +361,7 @@
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
-        <a href="/tags/HTML/" style="font-size: 0.77em;">HTML</a> <a href="/tags/c%E8%AF%AD%E8%A8%80/" style="font-size: 0.6em;">c语言</a> <a href="/tags/git/" style="font-size: 0.6em;">git</a> <a href="/tags/java/" style="font-size: 0.67em;">java</a> <a href="/tags/javascript/" style="font-size: 0.7em;">javascript</a> <a href="/tags/jquery/" style="font-size: 0.67em;">jquery</a> <a href="/tags/linux/" style="font-size: 0.63em;">linux</a> <a href="/tags/win/" style="font-size: 0.6em;">win</a> <a href="/tags/%E4%B8%BB%E9%A2%98/" style="font-size: 0.6em;">主题</a> <a href="/tags/%E5%92%95%E5%92%95%E5%92%95/" style="font-size: 0.6em;">咕咕咕</a> <a href="/tags/%E5%BF%83%E5%BE%97/" style="font-size: 0.6em;">心得</a> <a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 0.6em;">感悟</a> <a href="/tags/%E6%96%87%E6%A1%A3/" style="font-size: 0.6em;">文档</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 0.73em;">服务器</a> <a href="/tags/%E7%BB%8F%E9%AA%8C/" style="font-size: 0.8em;">经验</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 0.63em;">网络</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 0.6em;">网络安全</a> <a href="/tags/%E9%A1%B9%E7%9B%AE/" style="font-size: 0.6em;">项目</a>
+        <a href="/tags/HTML/" style="font-size: 0.77em;">HTML</a> <a href="/tags/c%E8%AF%AD%E8%A8%80/" style="font-size: 0.6em;">c语言</a> <a href="/tags/git/" style="font-size: 0.6em;">git</a> <a href="/tags/java/" style="font-size: 0.67em;">java</a> <a href="/tags/javascript/" style="font-size: 0.7em;">javascript</a> <a href="/tags/jquery/" style="font-size: 0.67em;">jquery</a> <a href="/tags/linux/" style="font-size: 0.63em;">linux</a> <a href="/tags/win/" style="font-size: 0.6em;">win</a> <a href="/tags/%E4%B8%BB%E9%A2%98/" style="font-size: 0.6em;">主题</a> <a href="/tags/%E5%92%95%E5%92%95%E5%92%95/" style="font-size: 0.6em;">咕咕咕</a> <a href="/tags/%E5%BF%83%E5%BE%97/" style="font-size: 0.6em;">心得</a> <a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 0.6em;">感悟</a> <a href="/tags/%E6%96%87%E6%A1%A3/" style="font-size: 0.6em;">文档</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 0.73em;">服务器</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 0.6em;">测试</a> <a href="/tags/%E7%BB%8F%E9%AA%8C/" style="font-size: 0.8em;">经验</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 0.63em;">网络</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 0.6em;">网络安全</a>
       </div>
   </aside>
 
@@ -356,6 +372,12 @@
   <div class="tab-content">
       <ul class="list-group">
         
+        
+          
+          
+            <a class="list-group-item" href="/2021/08/17/live2d/"><i class="fa  fa-book"></i> live2d</a>
+            
+          
         
           
           
@@ -382,11 +404,7 @@
           
         
           
-          
-            <a class="list-group-item" href="/2021/08/13/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E5%8D%81%E5%A4%A9)/"><i class="fa  fa-book"></i> java开发实战(第十天)</a>
             
-          
-        
           
             
           
@@ -547,5 +565,6 @@
 <!-- Extra support for third-party plguins  -->
 
 
+        
     </body>
 </html>
