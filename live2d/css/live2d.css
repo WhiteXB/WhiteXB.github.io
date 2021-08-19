@@ -1,12 +1,13 @@
 #landlord {
     user-select: none;
     position: fixed;
-    left: 80px;
+    right: 450px;
     bottom: 0;
     width:200px;
-    height:300px;
+    height:420px;
     z-index: 10000;
-    font-size: 0;
+    font-size: 2;
+    color: #00aeff;
     transition: all .3s ease-in-out;
 }
 
