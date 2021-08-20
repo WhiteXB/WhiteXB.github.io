@@ -299,9 +299,9 @@ function Won() {
     }
     won = true;
     //console.log("hello");
-    level.innerHTML = `<div id="won">YOU WON!</div>
+    level.innerHTML = `<div id="won">zh牛逼</div>
                     <button id="restart" class = "btn game-buttons" onclick = "Restart();">
-                        <span>RESTART</span>
+                        <span>返回</span>
                         <svg preserveAspectRatio="none" viewBox="0 0 132 45">
                             <g clip-path="url(#clip)" filter="url(#goo-big)">
                                 <circle class="top-left" cx="49.5" cy="-0.5" r="26.5" />
@@ -341,7 +341,7 @@ function Won() {
                     </svg>
                         
                     <button id="home" class = "btn game-buttons" onclick = "ShowMenu();">
-                        <span>HOME</span>
+                        <span>菜单</span>
                         <svg preserveAspectRatio="none" viewBox="0 0 132 45">
                             <g clip-path="url(#clip)" filter="url(#goo-big)">
                                 <circle class="top-left" cx="49.5" cy="-0.5" r="26.5" />
