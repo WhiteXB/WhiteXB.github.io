@@ -13,17 +13,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="" />
+    <meta name="keywords" content="HTML, 经验" />
   
-  <meta property="og:type" content="article">
+  <meta name="description" content="jquery 事件操作1.jquery的页面加载完成之后是浏览器的内核解析完页面的标签创建好Dom对象之后会马上执行2.原生js的页面加载完成 之后，处理要等浏览器内核解析完标签创建好dom对象，还要等标签显示时需要的内容加载完成3.原生js只执行最后一次4.jquery依次执行触发 事件1234567891011121314151617181920212223242526272829303132">
+<meta property="og:type" content="article">
 <meta property="og:title" content="java开发实战(第十九天)">
 <meta property="og:url" content="https://whitexb.github.io/2021/08/22/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E5%8D%81%E4%B9%9D%E5%A4%A9)/index.html">
 <meta property="og:site_name" content="(*´∇｀*)白筱の猫舍">
+<meta property="og:description" content="jquery 事件操作1.jquery的页面加载完成之后是浏览器的内核解析完页面的标签创建好Dom对象之后会马上执行2.原生js的页面加载完成 之后，处理要等浏览器内核解析完标签创建好dom对象，还要等标签显示时需要的内容加载完成3.原生js只执行最后一次4.jquery依次执行触发 事件1234567891011121314151617181920212223242526272829303132">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-08-22T12:02:28.000Z">
-<meta property="article:modified_time" content="2021-08-22T12:02:39.732Z">
+<meta property="article:modified_time" content="2021-08-23T07:27:11.670Z">
 <meta property="article:author" content="white-x">
+<meta property="article:tag" content="经验">
+<meta property="article:tag" content="HTML">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta name="twitter:site" content="@null">
@@ -154,7 +158,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        0
+                        ~3.64K
                     
                     字
                 </li>
@@ -163,11 +167,14 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1629633759732"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1629703631670"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
-            
+            <h1 id="jquery-事件操作"><a href="#jquery-事件操作" class="headerlink" title="jquery 事件操作"></a>jquery 事件操作</h1><p>1.jquery的页面加载完成之后是浏览器的内核解析完页面的标签创建好Dom对象之后会马上执行<br>2.原生js的页面加载完成 之后，处理要等浏览器内核解析完标签创建好dom对象，还要等标签显示时需要的内容加载完成<br>3.原生js只执行最后一次<br>4.jquery依次执行触发</p>
+<h1 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h1><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">$(function()&#123;</span><br><span class="line"><span class="code">				//*1.通常绑定事件的方式</span></span><br><span class="line"><span class="code">				//给元素绑定事件  </span></span><br><span class="line"><span class="code">				//jquery对象.事件方法(回调函数()&#123; 触发事件执行的代码 &#125;).事件方法(回调函数()&#123; 触发事件执行的代码 &#125;).事件方法(回调函数()&#123; 触发事件执行的代码 &#125;)</span></span><br><span class="line"><span class="code">				//绑定事件可以链式操作</span></span><br><span class="line"><span class="code">				$(&quot;.head&quot;).click(function()&#123;</span></span><br><span class="line"><span class="code">					$(&quot;.content&quot;).toggle();</span></span><br><span class="line"><span class="code">				&#125;).mouseover(function()&#123;</span></span><br><span class="line"><span class="code">					$(&quot;.content&quot;).toggle();</span></span><br><span class="line"><span class="code">				&#125;); </span></span><br><span class="line"><span class="code">				</span></span><br><span class="line"><span class="code">				//*2.jQuery提供的绑定方式：bind(type,[data],fn)函数把元素和事件绑定起来</span></span><br><span class="line"><span class="code">				//type表示要绑定的事件   [data]表示传入的数据   fn表示事件的处理方法</span></span><br><span class="line"><span class="code">				//bind(事件字符串,回调函数),后来添加的元素不会绑定事件</span></span><br><span class="line"><span class="code">				//使用bind()绑定多个事件   type可以接受多个事件类型，使用空格分割多个事件</span></span><br><span class="line"><span class="code">				/* $(&quot;.head&quot;).bind(&quot;click mouseover&quot;,function()&#123;</span></span><br><span class="line"><span class="code">					$(&quot;.content&quot;).toggle();</span></span><br><span class="line"><span class="code">				&#125;); */</span></span><br><span class="line"><span class="code">			</span></span><br><span class="line"><span class="code">				</span></span><br><span class="line"><span class="code">				//3.one()只绑定一次,绑定的事件只会发生一次one(type,[data],fn)函数把元素和事件绑定起来</span></span><br><span class="line"><span class="code">				//type表示要绑定的事件   [data]表示传入的数据   fn表示事件的处理方法</span></span><br><span class="line"><span class="code">			/* 	$(&quot;.head&quot;).one(&quot;click mouseover&quot;,function()&#123;</span></span><br><span class="line"><span class="code">					$(&quot;.content&quot;).toggle();</span></span><br><span class="line"><span class="code">				&#125;); */</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">				//4.live方法会为现在及以后添加的元素都绑定上相应的事件</span></span><br><span class="line"><span class="code">			/**	$(&quot;.head&quot;).live(&quot;click&quot;,function()&#123;</span></span><br><span class="line"><span class="code">					$(&quot;.content&quot;).toggle();</span></span><br><span class="line"><span class="code">				&#125;);</span></span><br><span class="line"><span class="code">				</span></span><br><span class="line"><span class="code">				$(&quot;#panel&quot;).before(&quot;&lt;h5 class=&#x27;head&#x27;&gt;什么是jQuery?&lt;/h5&gt;&quot;);</span></span><br><span class="line"><span class="code">			*/</span></span><br><span class="line"><span class="code">			&#125;);</span></span><br></pre></td></tr></table></figure>
+<h1 id="事件冒泡"><a href="#事件冒泡" class="headerlink" title="事件冒泡"></a>事件冒泡</h1><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">父子元素同时监听一个事件，触发子元素也被传递到父元素里去</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;jquery-1.7.2.js&quot;</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span></span><br><span class="line"><span class="code">	//当我们发生一个事件以后，某个事件其实就是一个对象。事件对象</span></span><br><span class="line"><span class="code">	//使用jquery获取事件对象，在回调函数中传入event参数，event是jquery定义好的一个变量</span></span><br><span class="line"><span class="code">	$(function()&#123;</span></span><br><span class="line"><span class="code">		$(&quot;#areaDiv&quot;).mousemove(function(event)&#123;</span></span><br><span class="line"><span class="code">			$(&quot;#showMsg2&quot;).text(&quot;x=&quot;+event.screenX+&quot; y=&quot;+event.screenY)	</span></span><br><span class="line"><span class="code">		&#125;)</span></span><br><span class="line"><span class="code">	&#125;)</span></span><br><span class="line"><span class="code">	window.onload = function()&#123;</span></span><br><span class="line"><span class="code">		//使用js获取事件对象</span></span><br><span class="line"><span class="code">		var areaDiv = document.getElementById(&quot;areaDiv&quot;);</span></span><br><span class="line"><span class="code">		var showMsg = document.getElementById(&quot;showMsg&quot;);</span></span><br><span class="line"><span class="code">		//同样是将event传入回调函数</span></span><br><span class="line"><span class="code">		areaDiv.onmousemove = function(event)&#123;</span></span><br><span class="line"><span class="code">			var x = event.pageX;//当前页面的坐标</span></span><br><span class="line"><span class="code">			var y = event.pageY;//Y</span></span><br><span class="line"><span class="code">			showMsg.innerHTML = &quot;x=&quot;+x+&quot; y=&quot;+y;</span></span><br><span class="line"><span class="code">		&#125;;</span></span><br><span class="line"><span class="code">	&#125;</span></span><br></pre></td></tr></table></figure>
+<h1 id="图片跟随"><a href="#图片跟随" class="headerlink" title="图片跟随"></a>图片跟随</h1><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;Content-Type&quot;</span> <span class="attr">content</span>=<span class="string">&quot;text/html; charset=UTF-8&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">title</span>&gt;</span></span>Insert title here<span class="xml"><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span></span><br><span class="line"><span class="code">	body &#123;</span></span><br><span class="line"><span class="code">		text-align: center;</span></span><br><span class="line"><span class="code">	&#125;</span></span><br><span class="line"><span class="code">	#small &#123;</span></span><br><span class="line"><span class="code">		margin-top: 150px;</span></span><br><span class="line"><span class="code">	&#125;</span></span><br><span class="line"><span class="code">	#showBig &#123;</span></span><br><span class="line"><span class="code">		position: absolute;</span></span><br><span class="line"><span class="code">		display: none;</span></span><br><span class="line"><span class="code">	&#125;</span></span><br><span class="line"><span class="code">&lt;/style&gt;</span></span><br><span class="line"><span class="code">&lt;script type=&quot;text/javascript&quot; src=&quot;script/jquery-1.7.2.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="code">&lt;script type=&quot;text/javascript&quot;&gt;</span></span><br><span class="line"><span class="code">	$(function()&#123;</span></span><br><span class="line"><span class="code">		$(&quot;#small&quot;)</span></span><br><span class="line"><span class="code">			.mouseover(function(event)&#123;</span></span><br><span class="line"><span class="code">				$(&quot;#showBig&quot;)</span></span><br><span class="line"><span class="code">					.show()</span></span><br><span class="line"><span class="code">					.css(&quot;left&quot;,event.pageX+10)</span></span><br><span class="line"><span class="code">					.css(&quot;top&quot;,event.pageY+10);</span></span><br><span class="line"><span class="code">			&#125;)</span></span><br><span class="line"><span class="code">			.mousemove(function(event)&#123;</span></span><br><span class="line"><span class="code">				$(&quot;#showBig&quot;)</span></span><br><span class="line"><span class="code">					.css(&quot;left&quot;,event.pageX+10)</span></span><br><span class="line"><span class="code">					.css(&quot;top&quot;,event.pageY+10);</span></span><br><span class="line"><span class="code">			&#125;)</span></span><br><span class="line"><span class="code">			.mouseout(function()&#123;</span></span><br><span class="line"><span class="code">				$(&quot;#showBig&quot;).hide();</span></span><br><span class="line"><span class="code">			&#125;);</span></span><br><span class="line"><span class="code">	&#125;);</span></span><br><span class="line"><span class="code">&lt;/script&gt;</span></span><br><span class="line"><span class="code">&lt;/head&gt;</span></span><br><span class="line"><span class="code">&lt;body&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">	&lt;img id=&quot;small&quot; src=&quot;img/small.jpg&quot; /&gt;</span></span><br><span class="line"><span class="code">	</span></span><br><span class="line"><span class="code">	&lt;div id=&quot;showBig&quot;&gt;</span></span><br><span class="line"><span class="code">		&lt;img src=&quot;img/big.jpg&quot;&gt;</span></span><br><span class="line"><span class="code">	&lt;/div&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="xml"><span class="css">&lt;/<span class="selector-tag">body</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="css">&lt;/<span class="selector-tag">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
         </div>
         
             <div class="kratos-copyright text-center clearfix">
@@ -236,7 +243,7 @@
             const twitterBase   = "https://twitter.com/intent/tweet?";
             const hostUrl       = "https://whitexb.github.io/2021/08/22/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E5%8D%81%E4%B9%9D%E5%A4%A9)/";
             const title         = "「java开发实战(第十九天)」";
-            const excerpt       = ``;
+            const excerpt       = `jquery 事件操作1.jquery的页面加载完成之后是浏览器的内核解析完页面的标签创建好Dom对象之后会马上执行2.原生js的页面加载完成 之后，处理要等浏览器内核解析完标签创建好dom对象，还要等标签显示时需要的内容加载完成3....`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -255,10 +262,10 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    
+                    <a class="tag-none-link" href="/tags/HTML/" rel="tag">HTML</a>, <a class="tag-none-link" href="/tags/%E7%BB%8F%E9%AA%8C/" rel="tag">经验</a>
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2021-08-22</span>
+                <span>最后编辑：2021-08-23</span>
                 </div>
             </div>
         </footer>
@@ -270,6 +277,10 @@
                 <a title=" java开发实战(第十八天)" href="/2021/08/21/java开发实战(第十八天)/">&lt; 上一篇</a>
             </div>
             
+            
+            <div class="nav-next clearfix">
+                <a title=" java开发实战(第二十天)" href="/2021/08/23/java开发实战(第二十天)/">下一篇 &gt;</a>
+            </div>
             
         </nav>
     
@@ -329,6 +340,12 @@
         
           
           
+            <a class="list-group-item" href="/2021/08/23/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%A4%A9)/"><i class="fa  fa-book"></i> java开发实战(第二十天)</a>
+            
+          
+        
+          
+          
             <a class="list-group-item" href="/2021/08/22/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E5%8D%81%E4%B9%9D%E5%A4%A9)/"><i class="fa  fa-book"></i> java开发实战(第十九天)</a>
             
           
@@ -352,11 +369,7 @@
           
         
           
-          
-            <a class="list-group-item" href="/2021/08/18/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E5%8D%81%E4%BA%94%E5%A4%A9)/"><i class="fa  fa-book"></i> java开发实战(第十五天)</a>
             
-          
-        
           
             
           
