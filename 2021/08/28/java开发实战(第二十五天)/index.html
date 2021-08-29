@@ -15,16 +15,16 @@
   
     <meta name="keywords" content="Tomcat, servlet" />
   
-  <meta name="description" content="javaweb导入源码servlet里面都是tomcat源码serveltGenericServlet类实现了Servlet接口，做了很多空实现并有一个ServletConfig类引用，ServletConfig的使用在做一些方法 HttpServlet抽象类实现了重要的抽象的方法，实现了请求的分发处理人家已经写好的">
+  <meta name="description" content="HttpServlet导入源码servlet里面都是tomcat源码serveltGenericServlet类实现了Servlet接口，做了很多空实现并有一个ServletConfig类引用，ServletConfig的使用在做一些方法 HttpServlet抽象类实现了重要的抽象的方法，实现了请求的分发处理人家已经写好的更具业务需求重写douget和dopost方法就行 ServletConf">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java开发实战(第二十五天)">
 <meta property="og:url" content="https://whitexb.github.io/2021/08/28/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%BA%94%E5%A4%A9)/index.html">
 <meta property="og:site_name" content="(*´∇｀*)白筱の猫舍">
-<meta property="og:description" content="javaweb导入源码servlet里面都是tomcat源码serveltGenericServlet类实现了Servlet接口，做了很多空实现并有一个ServletConfig类引用，ServletConfig的使用在做一些方法 HttpServlet抽象类实现了重要的抽象的方法，实现了请求的分发处理人家已经写好的">
+<meta property="og:description" content="HttpServlet导入源码servlet里面都是tomcat源码serveltGenericServlet类实现了Servlet接口，做了很多空实现并有一个ServletConfig类引用，ServletConfig的使用在做一些方法 HttpServlet抽象类实现了重要的抽象的方法，实现了请求的分发处理人家已经写好的更具业务需求重写douget和dopost方法就行 ServletConf">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-08-28T14:54:58.000Z">
-<meta property="article:modified_time" content="2021-08-29T01:02:10.105Z">
+<meta property="article:modified_time" content="2021-08-29T02:42:22.969Z">
 <meta property="article:author" content="white-x">
 <meta property="article:tag" content="Tomcat">
 <meta property="article:tag" content="servlet">
@@ -158,7 +158,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        160
+                        1007
                     
                     字
                 </li>
@@ -167,12 +167,17 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1630198930105"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1630204942969"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
-            <h1 id="javaweb"><a href="#javaweb" class="headerlink" title="javaweb"></a>javaweb</h1><p>导入源码servlet里面都是tomcat源码servelt<br>GenericServlet类实现了Servlet接口，做了很多空实现<br>并有一个ServletConfig类引用，ServletConfig的使用在做一些方法</p>
-<p>HttpServlet抽象类实现了重要的抽象的方法，实现了请求的分发处理<br>人家已经写好的</p>
+            <h1 id="HttpServlet"><a href="#HttpServlet" class="headerlink" title="HttpServlet"></a>HttpServlet</h1><p>导入源码servlet里面都是tomcat源码servelt<br>GenericServlet类实现了Servlet接口，做了很多空实现<br>并有一个ServletConfig类引用，ServletConfig的使用在做一些方法</p>
+<p>HttpServlet抽象类实现了重要的抽象的方法，实现了请求的分发处理<br>人家已经写好的<br>更具业务需求重写douget和dopost方法就行</p>
+<h1 id="ServletConfig"><a href="#ServletConfig" class="headerlink" title="ServletConfig"></a>ServletConfig</h1><p>都是由tomcat创建使用，是每个servlet创建后就生成的<br>1.可以获取servlet重新发别名servlet-name的值<br>2.获取初始化参数init-param<br>3.获取servletContext对象<br>可以写多个java文件通过不同的访问获取不同servletconfig属性</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">    System.out.println(&quot;2.init构造器方法&quot;);</span></span><br><span class="line"><span class="code">//        1.可以获取servlet重新发别名servlet-name的值</span></span><br><span class="line"><span class="code">        System.out.println(&quot;HelloServlet的别名是&quot;+ servletConfig.getServletName());</span></span><br><span class="line"><span class="code">//        2.获取初始化参数init-param</span></span><br><span class="line"><span class="code">        System.out.println(&quot;初始化参数username的值是&quot;+servletConfig.getInitParameter(&quot;username&quot;));</span></span><br><span class="line"><span class="code">        System.out.println(&quot;初始化参数url的值是&quot;+servletConfig.getInitParameter(&quot;url&quot;));</span></span><br><span class="line"><span class="code">        //        3.获取servletContext对象</span></span><br><span class="line"><span class="code">        System.out.println(servletConfig.getServletContext());</span></span><br></pre></td></tr></table></figure>
+<p>父类的保存操作就会丢失</p>
+<h1 id="ServletContext类"><a href="#ServletContext类" class="headerlink" title="ServletContext类"></a>ServletContext类</h1><p>什么是servletContext<br>1.是一个接口，表示servlet上下文对象<br>2.一个web工程，只有一个servletContext对象实例</p>
+<h2 id="什么是域对象"><a href="#什么是域对象" class="headerlink" title="什么是域对象"></a>什么是域对象</h2><p>可以像mao一样存取时间的对象，叫做域对象<br>这里的域对象是操作范围</p>
 
         </div>
         
@@ -242,8 +247,7 @@
             const twitterBase   = "https://twitter.com/intent/tweet?";
             const hostUrl       = "https://whitexb.github.io/2021/08/28/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%BA%94%E5%A4%A9)/";
             const title         = "「java开发实战(第二十五天)」";
-            const excerpt       = `javaweb导入源码servlet里面都是tomcat源码serveltGenericServlet类实现了Servlet接口，做了很多空实现并有一个ServletConfig类引用，ServletConfig的使用在做一些方法
-H...`;
+            const excerpt       = `HttpServlet导入源码servlet里面都是tomcat源码serveltGenericServlet类实现了Servlet接口，做了很多空实现并有一个ServletConfig类引用，ServletConfig的使用在做一些...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
