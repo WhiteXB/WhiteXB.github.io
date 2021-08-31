@@ -13,19 +13,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="" />
+    <meta name="keywords" content="servlet, 服务器" />
   
-  <meta name="description" content="微信服务器维护日志dns域名为无效域名文本无法传递到服务器“域名劫持”通常是电信运营商（ISP）干的好事儿。很多宽带用户用的域名服务器就是 ISP 提供给你的。 举例： 前几年曾经出现过：某个 ISP 跟某网站勾结，把维基百科的流量重定向到XX。具体搞法是：该 ISP 篡改自己的域名服务器的记录，把里面跟维基百科 相关的域名记录的 IP地址 修改为XX的 IP地址。如此一来，假设你用的是这个 IS">
+  <meta name="description" content="微信服务器维护日志123456789101112131415161718dns域名为无效域名文本无法传递到服务器“域名劫持”通常是电信运营商（ISP）干的好事儿。很多宽带用户用的域名服务器就是 ISP 提供给你的。举例：前几年曾经出现过：某个 ISP 跟某网站勾结，把维基百科的流量重定向到XX。具体搞法是：该 ISP 篡改自己的域名服务器的记录，把里面跟维基百科 相关的域名记录的 IP地址 修改为">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java开发实战(第二十八天)">
 <meta property="og:url" content="https://whitexb.github.io/2021/08/31/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%85%AB%E5%A4%A9)/index.html">
 <meta property="og:site_name" content="(*´∇｀*)白筱の猫舍">
-<meta property="og:description" content="微信服务器维护日志dns域名为无效域名文本无法传递到服务器“域名劫持”通常是电信运营商（ISP）干的好事儿。很多宽带用户用的域名服务器就是 ISP 提供给你的。 举例： 前几年曾经出现过：某个 ISP 跟某网站勾结，把维基百科的流量重定向到XX。具体搞法是：该 ISP 篡改自己的域名服务器的记录，把里面跟维基百科 相关的域名记录的 IP地址 修改为XX的 IP地址。如此一来，假设你用的是这个 IS">
+<meta property="og:description" content="微信服务器维护日志123456789101112131415161718dns域名为无效域名文本无法传递到服务器“域名劫持”通常是电信运营商（ISP）干的好事儿。很多宽带用户用的域名服务器就是 ISP 提供给你的。举例：前几年曾经出现过：某个 ISP 跟某网站勾结，把维基百科的流量重定向到XX。具体搞法是：该 ISP 篡改自己的域名服务器的记录，把里面跟维基百科 相关的域名记录的 IP地址 修改为">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-08-31T05:54:27.000Z">
-<meta property="article:modified_time" content="2021-08-31T16:57:53.390Z">
+<meta property="article:modified_time" content="2021-08-31T19:43:08.206Z">
 <meta property="article:author" content="white-x">
+<meta property="article:tag" content="服务器">
+<meta property="article:tag" content="servlet">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta name="twitter:site" content="@null">
@@ -156,7 +158,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        556
+                        1156
                     
                     字
                 </li>
@@ -165,18 +167,16 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1630429073390"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1630438988206"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
-            <h1 id="微信服务器维护日志"><a href="#微信服务器维护日志" class="headerlink" title="微信服务器维护日志"></a>微信服务器维护日志</h1><p>dns域名为无效域名<br>文本无法传递到服务器<br>“域名劫持”通常是电信运营商（ISP）干的好事儿。很多宽带用户用的域名服务器就是 ISP 提供给你的。</p>
-<p>举例：</p>
-<p>前几年曾经出现过：某个 ISP 跟某网站勾结，把维基百科的流量重定向到XX。具体搞法是：该 ISP 篡改自己的域名服务器的记录，把里面跟维基百科 相关的域名记录的 IP地址 修改为XX的 IP地址。如此一来，假设你用的是这个 ISP 的域名服务器，当你在浏览器输入 <a target="_blank" rel="noopener" href="http://zh.wikipedia.org/%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E4%BD%A0%E7%9A%84%E7%94%B5%E8%84%91%E6%9F%A5%E8%AF%A2%E5%88%B0%E7%9A%84">http://zh.wikipedia.org/的时候，你的电脑查询到的</a> IP地址 其实是XX的 IP地址，所以浏览器打开的是“XX”的主页。</p>
-<p>★如何对付“域名劫持”？</p>
-<p>刚才说了，“域名劫持”的根源在于：域名服务器上的记录被人给改了。要对付这种耍流氓，最直接的办法就是不要使用这种流氓 ISP 提供的域名服务器，改用国外那些比较靠谱的。目前口碑最好的，大概是 Google 提供的两个域名服务器，IP地址 分别是 8.8.8.8 和 8.8.4.4 ——这俩不光是地址好记，更重要的是，不会耍流氓。</p>
-<p>1.DNS失败</p>
-<p>该错误为微信服务器在推送消息给开发者时，解析dns失败。如遇到此报警，请开发者确认：</p>
-<p>a）填写的url,域名是否有误；<br>b) 域名是否发生变化，如过期，更新等。</p>
+            <h1 id="微信服务器维护日志"><a href="#微信服务器维护日志" class="headerlink" title="微信服务器维护日志"></a>微信服务器维护日志</h1><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">dns域名为无效域名</span><br><span class="line">文本无法传递到服务器</span><br><span class="line">“域名劫持”通常是电信运营商（ISP）干的好事儿。很多宽带用户用的域名服务器就是 ISP 提供给你的。</span><br><span class="line"></span><br><span class="line">举例：</span><br><span class="line"></span><br><span class="line">前几年曾经出现过：某个 ISP 跟某网站勾结，把维基百科的流量重定向到XX。具体搞法是：该 ISP 篡改自己的域名服务器的记录，把里面跟维基百科 相关的域名记录的 IP地址 修改为XX的 IP地址。如此一来，假设你用的是这个 ISP 的域名服务器，当你在浏览器输入 http://zh.wikipedia.org/的时候，你的电脑查询到的 IP地址 其实是XX的 IP地址，所以浏览器打开的是“XX”的主页。</span><br><span class="line"></span><br><span class="line">★如何对付“域名劫持”？</span><br><span class="line"></span><br><span class="line">刚才说了，“域名劫持”的根源在于：域名服务器上的记录被人给改了。要对付这种耍流氓，最直接的办法就是不要使用这种流氓 ISP 提供的域名服务器，改用国外那些比较靠谱的。目前口碑最好的，大概是 Google 提供的两个域名服务器，IP地址 分别是 8.8.8.8 和 8.8.4.4 ——这俩不光是地址好记，更重要的是，不会耍流氓。</span><br><span class="line"></span><br><span class="line">1.DNS失败</span><br><span class="line"></span><br><span class="line">该错误为微信服务器在推送消息给开发者时，解析dns失败。如遇到此报警，请开发者确认：</span><br><span class="line"></span><br><span class="line">a）填写的url,域名是否有误；</span><br><span class="line">b) 域名是否发生变化，如过期，更新等。</span><br></pre></td></tr></table></figure>
+<h1 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h1><h2 id="httpServletResponse"><a href="#httpServletResponse" class="headerlink" title="httpServletResponse"></a>httpServletResponse</h2><p>httpservletrequest表示请求过来的信息，httpservletResponse表示响应的信息<br>如果需要返回给客户端信息，都可以通过HttpservletResponse对象进行设置</p>
+<h2 id="两个输出流的说明"><a href="#两个输出流的说明" class="headerlink" title="两个输出流的说明"></a>两个输出流的说明</h2><p>字节流 getOutputStream() 常用于下载<br>字符流 getWiter()   常用于回传字符串（常用）<br>两个流只能同时使用一个，反之报错</p>
+<h2 id="请求重定向"><a href="#请求重定向" class="headerlink" title="请求重定向"></a>请求重定向</h2><p>客户端给服务端发请求，然后服务器告诉客户端说，我给一些新地址，访问新地址，请求重定向<br>响应码302已搬迁</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(&quot;请求重定向&quot;);</span><br><span class="line"><span class="code">        resp.setStatus(302);//返回状态</span></span><br><span class="line"><span class="code">        resp.setHeader(&quot;Location&quot;,&quot;http://localhost:8080/web_war_exploded/response2&quot;);</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">        resp.sendRedirect(&quot;http://localhost:8080/web_war_exploded/response2&quot;)  推荐使用</span></span><br></pre></td></tr></table></figure>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>1.地址栏会发生变化<br>2.两次请求<br>3.不共享域中的数据<br>4.不能访问web-inf下的资源</p>
 
         </div>
         
@@ -246,9 +246,7 @@
             const twitterBase   = "https://twitter.com/intent/tweet?";
             const hostUrl       = "https://whitexb.github.io/2021/08/31/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%85%AB%E5%A4%A9)/";
             const title         = "「java开发实战(第二十八天)」";
-            const excerpt       = `微信服务器维护日志dns域名为无效域名文本无法传递到服务器“域名劫持”通常是电信运营商（ISP）干的好事儿。很多宽带用户用的域名服务器就是 ISP 提供给你的。
-举例：
-前几年曾经出现过：某个 ISP 跟某网站勾结，把维基百科的流量重...`;
+            const excerpt       = `微信服务器维护日志123456789101112131415161718dns域名为无效域名文本无法传递到服务器“域名劫持”通常是电信运营商（ISP）干的好事儿。很多宽带用户用的域名服务器就是 ISP 提供给你的。举例：前几年曾经出现...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -267,7 +265,7 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    
+                    <a class="tag-none-link" href="/tags/servlet/" rel="tag">servlet</a>, <a class="tag-none-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">服务器</a>
                 </div>
                 <div class="pull-date">
                 <span>最后编辑：2021-09-01</span>
@@ -282,6 +280,10 @@
                 <a title=" java开发实战(第二十七天)" href="/2021/08/30/java开发实战(第二十七天) /">&lt; 上一篇</a>
             </div>
             
+            
+            <div class="nav-next clearfix">
+                <a title=" java开发实战(第二十九天)" href="/2021/09/01/java开发实战(第二十九天)/">下一篇 &gt;</a>
+            </div>
             
         </nav>
     
@@ -315,10 +317,22 @@
             
                     <div class="sticky-area">
                 
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix">
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar"></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BB%B4%E6%8A%A4%E6%97%A5%E5%BF%97"><span class="toc-text">微信服务器维护日志</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%80%E5%8F%91"><span class="toc-text">开发</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#httpServletResponse"><span class="toc-text">httpServletResponse</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%A4%E4%B8%AA%E8%BE%93%E5%87%BA%E6%B5%81%E7%9A%84%E8%AF%B4%E6%98%8E"><span class="toc-text">两个输出流的说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-text">请求重定向</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E7%82%B9"><span class="toc-text">特点</span></a></li></ol></li></ol></li></ol>
+    </div>
+</aside>
+                
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E9%A1%B9%E7%9B%AE/">小项目</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/">教程文档</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">22</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E9%A1%B9%E7%9B%AE/">小项目</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/">教程文档</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">24</span></li></ul>
   </aside>
 
 
@@ -327,7 +341,7 @@
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
-        <a href="/tags/HTML/" style="font-size: 0.8em;">HTML</a> <a href="/tags/HTTP/" style="font-size: 0.63em;">HTTP</a> <a href="/tags/JAVASCRIPT/" style="font-size: 0.6em;">JAVASCRIPT</a> <a href="/tags/Tomcat/" style="font-size: 0.77em;">Tomcat</a> <a href="/tags/c%E8%AF%AD%E8%A8%80/" style="font-size: 0.6em;">c语言</a> <a href="/tags/git/" style="font-size: 0.6em;">git</a> <a href="/tags/java/" style="font-size: 0.66em;">java</a> <a href="/tags/javascript/" style="font-size: 0.71em;">javascript</a> <a href="/tags/jquery/" style="font-size: 0.69em;">jquery</a> <a href="/tags/linux/" style="font-size: 0.63em;">linux</a> <a href="/tags/servlet/" style="font-size: 0.77em;">servlet</a> <a href="/tags/win/" style="font-size: 0.6em;">win</a> <a href="/tags/%E4%B8%BB%E9%A2%98/" style="font-size: 0.6em;">主题</a> <a href="/tags/%E5%92%95%E5%92%95%E5%92%95/" style="font-size: 0.63em;">咕咕咕</a> <a href="/tags/%E5%BF%83%E5%BE%97/" style="font-size: 0.6em;">心得</a> <a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 0.6em;">感悟</a> <a href="/tags/%E6%96%87%E6%A1%A3/" style="font-size: 0.6em;">文档</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 0.74em;">服务器</a>
+        <a href="/tags/HTML/" style="font-size: 0.8em;">HTML</a> <a href="/tags/HTTP/" style="font-size: 0.63em;">HTTP</a> <a href="/tags/JAVASCRIPT/" style="font-size: 0.6em;">JAVASCRIPT</a> <a href="/tags/Tomcat/" style="font-size: 0.73em;">Tomcat</a> <a href="/tags/c%E8%AF%AD%E8%A8%80/" style="font-size: 0.6em;">c语言</a> <a href="/tags/git/" style="font-size: 0.6em;">git</a> <a href="/tags/java/" style="font-size: 0.67em;">java</a> <a href="/tags/javascript/" style="font-size: 0.7em;">javascript</a> <a href="/tags/jquery/" style="font-size: 0.67em;">jquery</a> <a href="/tags/linux/" style="font-size: 0.63em;">linux</a> <a href="/tags/servlet/" style="font-size: 0.77em;">servlet</a> <a href="/tags/win/" style="font-size: 0.6em;">win</a> <a href="/tags/%E4%B8%BB%E9%A2%98/" style="font-size: 0.6em;">主题</a> <a href="/tags/%E5%92%95%E5%92%95%E5%92%95/" style="font-size: 0.63em;">咕咕咕</a> <a href="/tags/%E5%BF%83%E5%BE%97/" style="font-size: 0.6em;">心得</a> <a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 0.6em;">感悟</a> <a href="/tags/%E6%96%87%E6%A1%A3/" style="font-size: 0.6em;">文档</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 0.73em;">服务器</a>
       </div>
   </aside>
 
@@ -338,6 +352,12 @@
   <div class="tab-content">
       <ul class="list-group">
         
+        
+          
+          
+            <a class="list-group-item" href="/2021/09/01/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B9%9D%E5%A4%A9)/"><i class="fa  fa-book"></i> java开发实战(第二十九天)</a>
+            
+          
         
           
           
@@ -364,11 +384,7 @@
           
         
           
-          
-            <a class="list-group-item" href="/2021/08/27/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%9B%9B%E5%A4%A9)/"><i class="fa  fa-book"></i> java开发实战(第二十四天)</a>
             
-          
-        
           
             
           
