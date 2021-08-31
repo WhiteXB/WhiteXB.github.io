@@ -24,7 +24,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-08-31T19:25:31.000Z">
-<meta property="article:modified_time" content="2021-08-31T19:43:05.573Z">
+<meta property="article:modified_time" content="2021-08-31T20:10:20.819Z">
 <meta property="article:author" content="white-x">
 <meta property="article:tag" content="java">
 <meta property="article:tag" content="servlet">
@@ -158,7 +158,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        218
+                        505
                     
                     字
                 </li>
@@ -167,13 +167,18 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1630438985573"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1630440620819"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
             <h1 id="javaee项目的三层架构"><a href="#javaee项目的三层架构" class="headerlink" title="javaee项目的三层架构"></a>javaee项目的三层架构</h1><h2 id="web层控制层"><a href="#web层控制层" class="headerlink" title="web层控制层"></a>web层控制层</h2><p>1.获取请求参数，封装成为Bean对象<br>2.调用Service层处理业务<br>3.响应数据给客户端请求转发重定向<br>servlet程序<br>webwork<br>strtus1.x<br>strtus2.x<br>springmvc</p>
 <h2 id="service业务层"><a href="#service业务层" class="headerlink" title="service业务层"></a>service业务层</h2><p>1.处理业务逻辑<br>2.调用持久层保存到数据库<br>spring框架</p>
 <h2 id="dao-持久层"><a href="#dao-持久层" class="headerlink" title="dao 持久层"></a>dao 持久层</h2><p>和数据库的交互<br>sql语言<br>jdbc<br>dbutile<br>jdbctemplate<br>mybatis<br>hiberante<br>jpa</p>
+<p>分层的目的是为了解耦。解耦就是为了降低代码的耦合度<br>。方便项目后期的维护和升级</p>
+<h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2><p>com.atguigu.web/servlet/controller</p>
+<h2 id="service"><a href="#service" class="headerlink" title="service"></a>service</h2><p>service com.atguigu.service        service接口包<br>service com.atguigu.service.impl   service接口实现类</p>
+<h2 id="dao"><a href="#dao" class="headerlink" title="dao"></a>dao</h2><p>com.atguigu.dao         Dao接口包<br>com.atguigu.dao.impl    Dao接口实现类</p>
+<h2 id="实体bean对象"><a href="#实体bean对象" class="headerlink" title="实体bean对象"></a>实体bean对象</h2><p>com.atguigu.pojo/entity/dpmain/bean</p>
 
         </div>
         
@@ -319,7 +324,7 @@ s...`;
         <span class="toc-progress-bar"></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#javaee%E9%A1%B9%E7%9B%AE%E7%9A%84%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84"><span class="toc-text">javaee项目的三层架构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#web%E5%B1%82%E6%8E%A7%E5%88%B6%E5%B1%82"><span class="toc-text">web层控制层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#service%E4%B8%9A%E5%8A%A1%E5%B1%82"><span class="toc-text">service业务层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dao-%E6%8C%81%E4%B9%85%E5%B1%82"><span class="toc-text">dao 持久层</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#javaee%E9%A1%B9%E7%9B%AE%E7%9A%84%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84"><span class="toc-text">javaee项目的三层架构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#web%E5%B1%82%E6%8E%A7%E5%88%B6%E5%B1%82"><span class="toc-text">web层控制层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#service%E4%B8%9A%E5%8A%A1%E5%B1%82"><span class="toc-text">service业务层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dao-%E6%8C%81%E4%B9%85%E5%B1%82"><span class="toc-text">dao 持久层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web"><span class="toc-text">web</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#service"><span class="toc-text">service</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dao"><span class="toc-text">dao</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E4%BD%93bean%E5%AF%B9%E8%B1%A1"><span class="toc-text">实体bean对象</span></a></li></ol></li></ol>
     </div>
 </aside>
                 
