@@ -15,16 +15,16 @@
   
     <meta name="keywords" content="数据库" />
   
-  <meta name="description" content="数据库数据库实体的抽象 层次不同层次有不同的包web层com.white.web&#x2F;servlet&#x2F;controllerservice册com.white.service       service接口包com.white.service.impl  service接口实现类dao持久层com.white.dao           Dao接口包com.white.dao.impl      Dao">
+  <meta name="description" content="数据库数据库实体的抽象编写对应的数据库表编写pojo程序 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061package com.white.pojo;public class user &amp;#123;    private">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java开发实战(第三十天)">
 <meta property="og:url" content="https://whitexb.github.io/2021/09/01/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E4%B8%89%E5%8D%81%E5%A4%A9)/index.html">
 <meta property="og:site_name" content="(*´∇｀*)白筱の猫舍">
-<meta property="og:description" content="数据库数据库实体的抽象 层次不同层次有不同的包web层com.white.web&#x2F;servlet&#x2F;controllerservice册com.white.service       service接口包com.white.service.impl  service接口实现类dao持久层com.white.dao           Dao接口包com.white.dao.impl      Dao">
+<meta property="og:description" content="数据库数据库实体的抽象编写对应的数据库表编写pojo程序 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061package com.white.pojo;public class user &amp;#123;    private">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-08-31T19:25:31.000Z">
-<meta property="article:modified_time" content="2021-09-02T13:44:12.702Z">
+<meta property="article:modified_time" content="2021-09-04T15:05:09.398Z">
 <meta property="article:author" content="white-x">
 <meta property="article:tag" content="数据库">
 <meta name="twitter:card" content="summary">
@@ -157,7 +157,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        298
+                        ~1.83K
                     
                     字
                 </li>
@@ -166,11 +166,12 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1630590252702"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1630767909398"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
-            <h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><p>数据库实体的抽象</p>
+            <h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><p>数据库实体的抽象<br>编写对应的数据库表<br>编写pojo程序</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">package com.white.pojo;</span><br><span class="line"></span><br><span class="line">public class user &#123;</span><br><span class="line"><span class="code">    private Integer id;</span></span><br><span class="line"><span class="code">    private String username;</span></span><br><span class="line"><span class="code">    private String password;</span></span><br><span class="line"><span class="code">    private String call;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    public Integer getId() &#123;</span></span><br><span class="line"><span class="code">        return id;</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    public void setId(Integer id) &#123;</span></span><br><span class="line"><span class="code">        this.id = id;</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    public String getUsername() &#123;</span></span><br><span class="line"><span class="code">        return username;</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    public void setUsername(String username) &#123;</span></span><br><span class="line"><span class="code">        this.username = username;</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    public String getPassword() &#123;</span></span><br><span class="line"><span class="code">        return password;</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    public void setPassword(String password) &#123;</span></span><br><span class="line"><span class="code">        this.password = password;</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    public String getCall() &#123;</span></span><br><span class="line"><span class="code">        return call;</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    public void setCall(String call) &#123;</span></span><br><span class="line"><span class="code">        this.call = call;</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    @Override</span></span><br><span class="line"><span class="code">    public String toString() &#123;</span></span><br><span class="line"><span class="code">        return &quot;user&#123;&quot; +</span></span><br><span class="line"><span class="code">                &quot;id=&quot; + id +</span></span><br><span class="line"><span class="code">                &quot;, username=&#x27;&quot; + username + &#x27;\&#x27;&#x27; +</span></span><br><span class="line"><span class="code">                &quot;, password=&#x27;&quot; + password + &#x27;\&#x27;&#x27; +</span></span><br><span class="line"><span class="code">                &quot;, call=&#x27;&quot; + call + &#x27;\&#x27;&#x27; +</span></span><br><span class="line"><span class="code">                &#x27;&#125;&#x27;;</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    public user() &#123;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    public user(Integer id, String username, String password, String call) &#123;</span></span><br><span class="line"><span class="code">        this.id = id;</span></span><br><span class="line"><span class="code">        this.username = username;</span></span><br><span class="line"><span class="code">        this.password = password;</span></span><br><span class="line"><span class="code">        this.call = call;</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code">&#125;</span></span><br></pre></td></tr></table></figure>
 <h1 id="层次"><a href="#层次" class="headerlink" title="层次"></a>层次</h1><p>不同层次有不同的包<br>web层<br>com.white.web/servlet/controller<br>service册<br>com.white.service       service接口包<br>com.white.service.impl  service接口实现类<br>dao持久层<br>com.white.dao           Dao接口包<br>com.white.dao.impl      Dao接口包<br>实体bean对象<br>com.white.pojo/entity/domain/bean   javabear类<br>测试包<br>com.white.text/junit<br>工具类<br>com.white.utils</p>
 
         </div>
@@ -241,8 +242,8 @@
             const twitterBase   = "https://twitter.com/intent/tweet?";
             const hostUrl       = "https://whitexb.github.io/2021/09/01/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E4%B8%89%E5%8D%81%E5%A4%A9)/";
             const title         = "「java开发实战(第三十天)」";
-            const excerpt       = `数据库数据库实体的抽象
-层次不同层次有不同的包web层com.white.web/servlet/controllerservice册com.white.service       service接口包com.white.servic...`;
+            const excerpt       = `数据库数据库实体的抽象编写对应的数据库表编写pojo程序
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -264,7 +265,7 @@
                     <a class="tag-none-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a>
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2021-09-02</span>
+                <span>最后编辑：2021-09-04</span>
                 </div>
             </div>
         </footer>
