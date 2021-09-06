@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="" />
+    <meta name="keywords" content="数据库" />
   
   <meta name="description" content="jdbcutil.java12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455package com.white.utils;import com.alibaba.druid.pool.DruidDataSource;import com.aliba">
 <meta property="og:type" content="article">
@@ -24,8 +24,9 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-09-05T07:45:37.000Z">
-<meta property="article:modified_time" content="2021-09-05T13:34:06.110Z">
+<meta property="article:modified_time" content="2021-09-06T13:09:39.606Z">
 <meta property="article:author" content="white-x">
+<meta property="article:tag" content="数据库">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta name="twitter:site" content="@null">
@@ -165,7 +166,7 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1630848846110"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1630933779606"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
@@ -265,10 +266,10 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    
+                    <a class="tag-none-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a>
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2021-09-05</span>
+                <span>最后编辑：2021-09-06</span>
                 </div>
             </div>
         </footer>
@@ -280,6 +281,10 @@
                 <a title=" java开发实战(第二十九天)" href="/2021/09/01/java开发实战(第二十九天)/">&lt; 上一篇</a>
             </div>
             
+            
+            <div class="nav-next clearfix">
+                <a title=" web层交互数据库" href="/2021/09/06/web层交互数据库/">下一篇 &gt;</a>
+            </div>
             
         </nav>
     
@@ -313,10 +318,22 @@
             
                     <div class="sticky-area">
                 
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix">
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar"></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#jdbcutil-java"><span class="toc-text">jdbcutil.java</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JdbcutilTest-java-%E6%B5%8B%E8%AF%95%E7%B1%BB"><span class="toc-text">JdbcutilTest.java 测试类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Basedao-java"><span class="toc-text">Basedao.java</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#User-java"><span class="toc-text">User.java</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UserDaoImpl-java"><span class="toc-text">UserDaoImpl.java</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UserDao-interface-%E6%B3%A8%E9%87%8A"><span class="toc-text">UserDao.interface 注释</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UserDaoTest"><span class="toc-text">UserDaoTest</span></a></li></ol>
+    </div>
+</aside>
+                
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E9%A1%B9%E7%9B%AE/">小项目</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/">教程文档</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">25</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E9%A1%B9%E7%9B%AE/">小项目</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/">教程文档</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">27</span></li></ul>
   </aside>
 
 
@@ -325,7 +342,7 @@
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
-        <a href="/tags/HTML/" style="font-size: 0.8em;">HTML</a> <a href="/tags/HTTP/" style="font-size: 0.63em;">HTTP</a> <a href="/tags/JAVASCRIPT/" style="font-size: 0.6em;">JAVASCRIPT</a> <a href="/tags/Tomcat/" style="font-size: 0.73em;">Tomcat</a> <a href="/tags/c%E8%AF%AD%E8%A8%80/" style="font-size: 0.6em;">c语言</a> <a href="/tags/git/" style="font-size: 0.6em;">git</a> <a href="/tags/java/" style="font-size: 0.67em;">java</a> <a href="/tags/javascript/" style="font-size: 0.7em;">javascript</a> <a href="/tags/jquery/" style="font-size: 0.67em;">jquery</a> <a href="/tags/linux/" style="font-size: 0.63em;">linux</a> <a href="/tags/servlet/" style="font-size: 0.77em;">servlet</a> <a href="/tags/win/" style="font-size: 0.6em;">win</a> <a href="/tags/%E4%B8%BB%E9%A2%98/" style="font-size: 0.6em;">主题</a> <a href="/tags/%E5%92%95%E5%92%95%E5%92%95/" style="font-size: 0.63em;">咕咕咕</a> <a href="/tags/%E5%BF%83%E5%BE%97/" style="font-size: 0.6em;">心得</a> <a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 0.6em;">感悟</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 0.6em;">数据库</a> <a href="/tags/%E6%96%87%E6%A1%A3/" style="font-size: 0.6em;">文档</a>
+        <a href="/tags/HTML/" style="font-size: 0.8em;">HTML</a> <a href="/tags/HTTP/" style="font-size: 0.63em;">HTTP</a> <a href="/tags/JAVASCRIPT/" style="font-size: 0.6em;">JAVASCRIPT</a> <a href="/tags/Tomcat/" style="font-size: 0.74em;">Tomcat</a> <a href="/tags/c%E8%AF%AD%E8%A8%80/" style="font-size: 0.6em;">c语言</a> <a href="/tags/git/" style="font-size: 0.6em;">git</a> <a href="/tags/java/" style="font-size: 0.69em;">java</a> <a href="/tags/javascript/" style="font-size: 0.71em;">javascript</a> <a href="/tags/jquery/" style="font-size: 0.69em;">jquery</a> <a href="/tags/linux/" style="font-size: 0.63em;">linux</a> <a href="/tags/servlet/" style="font-size: 0.77em;">servlet</a> <a href="/tags/win/" style="font-size: 0.6em;">win</a> <a href="/tags/%E4%B8%BB%E9%A2%98/" style="font-size: 0.6em;">主题</a> <a href="/tags/%E5%92%95%E5%92%95%E5%92%95/" style="font-size: 0.63em;">咕咕咕</a> <a href="/tags/%E5%BF%83%E5%BE%97/" style="font-size: 0.6em;">心得</a> <a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 0.6em;">感悟</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 0.66em;">数据库</a> <a href="/tags/%E6%96%87%E6%A1%A3/" style="font-size: 0.6em;">文档</a>
       </div>
   </aside>
 
@@ -336,6 +353,12 @@
   <div class="tab-content">
       <ul class="list-group">
         
+        
+          
+          
+            <a class="list-group-item" href="/2021/09/06/web%E5%B1%82%E4%BA%A4%E4%BA%92%E6%95%B0%E6%8D%AE%E5%BA%93/"><i class="fa  fa-book"></i> web层交互数据库</a>
+            
+          
         
           
           
@@ -362,11 +385,7 @@
           
         
           
-          
-            <a class="list-group-item" href="/2021/08/30/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%83%E5%A4%A9)%20/"><i class="fa  fa-book"></i> java开发实战(第二十七天)</a>
             
-          
-        
           
             
           
