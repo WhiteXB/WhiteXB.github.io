@@ -24,7 +24,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-09-09T14:55:12.000Z">
-<meta property="article:modified_time" content="2021-09-10T15:23:34.086Z">
+<meta property="article:modified_time" content="2021-09-11T06:11:49.721Z">
 <meta property="article:author" content="white-x">
 <meta property="article:tag" content="jsp">
 <meta name="twitter:card" content="summary">
@@ -157,7 +157,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        370
+                        609
                     
                     字
                 </li>
@@ -166,7 +166,7 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1631287414086"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1631340709721"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
@@ -175,12 +175,13 @@
 <li>language 属性  翻译后是什么语言 暂时只支持java</li>
 <li>contentType 属性  表示返回的类型是什么，也是源码中response.setContentType参数值</li>
 <li>pageEncoding 属性 文件本身的字符集</li>
-<li>import 属性</li>
-<li>autoFlush 属性</li>
-<li>buffer 属性</li>
-<li>errorPage 属性</li>
-<li>session 属性</li>
-<li>extends 属性</li>
+<li>import 属性 跟java源代码一样用于导包导类<br>两个属性给out输出流</li>
+<li>autoFlush 属性 设置当out输出流满了之后，是否自动刷新缓冲 一般是true</li>
+<li>buffer 属性 缓冲区 缓冲区大小设置 超过后报错 8kb是性能综合优<br>两个属性给out输出流</li>
+<li>errorPage 属性 设置jsp页面运行出错，自动跳转的错误页面路径 映射到代码的web目录</li>
+<li>isErrorPage设置当前jsp页面是否是错误信息页面，默认是false 如果是true可以获取异常信息 异常对象得到异常信息</li>
+<li>session 属性 设置当前访问jsp页面是否创建http对象</li>
+<li>extends 属性 继承设置jsp翻译的类默认继承谁</li>
 </ol>
 
         </div>
@@ -273,7 +274,7 @@
                     <a class="tag-none-link" href="/tags/jsp/" rel="tag">jsp</a>
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2021-09-10</span>
+                <span>最后编辑：2021-09-11</span>
                 </div>
             </div>
         </footer>
