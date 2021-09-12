@@ -15,16 +15,16 @@
   
     <meta name="keywords" content="jsp" />
   
-  <meta name="description" content="静态标签1&lt;%@ include file&#x3D;&quot;footer.jsp&quot;%&gt;&gt;">
+  <meta name="description" content="静态标签1&lt;%@ include file&#x3D;&quot;footer.jsp&quot;%&gt;&gt; 动态包含1&lt;jsp:include page&#x3D;&quot;&#x2F;footer.jsp&quot;&gt;&lt;jsp:include&gt; 把被包含的内容执行到包含位置动态包含会把包含的jsp的页面会把包含的界面也翻译成jsp代码动态包含可以传递参数 jsp标签转发1&lt;js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jsp静态动态标签">
 <meta property="og:url" content="https://whitexb.github.io/2021/09/12/jsp%E9%9D%99%E6%80%81%E5%8A%A8%E6%80%81%E6%A0%87%E7%AD%BE/index.html">
 <meta property="og:site_name" content="(*´∇｀*)白筱の猫舍">
-<meta property="og:description" content="静态标签1&lt;%@ include file&#x3D;&quot;footer.jsp&quot;%&gt;&gt;">
+<meta property="og:description" content="静态标签1&lt;%@ include file&#x3D;&quot;footer.jsp&quot;%&gt;&gt; 动态包含1&lt;jsp:include page&#x3D;&quot;&#x2F;footer.jsp&quot;&gt;&lt;jsp:include&gt; 把被包含的内容执行到包含位置动态包含会把包含的jsp的页面会把包含的界面也翻译成jsp代码动态包含可以传递参数 jsp标签转发1&lt;js">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-09-12T02:56:37.000Z">
-<meta property="article:modified_time" content="2021-09-12T02:57:32.313Z">
+<meta property="article:modified_time" content="2021-09-12T05:14:07.037Z">
 <meta property="article:author" content="white-x">
 <meta property="article:tag" content="jsp">
 <meta name="twitter:card" content="summary">
@@ -157,7 +157,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        56
+                        514
                     
                     字
                 </li>
@@ -166,11 +166,27 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1631415452313"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1631423647037"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
             <h1 id="静态标签"><a href="#静态标签" class="headerlink" title="静态标签"></a>静态标签</h1><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ include file=&quot;footer.jsp&quot;%&gt;&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="动态包含"><a href="#动态包含" class="headerlink" title="动态包含"></a>动态包含</h1><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">jsp:include</span> <span class="attr">page</span>=<span class="string">&quot;/footer.jsp&quot;</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">jsp:include</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>把被包含的内容执行到包含位置<br>动态包含会把包含的jsp的页面会把包含的界面也翻译成jsp代码<br>动态包含可以传递参数</p>
+<h1 id="jsp标签转发"><a href="#jsp标签转发" class="headerlink" title="jsp标签转发"></a>jsp标签转发</h1><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">jsp:forward</span> <span class="attr">page</span>=<span class="string">&quot;try2.jsp&quot;</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">jsp:forward</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h1 id="搜索请求转发"><a href="#搜索请求转发" class="headerlink" title="搜索请求转发"></a>搜索请求转发</h1><ol>
+<li>客户端搜索</li>
+<li>SearStudentServler程序获取发sql到数据库查询保存查询request域中</li>
+<li>showShow.jsp遍历结果显示</li>
+<li>回传客户端</li>
+</ol>
+<p>直接访问jsp出错<br>使用java程序正确</p>
+<h1 id="什么是Listener监听器"><a href="#什么是Listener监听器" class="headerlink" title="什么是Listener监听器"></a>什么是Listener监听器</h1><ol>
+<li>LISTENER监听器是javaweb的三大组件之一，javaweb的三大组件分别是servlet程序，filter过滤器，Listener监听器</li>
+<li>Listener是javaee的规范，就是接口</li>
+<li>监听器的作用是，监听某种事物的变化，然后通过回调函数，反馈给客户程序</li>
+</ol>
+
         </div>
         
             <div class="kratos-copyright text-center clearfix">
@@ -239,7 +255,8 @@
             const twitterBase   = "https://twitter.com/intent/tweet?";
             const hostUrl       = "https://whitexb.github.io/2021/09/12/jsp%E9%9D%99%E6%80%81%E5%8A%A8%E6%80%81%E6%A0%87%E7%AD%BE/";
             const title         = "「jsp静态动态标签」";
-            const excerpt       = `静态标签1&lt;%@ include file=&quot;footer.jsp&quot;%&gt;&gt;`;
+            const excerpt       = `静态标签1&lt;%@ include file=&quot;footer.jsp&quot;%&gt;&gt;
+动态包含1&lt;jsp:include page=&quot;/footer.jsp&quot;&gt;&lt;jsp...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -314,7 +331,7 @@
         <span class="toc-progress-bar"></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%A0%87%E7%AD%BE"><span class="toc-text">静态标签</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%A0%87%E7%AD%BE"><span class="toc-text">静态标签</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E5%8C%85%E5%90%AB"><span class="toc-text">动态包含</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#jsp%E6%A0%87%E7%AD%BE%E8%BD%AC%E5%8F%91"><span class="toc-text">jsp标签转发</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2%E8%AF%B7%E6%B1%82%E8%BD%AC%E5%8F%91"><span class="toc-text">搜索请求转发</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFListener%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-text">什么是Listener监听器</span></a></li></ol>
     </div>
 </aside>
                 
