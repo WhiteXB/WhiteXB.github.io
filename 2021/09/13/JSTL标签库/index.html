@@ -24,7 +24,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-09-13T07:15:19.000Z">
-<meta property="article:modified_time" content="2021-09-13T07:57:22.081Z">
+<meta property="article:modified_time" content="2021-09-13T08:07:48.781Z">
 <meta property="article:author" content="white-x">
 <meta property="article:tag" content="jsp">
 <meta name="twitter:card" content="summary">
@@ -157,7 +157,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        1055
+                        1069
                     
                     字
                 </li>
@@ -166,13 +166,14 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1631519842081"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1631520468781"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
             <h1 id="五个不同的标签库"><a href="#五个不同的标签库" class="headerlink" title="五个不同的标签库"></a>五个不同的标签库</h1><p>taglib标签库引入jar包。<br>使用taglib指令引入标签库。</p>
 <h2 id="core核心库使用"><a href="#core核心库使用" class="headerlink" title="core核心库使用"></a>core核心库使用</h2><p>set标签可以往库中保存数据<br>多路判断。跟switch…case…default非常接近<br>choose标签开始选择判断<br>when标签标示每一种判断情况<br>if标签用来做if判断 text属性表示判断的条件 只支持if</p>
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">hr</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">hr</span>&gt;</span></span></span><br><span class="line">保存之前：$&#123;requestScope.abc&#125;<span class="xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">c:set</span> <span class="attr">scope</span>=<span class="string">&quot;request&quot;</span> <span class="attr">var</span>=<span class="string">&quot;abc&quot;</span> <span class="attr">value</span>=<span class="string">&quot;avcvalur&quot;</span>/&gt;</span></span></span><br><span class="line">保存之后：$&#123;requestScope.abc&#125;<span class="xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span></span><br><span class="line">&lt;%--<span class="xml"><span class="tag">&lt;<span class="name">c:forEach</span> <span class="attr">end</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">c:forEach</span>&gt;</span></span>--%&gt;</span><br><span class="line">if标签用来做if判断 text属性表示判断的条件 只支持if</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">c:if</span> <span class="attr">test</span>=<span class="string">&quot;$&#123;12==12&#125;&quot;</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;h1&gt;12等于12&lt;/h1&gt;</span></span><br><span class="line"><span class="code">&lt;/c:if&gt;</span></span><br><span class="line"><span class="code">&lt;%--&lt;c:choose&gt;&lt;c:when&gt;&lt;c:otherwise&gt;--%&gt;</span></span><br><span class="line"><span class="code">选择判断域中的对象：</span></span><br><span class="line"><span class="code">&lt;% request.setAttribute(&quot;height&quot;,160);%&gt;</span></span><br><span class="line"><span class="code">&lt;c:choose&gt;</span></span><br><span class="line"><span class="code">    &lt;c:when test=&quot;$&#123;requestScope.height&gt;170&#125;&quot;&gt;小巨人&lt;/c:when&gt;</span></span><br><span class="line"><span class="code">    &lt;c:when test=&quot;$&#123;requestScope.height&gt;180&#125;&quot;&gt;中巨人&lt;/c:when&gt;</span></span><br><span class="line"><span class="code">    &lt;c:when test=&quot;$&#123;requestScope.height&gt;190&#125;&quot;&gt;大巨人&lt;/c:when&gt;</span></span><br><span class="line"><span class="code">    &lt;c:otherwise&gt;未知&lt;/c:otherwise&gt;</span></span><br><span class="line"><span class="code">&lt;/c:choose&gt;</span></span><br></pre></td></tr></table></figure>
+<p>标签中不能使用html注释</p>
 
         </div>
         
