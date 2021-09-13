@@ -15,16 +15,16 @@
   
     <meta name="keywords" content="jsp" />
   
-  <meta name="description" content="五个不同的标签库taglib标签库引入jar包。使用taglib指令引入标签库。 core核心库使用set标签可以往库中保存数据 123保存之前：$&amp;#123;requestScope.abc&amp;#125;&lt;br&gt;&lt;c:set scope&#x3D;&quot;request&quot; var&#x3D;&quot;abc&quot; value&#x3D;&quot;avcvalur&quot;&#x2F;&gt;保">
+  <meta name="description" content="五个不同的标签库taglib标签库引入jar包。使用taglib指令引入标签库。 core核心库使用set标签可以往库中保存数据多路判断。跟switch…case…default非常接近choose标签开始选择判断when标签标示每一种判断情况if标签用来做if判断 text属性表示判断的条件 只支持if 12345678910111213141516171819&lt;hr&gt;&lt;hr&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JSTL标签库">
 <meta property="og:url" content="https://whitexb.github.io/2021/09/13/JSTL%E6%A0%87%E7%AD%BE%E5%BA%93/index.html">
 <meta property="og:site_name" content="(*´∇｀*)白筱の猫舍">
-<meta property="og:description" content="五个不同的标签库taglib标签库引入jar包。使用taglib指令引入标签库。 core核心库使用set标签可以往库中保存数据 123保存之前：$&amp;#123;requestScope.abc&amp;#125;&lt;br&gt;&lt;c:set scope&#x3D;&quot;request&quot; var&#x3D;&quot;abc&quot; value&#x3D;&quot;avcvalur&quot;&#x2F;&gt;保">
+<meta property="og:description" content="五个不同的标签库taglib标签库引入jar包。使用taglib指令引入标签库。 core核心库使用set标签可以往库中保存数据多路判断。跟switch…case…default非常接近choose标签开始选择判断when标签标示每一种判断情况if标签用来做if判断 text属性表示判断的条件 只支持if 12345678910111213141516171819&lt;hr&gt;&lt;hr&amp;">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-09-13T07:15:19.000Z">
-<meta property="article:modified_time" content="2021-09-13T07:28:44.522Z">
+<meta property="article:modified_time" content="2021-09-13T07:57:22.081Z">
 <meta property="article:author" content="white-x">
 <meta property="article:tag" content="jsp">
 <meta name="twitter:card" content="summary">
@@ -157,7 +157,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        243
+                        1055
                     
                     字
                 </li>
@@ -166,13 +166,14 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1631518124522"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1631519842081"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
             <h1 id="五个不同的标签库"><a href="#五个不同的标签库" class="headerlink" title="五个不同的标签库"></a>五个不同的标签库</h1><p>taglib标签库引入jar包。<br>使用taglib指令引入标签库。</p>
-<h2 id="core核心库使用"><a href="#core核心库使用" class="headerlink" title="core核心库使用"></a>core核心库使用</h2><p>set标签可以往库中保存数据</p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">保存之前：$&#123;requestScope.abc&#125;<span class="xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">c:set</span> <span class="attr">scope</span>=<span class="string">&quot;request&quot;</span> <span class="attr">var</span>=<span class="string">&quot;abc&quot;</span> <span class="attr">value</span>=<span class="string">&quot;avcvalur&quot;</span>/&gt;</span></span></span><br><span class="line">保存之后：$&#123;requestScope.abc&#125;<span class="xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="core核心库使用"><a href="#core核心库使用" class="headerlink" title="core核心库使用"></a>core核心库使用</h2><p>set标签可以往库中保存数据<br>多路判断。跟switch…case…default非常接近<br>choose标签开始选择判断<br>when标签标示每一种判断情况<br>if标签用来做if判断 text属性表示判断的条件 只支持if</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">hr</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">hr</span>&gt;</span></span></span><br><span class="line">保存之前：$&#123;requestScope.abc&#125;<span class="xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">c:set</span> <span class="attr">scope</span>=<span class="string">&quot;request&quot;</span> <span class="attr">var</span>=<span class="string">&quot;abc&quot;</span> <span class="attr">value</span>=<span class="string">&quot;avcvalur&quot;</span>/&gt;</span></span></span><br><span class="line">保存之后：$&#123;requestScope.abc&#125;<span class="xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span></span><br><span class="line">&lt;%--<span class="xml"><span class="tag">&lt;<span class="name">c:forEach</span> <span class="attr">end</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">c:forEach</span>&gt;</span></span>--%&gt;</span><br><span class="line">if标签用来做if判断 text属性表示判断的条件 只支持if</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">c:if</span> <span class="attr">test</span>=<span class="string">&quot;$&#123;12==12&#125;&quot;</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;h1&gt;12等于12&lt;/h1&gt;</span></span><br><span class="line"><span class="code">&lt;/c:if&gt;</span></span><br><span class="line"><span class="code">&lt;%--&lt;c:choose&gt;&lt;c:when&gt;&lt;c:otherwise&gt;--%&gt;</span></span><br><span class="line"><span class="code">选择判断域中的对象：</span></span><br><span class="line"><span class="code">&lt;% request.setAttribute(&quot;height&quot;,160);%&gt;</span></span><br><span class="line"><span class="code">&lt;c:choose&gt;</span></span><br><span class="line"><span class="code">    &lt;c:when test=&quot;$&#123;requestScope.height&gt;170&#125;&quot;&gt;小巨人&lt;/c:when&gt;</span></span><br><span class="line"><span class="code">    &lt;c:when test=&quot;$&#123;requestScope.height&gt;180&#125;&quot;&gt;中巨人&lt;/c:when&gt;</span></span><br><span class="line"><span class="code">    &lt;c:when test=&quot;$&#123;requestScope.height&gt;190&#125;&quot;&gt;大巨人&lt;/c:when&gt;</span></span><br><span class="line"><span class="code">    &lt;c:otherwise&gt;未知&lt;/c:otherwise&gt;</span></span><br><span class="line"><span class="code">&lt;/c:choose&gt;</span></span><br></pre></td></tr></table></figure>
+
         </div>
         
             <div class="kratos-copyright text-center clearfix">
@@ -242,8 +243,7 @@
             const hostUrl       = "https://whitexb.github.io/2021/09/13/JSTL%E6%A0%87%E7%AD%BE%E5%BA%93/";
             const title         = "「JSTL标签库」";
             const excerpt       = `五个不同的标签库taglib标签库引入jar包。使用taglib指令引入标签库。
-core核心库使用set标签可以往库中保存数据
-123保存之前：$&#123;requestScope.abc&#125;&lt;br&gt;&lt;c...`;
+core核心库使用set标签可以往库中保存数据多路判断。跟switch…case…default非常接近choose标签开始选择判断when标签标示每一...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
