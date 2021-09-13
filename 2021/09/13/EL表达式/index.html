@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  <link rel="icon" href="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
+  <title>EL表达式 | (*´∇｀*)白筱の猫舍</title>
+  <meta name="author" content="white-x" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="jsp" />
+  
+  <meta name="description" content="EL表达式EL 表达式的全称是：Expression Language。是表达式语言。 EL 表达式的什么作用：EL 表达式主要是代替 jsp 页面中的表达式脚本在 jsp 页面中进行数据的输出。 因为 EL 表达式在输出数据的时候，要比 jsp 的表达式脚本要简洁很多。 1&lt;body&gt; &lt;% request.setAttribute(&quot;key&quot;,&quot;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EL表达式">
+<meta property="og:url" content="https://whitexb.github.io/2021/09/13/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
+<meta property="og:site_name" content="(*´∇｀*)白筱の猫舍">
+<meta property="og:description" content="EL表达式EL 表达式的全称是：Expression Language。是表达式语言。 EL 表达式的什么作用：EL 表达式主要是代替 jsp 页面中的表达式脚本在 jsp 页面中进行数据的输出。 因为 EL 表达式在输出数据的时候，要比 jsp 的表达式脚本要简洁很多。 1&lt;body&gt; &lt;% request.setAttribute(&quot;key&quot;,&quot;">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
+<meta property="article:published_time" content="2021-09-13T01:14:47.000Z">
+<meta property="article:modified_time" content="2021-09-13T01:21:43.011Z">
+<meta property="article:author" content="white-x">
+<meta property="article:tag" content="jsp">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
+<meta name="twitter:site" content="@null">
+  
+  <!-- 站点验证相关 -->
+  
+    
+    
+    
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/css/kratosr.min.css" type="text/css" media="all">
+  
+    <link rel="stylesheet" id="highlight-css" href="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/css/highlight/light.min.css" type="text/css" media="all">
+  
+  
+  <link rel="stylesheet" id="fontawe-css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="nprogress-css" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" type="text/css" media="all">
+  
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+  
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+    <link rel="stylesheet" id="darkmode-css" href="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/css/kr-dark.min.css" type="text/css" media="all">
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+    
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                                    
+                                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/archives/"><i class="fa fa-file"></i>猿の力</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/friends/"><i class="fa fa-paw"></i>喵喵喵</a></li>
+                                    
+                                
+                                    
+                                        <li>
+                                            <a><i class="fa fa-link"></i>链接</a>
+                                            <ul class="sub-menu">
+                                                
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://www.white-x.top/WhiteXB-old-html/">作者博客</a></li>
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://github.com/WhiteXB/WhiteXB.io">项目链接</a></li>
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">(*´∇｀*)白筱の猫舍</a></div>
+                    <div class="nav-toggle">
+                        <a class="kratos-nav-toggle js-kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>(*´∇｀*)白筱の猫舍</h2> <br />
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+                    
+
+        
+
+            <section class="col-md-8">
+
+        
+
+            <article>
+    <div class="kratos-hentry kratos-post-inner clearfix">
+        <header class="kratos-entry-header">
+            
+                <h1 class="kratos-entry-title text-center">EL表达式</h1>
+            
+            
+            <ul class="kratos-post-meta text-center">
+                <li><i class="fa fa-calendar"></i> 2021-09-13</li>
+                <li><i class="fa fa-user"></i> 作者 white-x</li>
+                <li>
+                    <i class="fa fa-edit"></i> 
+                    
+                    
+                        ~3.15K
+                    
+                    字
+                </li>
+                
+            </ul>
+        </header>
+        <div class="kratos-post-content">
+            <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                本文最后编辑于 <time datetime="1631496103011"></time> 前，其中的内容可能需要更新。
+            </div>
+            
+            <hr />
+            <h1 id="EL表达式"><a href="#EL表达式" class="headerlink" title="EL表达式"></a>EL表达式</h1><p>EL 表达式的全称是：Expression Language。是表达式语言。 EL 表达式的什么作用：EL 表达式主要是代替 jsp 页面中的表达式脚本在 jsp 页面中进行数据的输出。 因为 EL 表达式在输出数据的时候，要比 jsp 的表达式脚本要简洁很多。</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span> &lt;% request.setAttribute(&quot;key&quot;,&quot;值&quot;); %&gt;表达式脚本输出 key 的值是： &lt;%=request.getAttribute(&quot;key1&quot;)==null?&quot;&quot;:request.getAttribute(&quot;key1&quot;)%&gt;<span class="xml"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span> EL 表达式输出 key 的值是：$&#123;key1&#125; <span class="xml"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="关系运算"><a href="#关系运算" class="headerlink" title="关系运算"></a>关系运算</h2><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">关系运算符 说 明 范 例 结果</span><br><span class="line">== 或 eq 等于 $&#123; 5 == 5 &#125; 或 $&#123; 5 eq 5 &#125; true </span><br><span class="line">!= 或 ne 不等于 $&#123; 5 !=5 &#125; 或 $&#123; 5 ne 5 &#125; false </span><br><span class="line">&lt; 或 lt 小于 $&#123; 3 &lt; 5 &#125; 或 $&#123; 3 lt 5 &#125; true </span><br><span class="line"><span class="quote">&gt; 或 gt 大于 $&#123; 2 &gt; 10 &#125; 或 $&#123; 2 gt 10 &#125; false </span></span><br><span class="line">&lt;= 或 le 小于等于 $&#123; 5 &lt;= 12 &#125; 或 $&#123; 5 le 12 &#125; true</span><br><span class="line">&gt;= 或 ge 大于等于 $&#123; 3 &gt;= 5 &#125; 或 $&#123; 3 ge 5 &#125; false</span><br></pre></td></tr></table></figure>
+<h2 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h2><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&amp;&amp; 或 and 与运算 $&#123; 12 == 12 &amp;&amp; 12 &lt; 11 &#125; 或 $&#123; 12 == 12 and 12 &lt; 11 &#125; false </span><br><span class="line">|| 或 or 或运算 $&#123; 12 == 12 || 12 &lt; 11 &#125; 或 $&#123; 12 == 12 or 12 &lt; 11 &#125; true </span><br><span class="line">! 或 not 取反运算 $&#123; !true &#125; 或 $&#123;not true &#125; false</span><br><span class="line"> ## 算数运算</span><br><span class="line"> <span class="code">``` md</span></span><br><span class="line"><span class="code">+ 加法 $&#123; 12 + 18 &#125; 30</span></span><br><span class="line"><span class="code">- 减法 $&#123; 18 - 8 &#125; 10 </span></span><br><span class="line"><span class="code">* 乘法 $&#123; 12 * 12 &#125; 144 </span></span><br><span class="line"><span class="code">/ 或 div 除法 $&#123; 144 / 12 &#125; 或 $&#123; 144 div 12 &#125; 12 </span></span><br><span class="line"><span class="code">% 或 mod 取模 $&#123; 144 % 10 &#125; 或 $&#123; 144 mod 10 &#125; 4</span></span><br></pre></td></tr></table></figure>
+<p>empty可以判断一个数据是否为空</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span> &lt;% // 1、值为 null 值的时候，为空 request.setAttribute(&quot;emptyNull&quot;, null); // 2、值为空串的时候，为空 request.setAttribute(&quot;emptyStr&quot;, &quot;&quot;); // 3、值是 Object 类型数组，长度为零的时候 request.setAttribute(&quot;emptyArr&quot;, new Object[]&#123;&#125;); // 4、list 集合，元素个数为零 List<span class="xml"><span class="tag">&lt;<span class="name">String</span>&gt;</span></span> list = new ArrayList&lt;&gt;(); // list.add(&quot;abc&quot;); request.setAttribute(&quot;emptyList&quot;, list); // 5、map 集合，元素个数为零 Map<span class="xml">&lt;String,Object&gt;</span> map = new HashMap<span class="xml">&lt;String, Object&gt;</span>(); // map.put(&quot;key1&quot;, &quot;value1&quot;); request.setAttribute(&quot;emptyMap&quot;, map); %&gt;$&#123; empty emptyNull &#125; <span class="xml"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span> $&#123; empty emptyStr &#125; <span class="xml"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span> $&#123; empty emptyArr &#125; <span class="xml"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span> $&#123; empty emptyList &#125; <span class="xml"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span> $&#123; empty emptyMap &#125; <span class="xml"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span> <span class="xml"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="三元运算"><a href="#三元运算" class="headerlink" title="三元运算"></a>三元运算</h2><p>表达式 1？表达式 2：表达式 3 如果表达式 1 的值为真，返回表达式 2 的值，如果表达式 1 的值为假，返回表达式 3 的值。</p>
+<h2 id="和-运算"><a href="#和-运算" class="headerlink" title=".和[]运算"></a>.和[]运算</h2><p>.点运算，可以输出 Bean 对象中某个属性的值。 []中括号运算，可以输出有序集合中某个元素的值。 并且[]中括号运算，还可以输出 map 集合中 key 里含有特殊字符的 key 的值。</p>
+<h1 id="EL-表达式的-11-个隐含对象"><a href="#EL-表达式的-11-个隐含对象" class="headerlink" title="EL 表达式的 11 个隐含对象"></a>EL 表达式的 11 个隐含对象</h1><p>pageContext PageContextImpl 它可以获取 jsp 中的九大内置对象<br>pageScope Map&lt;String,Object&gt; 它可以获取 pageContext 域中的数据<br>requestScope Map&lt;String,Object&gt; 它可以获取 Request 域中的数据<br>sessionScope Map&lt;String,Object&gt; 它可以获取 Session 域中的数据<br>applicationScope Map&lt;String,Object&gt; 它可以获取 ServletContext 域中的数据<br>param Map&lt;String,String&gt; 它可以获取请求参数的值<br>paramValues Map&lt;String,String[]&gt; 它也可以获取请求参数的值，获取多个值的时候使用。<br>header Map&lt;String,String&gt; 它可以获取请求头的信息<br>headerValues Map&lt;String,String[]&gt; 它可以获取请求头的信息，它可以获取多个值的情况<br>cookie Map&lt;String,Cookie&gt; 它可以获取当前请求的 Cookie 信息<br>initParam Map&lt;String,String&gt; 它可以获取在 web.xml 中配置的<context-param>上下文参数</p>
+<h2 id="EL-获取四个特定域中的属性"><a href="#EL-获取四个特定域中的属性" class="headerlink" title="EL 获取四个特定域中的属性"></a>EL 获取四个特定域中的属性</h2><p>pageScope ====== pageContext 域<br>requestScope ====== Request 域<br>sessionScope ====== Session 域<br>applicationScope ====== ServletContext 域</p>
+
+        </div>
+        
+            <div class="kratos-copyright text-center clearfix">
+                <h5>本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+            </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+                <div class="post-like-donate text-center clearfix" id="post-like-donate">
+                
+                    <a class="donate" href="javascript:;"><i class="fa fa-bitcoin"></i> 打赏</a>
+                
+                
+                    <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                    <div class="share-wrap" style="display: none;">
+    <div class="share-group">
+        <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-qq"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain qzone" onclick="share('qzone');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-star"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weixin"></i>
+            </div>
+            <div class="share-int">
+                <div class="qrcode" id="wechat-qr"></div>
+                <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weibo" onclick="share('weibo');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weibo"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-facebook"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain twitter style-plain" onclick="share('twitter');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-twitter"></i>
+            </div>
+        </a>
+    </div>
+    <script type="text/javascript">
+        $(()=>{
+            new QRCode("wechat-qr", {
+                text: "https://whitexb.github.io/2021/09/13/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/",
+                width: 150,
+                height: 150,
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        });
+        function share(dest) {
+            const qqBase        = "https://connect.qq.com/widget/shareqq/index.html?";
+            const weiboBase     = "https://service.weibo.com/share/share.php?";
+            const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+            const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
+            const twitterBase   = "https://twitter.com/intent/tweet?";
+            const hostUrl       = "https://whitexb.github.io/2021/09/13/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/";
+            const title         = "「EL表达式」";
+            const excerpt       = `EL表达式EL 表达式的全称是：Expression Language。是表达式语言。 EL 表达式的什么作用：EL 表达式主要是代替 jsp 页面中的表达式脚本在 jsp 页面中进行数据的输出。 因为 EL 表达式在输出数据的时候，...`;
+            let _URL;
+            switch (dest) {
+                case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
+                case "weibo"    : _URL = weiboBase+"url="+hostUrl+"&title="+title+excerpt;                                 break;
+                case "qzone"    : _URL = qzoneBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
+                case "facebook" : _URL = facebookBase+"u="+hostUrl;                                                        break;
+                case "twitter"  : _URL = twitterBase+"text="+title+excerpt+"&url="+hostUrl;                                break;
+            }
+            window.open(_URL);
+        };
+    </script>
+</div>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/jsp/" rel="tag">jsp</a>
+                </div>
+                <div class="pull-date">
+                <span>最后编辑：2021-09-13</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" Listener监听器" href="/2021/09/12/监听器/">&lt; 上一篇</a>
+            </div>
+            
+            
+        </nav>
+    
+    
+</article>
+
+        
+
+            </section>
+
+        
+
+                
+            
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/images/avatar.webp" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center"></p>
+    </div>
+</aside>
+            
+                    <div class="sticky-area">
+                
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix">
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar"></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#EL%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">EL表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97"><span class="toc-text">关系运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97"><span class="toc-text">逻辑运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97"><span class="toc-text">三元运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%92%8C-%E8%BF%90%E7%AE%97"><span class="toc-text">.和[]运算</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#EL-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84-11-%E4%B8%AA%E9%9A%90%E5%90%AB%E5%AF%B9%E8%B1%A1"><span class="toc-text">EL 表达式的 11 个隐含对象</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#EL-%E8%8E%B7%E5%8F%96%E5%9B%9B%E4%B8%AA%E7%89%B9%E5%AE%9A%E5%9F%9F%E4%B8%AD%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-text">EL 获取四个特定域中的属性</span></a></li></ol></li></ol>
+    </div>
+</aside>
+                
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E9%A1%B9%E7%9B%AE/">小项目</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/">教程文档</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">34</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/HTML/" style="font-size: 0.8em;">HTML</a> <a href="/tags/HTTP/" style="font-size: 0.63em;">HTTP</a> <a href="/tags/JAVASCRIPT/" style="font-size: 0.6em;">JAVASCRIPT</a> <a href="/tags/Tomcat/" style="font-size: 0.74em;">Tomcat</a> <a href="/tags/c%E8%AF%AD%E8%A8%80/" style="font-size: 0.6em;">c语言</a> <a href="/tags/git/" style="font-size: 0.6em;">git</a> <a href="/tags/java/" style="font-size: 0.66em;">java</a> <a href="/tags/javascript/" style="font-size: 0.69em;">javascript</a> <a href="/tags/jquery/" style="font-size: 0.66em;">jquery</a> <a href="/tags/jsp/" style="font-size: 0.71em;">jsp</a> <a href="/tags/linux/" style="font-size: 0.63em;">linux</a> <a href="/tags/servlet/" style="font-size: 0.77em;">servlet</a> <a href="/tags/win/" style="font-size: 0.6em;">win</a> <a href="/tags/%E4%B8%BB%E9%A2%98/" style="font-size: 0.6em;">主题</a> <a href="/tags/%E5%92%95%E5%92%95%E5%92%95/" style="font-size: 0.63em;">咕咕咕</a> <a href="/tags/%E5%BF%83%E5%BE%97/" style="font-size: 0.6em;">心得</a> <a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 0.6em;">感悟</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 0.66em;">数据库</a>
+      </div>
+  </aside>
+
+            
+                
+  <aside id="krw-posts" class="widget widget-kratos-posts">
+  <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
+  <div class="tab-content">
+      <ul class="list-group">
+        
+        
+          
+          
+            <a class="list-group-item" href="/2021/09/13/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/"><i class="fa  fa-book"></i> EL表达式</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/09/12/%E7%9B%91%E5%90%AC%E5%99%A8/"><i class="fa  fa-book"></i> Listener监听器</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/09/12/jsp%E9%9D%99%E6%80%81%E5%8A%A8%E6%80%81%E6%A0%87%E7%AD%BE/"><i class="fa  fa-book"></i> jsp静态动态标签</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/09/11/jsp%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/"><i class="fa  fa-book"></i> jsp对象</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/09/09/jsp%E5%9B%9E%E4%BC%A0/"><i class="fa  fa-book"></i> jsp回传</a>
+            
+          
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+      </ul>
+  </div>
+  </aside>
+
+            
+    </div>
+</section>
+        
+        </div>
+    </div>
+</div>
+<footer>
+    
+    <link rel="stylesheet" href="./live2d/css/live2d.css" /><!-- live2d看板娘在themes的source中替换 -->
+    <body class="custom-background">
+        <div id="landlord">
+            <div class="message" style="opacity:0"></div>
+            <canvas id="live2d" width="300" height="450" class="live2d"></canvas>
+            <div class="hide-button">隐藏</div>
+        </div>
+        <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            var message_Path = './live2d/'
+            var home_Path = 'https://white-x.top/'
+        </script>
+        <script type="text/javascript" src="./live2d/js/live2d.js"></script>
+        <script type="text/javascript" src="./live2d/js/message.js"></script>
+        <script type="text/javascript">
+            loadlive2d("live2d", "./live2d/model/leimu/leimu.model.json");
+        </script>
+
+    <div id="footer"  class="ap-lrc"  >
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search/">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="box theme-box" id="darkmode-switch">
+                        <span class="fa fa-adjust"></span>
+                    </div>
+                
+                
+                    <div class="box group-box">
+                        <a href="www.white-x.top" target="_blank" rel="nofollow">
+                            <span class="fa fa-users"></span>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                        <li><a href="mailto:www741740071@163.com"><i class="fa fa-envelope"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://t.me/18992210106"><i class="fa fa-telegram"></i></a></li>
+                        
+                        
+                        
+                        <li><a target="_blank" rel="me" href="https://nya.one/@WhiteXB"><i class="fa fa fa-share-alt-square"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://github.com/WhiteXB"><i class="fa fa-github"></i></a></li>
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2021 (*´∇｀*)白筱の猫舍 版权所有.</li>
+                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by white-x.</li>
+                        </div>
+                        <div>
+                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+                            <li>Hosted on <a href="https://www.white-x.top" target="_blank">Github Pages</a></li>
+                        </div>
+                        <div>
+                            
+                            
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
+<script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
+
+    <div>
+        <canvas id="snow"></canvas>
+        <script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/snow.min.js"></script>
+    </div>
+
+<script async src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/candy.min.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <meting-js
+        server="netease"
+        type="playlist"
+        id="6616775659"
+        order="random"
+        fixed="true"
+    >
+    </meting-js>
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/kratosr.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/pjax.min.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/layui-src@2.5.5/dist/layui.all.js"></script>
+
+
+    <script defer src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/kr-dark.min.js"></script>
+
+
+
+<!-- Extra support for third-party plguins  -->
+
+
+        
+    </body>
+</html>
