@@ -24,7 +24,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-09-13T07:15:19.000Z">
-<meta property="article:modified_time" content="2021-09-17T12:24:22.794Z">
+<meta property="article:modified_time" content="2021-09-17T12:49:43.995Z">
 <meta property="article:author" content="white-x">
 <meta property="article:tag" content="jsp">
 <meta name="twitter:card" content="summary">
@@ -157,7 +157,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        ~3.38K
+                        ~3.65K
                     
                     字
                 </li>
@@ -166,7 +166,7 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1631881462794"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1631882983995"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
@@ -177,6 +177,8 @@
 <h1 id="ForEach"><a href="#ForEach" class="headerlink" title="ForEach"></a>ForEach</h1><p>遍历输出使用<br>同时使用两个相同名字的包会产生冲突<br>尽量避免命名重复</p>
 <p>items 表示遍历的集合<br>var 表示遍历的数据<br>begin 表示遍历的开始<br>end 表示结束的索引值<br>step 表示遍历的步长值</p>
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">1.遍历1-100输出</span><br><span class="line">begin属性设置开始的索引end设置结束的索引</span><br><span class="line">var属性表示循环变量<span class="xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span></span><br><span class="line">&lt;%--for(int i=1;i&lt;10;i++)--%&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">c:forEach</span> <span class="attr">begin</span>=<span class="string">&quot;1&quot;</span> <span class="attr">end</span>=<span class="string">&quot;10&quot;</span> <span class="attr">var</span>=<span class="string">&quot;i&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;tr&gt;</span></span><br><span class="line"><span class="code">        &lt;td&gt;第$&#123;i&#125;行&lt;/td&gt;</span></span><br><span class="line"><span class="code">    &lt;/tr&gt;</span></span><br><span class="line"><span class="code">&lt;/table&gt;</span></span><br><span class="line"><span class="code">&lt;/c:forEach&gt;</span></span><br><span class="line"><span class="code">&lt;hr&gt;</span></span><br><span class="line"><span class="code">&lt;%request.setAttribute(&quot;arr&quot;,new String[]&#123;&quot;123131310&quot;,&quot;355464664&quot;,&quot;64864864&quot;&#125;);%&gt;</span></span><br><span class="line"><span class="code">&lt;c:forEach items=&quot;$&#123;requestScope&#125;&quot; var=&quot;item&quot;&gt;</span></span><br><span class="line"><span class="code">    $&#123;item&#125;&lt;br&gt;</span></span><br><span class="line"><span class="code">&lt;/c:forEach&gt;</span></span><br><span class="line"><span class="code">&lt;%</span></span><br><span class="line"><span class="code">    Map&lt;String,Object&gt; map = new HashMap&lt;String,Object&gt;();</span></span><br><span class="line"><span class="code">    map.put(&quot;key1&quot;,&quot;value1&quot;);</span></span><br><span class="line"><span class="code">    map.put(&quot;key2&quot;,&quot;value2&quot;);</span></span><br><span class="line"><span class="code">    map.put(&quot;key3&quot;,&quot;value3&quot;);</span></span><br><span class="line"><span class="code">/*    for (Map.Entry&lt;String,Object&gt;entry:map.entrySet())&#123;</span></span><br><span class="line"><span class="code">    &#125;*/</span></span><br><span class="line"><span class="code">    request.setAttribute(&quot;map&quot;,map);</span></span><br><span class="line"><span class="code">%&gt;</span></span><br><span class="line"><span class="code">&lt;c:forEach items=&quot;$&#123;requestScope.map&#125;&quot; var=&quot;entry&quot;&gt;</span></span><br><span class="line"><span class="code">   &lt;h1&gt; $&#123;entry.key&#125;=$&#123;entry.value&#125;&lt;/h1&gt;</span></span><br><span class="line"><span class="code">&lt;/c:forEach&gt;</span></span><br><span class="line"><span class="code">&lt;hr&gt;</span></span><br><span class="line"><span class="code">遍历数组</span></span><br><span class="line"><span class="code">&lt;%</span></span><br><span class="line"><span class="code">   List&lt;Student&gt; studentList = new ArrayList&lt;Student&gt;();</span></span><br><span class="line"><span class="code">   for (int i = 1; i&lt;=10;i++)&#123;</span></span><br><span class="line"><span class="code">      studentList.add(new com.atguigu.servlet.Student(i,&quot;username&quot;+i,&quot;pass&quot;+i,i,i+&quot;phone&quot;));</span></span><br><span class="line"><span class="code">   &#125;</span></span><br><span class="line"><span class="code">   request.setAttribute(&quot;stus&quot;,studentList);</span></span><br><span class="line"><span class="code">%&gt;</span></span><br><span class="line"><span class="code">&lt;table border=&quot;1&quot;&gt;</span></span><br><span class="line"><span class="code">&lt;tr&gt;</span></span><br><span class="line"><span class="code">    &lt;th&gt;编号&lt;/th&gt;</span></span><br><span class="line"><span class="code">    &lt;th&gt;用户名&lt;/th&gt;</span></span><br><span class="line"><span class="code">    &lt;th&gt;密码&lt;/th&gt;</span></span><br><span class="line"><span class="code">    &lt;th&gt;年龄&lt;/th&gt;</span></span><br><span class="line"><span class="code">    &lt;th&gt;电话&lt;/th&gt;</span></span><br><span class="line"><span class="code">    &lt;th&gt;操作&lt;/th&gt;</span></span><br><span class="line"><span class="code">&lt;/tr&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">c:forEach</span> <span class="attr">begin</span>=<span class="string">&quot;0&quot;</span> <span class="attr">end</span>=<span class="string">&quot;10&quot;</span> <span class="attr">step</span>=<span class="string">&quot;2&quot;</span> <span class="attr">items</span>=<span class="string">&quot;$&#123;requestScope.stus&#125;&quot;</span> <span class="attr">var</span>=<span class="string">&quot;stus&quot;</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;tr&gt;</span></span><br><span class="line"><span class="code">        &lt;td&gt;$&#123;stus.id&#125;&lt;/td&gt;</span></span><br><span class="line"><span class="code">        &lt;td&gt;$&#123;stus.username&#125;&lt;/td&gt;</span></span><br><span class="line"><span class="code">        &lt;td&gt;$&#123;stus.password&#125;&lt;/td&gt;&lt;td&gt;$&#123;stus.id&#125;&lt;/td&gt;</span></span><br><span class="line"><span class="code">        &lt;td&gt;$&#123;stus.phone&#125;&lt;/td&gt;</span></span><br><span class="line"><span class="code">        &lt;td&gt;删除修改&lt;/td&gt;</span></span><br><span class="line"><span class="code">    &lt;/tr&gt;</span></span><br><span class="line"><span class="code">&lt;/c:forEach&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="LoopTagStatus"><a href="#LoopTagStatus" class="headerlink" title="LoopTagStatus"></a>LoopTagStatus</h1><p>Object getCurrent()  表示获取当前遍历到的数据<br>int getIndex() 表示获取当前遍历的索引<br>int getCount() 表示遍历的个数<br>boolean isFirst() 表示当前遍历的数据是第一条或者最后一条<br>boolean isLast()  表示当前遍历的数据是第一条或者最后一条<br>读方法取决于方法boolean的数据生成的是读is方法<br>Integer getBegin()<br>Interger getEnd()<br>Interger gerStep()<br>获取begin end step 的属性值</p>
+
         </div>
         
             <div class="kratos-copyright text-center clearfix">
@@ -325,14 +327,14 @@ core核心库使用set标签可以往库中保存数据多路判断。跟switch�
         <span class="toc-progress-bar"></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94%E4%B8%AA%E4%B8%8D%E5%90%8C%E7%9A%84%E6%A0%87%E7%AD%BE%E5%BA%93"><span class="toc-text">五个不同的标签库</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#core%E6%A0%B8%E5%BF%83%E5%BA%93%E4%BD%BF%E7%94%A8"><span class="toc-text">core核心库使用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ForEach"><span class="toc-text">ForEach</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94%E4%B8%AA%E4%B8%8D%E5%90%8C%E7%9A%84%E6%A0%87%E7%AD%BE%E5%BA%93"><span class="toc-text">五个不同的标签库</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#core%E6%A0%B8%E5%BF%83%E5%BA%93%E4%BD%BF%E7%94%A8"><span class="toc-text">core核心库使用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ForEach"><span class="toc-text">ForEach</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#LoopTagStatus"><span class="toc-text">LoopTagStatus</span></a></li></ol>
     </div>
 </aside>
                 
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E9%A1%B9%E7%9B%AE/">小项目</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/">教程文档</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">35</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E9%A1%B9%E7%9B%AE/">小项目</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/">教程文档</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">36</span></li></ul>
   </aside>
 
 
@@ -352,6 +354,12 @@ core核心库使用set标签可以往库中保存数据多路判断。跟switch�
   <div class="tab-content">
       <ul class="list-group">
         
+        
+          
+          
+            <a class="list-group-item" href="/2021/09/17/%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%8A%E4%BC%A0%E5%92%8C%E4%B8%8B%E8%BD%BD/"><i class="fa  fa-book"></i> 文件的上传和下载</a>
+            
+          
         
           
           
@@ -378,11 +386,7 @@ core核心库使用set标签可以往库中保存数据多路判断。跟switch�
           
         
           
-          
-            <a class="list-group-item" href="/2021/09/12/jsp%E9%9D%99%E6%80%81%E5%8A%A8%E6%80%81%E6%A0%87%E7%AD%BE/"><i class="fa  fa-book"></i> jsp静态动态标签</a>
             
-          
-        
           
             
           
