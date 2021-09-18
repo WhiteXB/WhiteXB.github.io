@@ -24,7 +24,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-09-17T12:50:31.000Z">
-<meta property="article:modified_time" content="2021-09-18T12:57:14.868Z">
+<meta property="article:modified_time" content="2021-09-18T13:26:13.732Z">
 <meta property="article:author" content="white-x">
 <meta property="article:tag" content="文件">
 <meta name="twitter:card" content="summary">
@@ -157,7 +157,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        690
+                        1448
                     
                     字
                 </li>
@@ -166,7 +166,7 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1631969834868"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1631971573732"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
@@ -175,17 +175,8 @@
 <li>要有一个form标签 method=post请求</li>
 <li>form标签的encType属性值必须为multipart/form-date值</li>
 <li>在form标签中使用input type=file添加要上传的文件</li>
-<li>编写服务器代码接受，处理上传的数据<h2 id="上传http协议内容介绍"><a href="#上传http协议内容介绍" class="headerlink" title="上传http协议内容介绍"></a>上传http协议内容介绍</h2> protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {<pre><code> System.out.println(&quot;文件上传过来了&quot;);
- System.out.println(req.getParameter(&quot;username&quot;));
- System.out.println(req.getParameter(&quot;photo&quot;));
- ServletInputStream inputStream = req.getInputStream();
- byte[] buffer = new byte[102400];
- int read = inputStream.read(buffer);
- System.out.println(new String(buffer,0,read));
-</code></pre>
-</li>
+<li>编写服务器代码接受，处理上传的数据<h2 id="上传http协议内容介绍"><a href="#上传http协议内容介绍" class="headerlink" title="上传http协议内容介绍"></a>上传http协议内容介绍</h2><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;</span></span><br><span class="line"><span class="code">        System.out.println(&quot;文件上传过来了&quot;);</span></span><br><span class="line"><span class="code">        System.out.println(req.getParameter(&quot;username&quot;));</span></span><br><span class="line"><span class="code">        System.out.println(req.getParameter(&quot;photo&quot;));</span></span><br><span class="line"><span class="code">        ServletInputStream inputStream = req.getInputStream();</span></span><br><span class="line"><span class="code">        byte[] buffer = new byte[102400];</span></span><br><span class="line"><span class="code">        int read = inputStream.read(buffer);</span></span><br><span class="line"><span class="code">        System.out.println(new String(buffer,0,read));</span></span><br><span class="line"><span class="code"></span></span><br><span class="line">chrome并不能得到请求体，在java后台查看</span><br><span class="line">commons-fileupload.jar 需要依赖 commons-io.jar 这个包，所以两个包我们都要引入。 </span><br><span class="line">第一步，就是需要导入两个 jar 包：</span><br><span class="line">commons-fileupload-1.2.1.jar commons-io-1.4.jar commons-fileupload.jar 和 commons-io.jar 包中，我们常用的类有哪些？ </span><br><span class="line">ServletFileUpload 类，用于解析上传的数据。 FileItem 类，表示每一个表单项。 </span><br><span class="line">boolean ServletFileUpload.isMultipartContent(HttpServletRequest request);</span><br><span class="line">  判断当前上传的数据格式是否是多段的格式。 </span><br><span class="line">public List<span class="xml"><span class="tag">&lt;<span class="name">FileItem</span>&gt;</span></span> parseRequest(HttpServletRequest request) 解析上传的数据 </span><br><span class="line">boolean FileItem.isFormField() </span><br><span class="line">判断当前这个表单项，是否是普通的表单项。还是上传的文件型。 </span><br><span class="line">true 表示普通类型的表单项 false 表示上传的文件类型 String FileItem.getFieldName() 获取表单项的 name 属性值</span><br><span class="line">String FileItem.getString() 获取当前表单项的值。</span><br><span class="line">String FileItem.getName(); 获取上传的文件名 void FileItem.write( file ); 将上传的文件写到 参数 file 所指向抽硬盘位置 。</span><br></pre></td></tr></table></figure></li>
 </ol>
-<p>chrome并不能得到请求体，在java后台查看</p>
 
         </div>
         
