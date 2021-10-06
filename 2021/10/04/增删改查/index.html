@@ -24,7 +24,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-10-04T01:46:01.000Z">
-<meta property="article:modified_time" content="2021-10-05T10:14:51.194Z">
+<meta property="article:modified_time" content="2021-10-06T08:30:27.165Z">
 <meta property="article:author" content="white-x">
 <meta property="article:tag" content="JAVA">
 <meta name="twitter:card" content="summary">
@@ -157,7 +157,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        1365
+                        1422
                     
                     字
                 </li>
@@ -166,7 +166,7 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1633428891194"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1633509027165"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
@@ -178,7 +178,8 @@
 <p>pageNo 当前页码显示时由客户端进行传输<br>pageSize 每页的显示数量由两种因素决定<br>pageTotaiCount 总记录数可以由sql语句球的<br>sql语句时：select count(<em>) form 表名<br>items是当前页数，也可以由sql语句求得<br>sql语句是：select * from 表名 limit begin ，pageSize<br>begin可以由公式求得 (pageNo-1)<em>pageSize;<br>假设，当前是第一页，每页四条记录则begin=（1-1）</em>4 得0<br>假设，当前是第二页，每页四条记录则begin=（2-1）</em>4 得4<br>假设，当前是第三页，每页四条记录则begin=（3-1）*4 得8</p>
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">//web层</span><br><span class="line">public void page&#123;</span><br><span class="line"><span class="code">    //处理分页</span></span><br><span class="line"><span class="code">    1.获取请求的参数pageNo和pageSize</span></span><br><span class="line"><span class="code">    2.调用ByueService.page(pageNo,pageSize):Page对象</span></span><br><span class="line"><span class="code">    3.保存到request域中</span></span><br><span class="line"><span class="code">    4.转发到页面</span></span><br><span class="line"><span class="code">&#125;</span></span><br><span class="line"><span class="code">//service层</span></span><br><span class="line"><span class="code">public Page page(pageNo,pageSize)&#123;</span></span><br><span class="line"><span class="code">    //处理分页业务</span></span><br><span class="line"><span class="code">    求三个属性即可</span></span><br><span class="line"><span class="code">    总记录数，总页码，当前页数据</span></span><br><span class="line"><span class="code">    总记录数：select count(*) form 表名</span></span><br><span class="line"><span class="code">    总页码：总记录除页码</span></span><br><span class="line"><span class="code">    当前页数据：select * from表面 limit begin， pageSize</span></span><br><span class="line"><span class="code">&#125;</span></span><br><span class="line"><span class="code">//dao层</span></span><br><span class="line"><span class="code">ByueDap</span></span><br><span class="line"><span class="code">querForPageTotalCount()总记录数</span></span><br><span class="line"><span class="code">select count(*) from 表名</span></span><br><span class="line"><span class="code">querForltems()求当前页数据</span></span><br><span class="line"><span class="code">select * from 表名 limit begin ,pageSize ;</span></span><br></pre></td></tr></table></figure>
 <h1 id="一个数据传输错误的隐藏抛出"><a href="#一个数据传输错误的隐藏抛出" class="headerlink" title="一个数据传输错误的隐藏抛出"></a>一个数据传输错误的隐藏抛出</h1><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public static int parseInt(String strIng,int defaultValue)&#123;</span><br><span class="line"><span class="code">    try &#123;</span></span><br><span class="line"><span class="code">        return Integer.parseInt(strIng);//不能将默认值放入这里</span></span><br><span class="line"><span class="code">    &#125;catch (NumberFormatException e)&#123;</span></span><br><span class="line"><span class="code">       // e.printStackTrace();这个异常抛出的问题代解决</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code">    return defaultValue;</span></span><br><span class="line"><span class="code">&#125;</span></span><br></pre></td></tr></table></figure>
-<h1 id="页码显示"><a href="#页码显示" class="headerlink" title="页码显示"></a>页码显示</h1><p>如果页码小于等于5</p>
+<h1 id="页码显示"><a href="#页码显示" class="headerlink" title="页码显示"></a>页码显示</h1><p>多显示一页的bug尚未得到有效解决，在第二轮时寻求更改办法</p>
+<p> 通过debug方法寻找到bug问题，发现是求余时变量应用错误，已经修改</p>
 
         </div>
         
@@ -272,7 +273,7 @@
                     <a class="tag-none-link" href="/tags/JAVA/" rel="tag">JAVA</a>
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2021-10-05</span>
+                <span>最后编辑：2021-10-06</span>
                 </div>
             </div>
         </footer>
