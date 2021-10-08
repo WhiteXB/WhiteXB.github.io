@@ -24,7 +24,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-10-08T07:30:00.000Z">
-<meta property="article:modified_time" content="2021-10-08T09:11:13.719Z">
+<meta property="article:modified_time" content="2021-10-08T10:22:57.920Z">
 <meta property="article:author" content="white-x">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
@@ -156,7 +156,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        ~2.49K
+                        ~4.76K
                     
                     字
                 </li>
@@ -165,7 +165,7 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1633684273719"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1633688577920"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
@@ -174,7 +174,48 @@
 <h2 id="服务器如何获取-Cookie"><a href="#服务器如何获取-Cookie" class="headerlink" title="服务器如何获取 Cookie"></a>服务器如何获取 Cookie</h2><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">    protected void getCookie(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;//获取cookie值</span></span><br><span class="line"><span class="code">        Cookie[] cookies = req.getCookies();</span></span><br><span class="line"><span class="code">        for (Cookie cookie : cookies) &#123;</span></span><br><span class="line"><span class="code">            // getName方法返回Cookie的key（名）</span></span><br><span class="line"><span class="code">            // getValue方法返回Cookie的value值</span></span><br><span class="line"><span class="code">            resp.getWriter().write(&quot;Cookie[&quot; + cookie.getName() + &quot;=&quot; + cookie.getValue() + &quot;] &lt;br/&gt;&quot;);</span></span><br><span class="line"><span class="code">        &#125;</span></span><br><span class="line"><span class="code">        Cookie iWantCookie = CookieUtils.findCookie(&quot;key1&quot;, cookies);</span></span><br><span class="line"><span class="code">//        for (Cookie cookie : cookies) &#123;</span></span><br><span class="line"><span class="code">//            if (&quot;key2&quot;.equals(cookie.getName())) &#123;</span></span><br><span class="line"><span class="code">//                iWantCookie = cookie;</span></span><br><span class="line"><span class="code">//                break;</span></span><br><span class="line"><span class="code">//            &#125;</span></span><br><span class="line"><span class="code">//        &#125;</span></span><br><span class="line"><span class="code">        // 如果不等于null，说明赋过值，也就是找到了需要的Cookie</span></span><br><span class="line"><span class="code">        if (iWantCookie != null) &#123;</span></span><br><span class="line"><span class="code">            resp.getWriter().write(&quot;找到了需要的Cookie&quot;+iWantCookie.getName() + iWantCookie.getValue());</span></span><br><span class="line"><span class="code">        &#125;</span></span><br><span class="line"><span class="code">    &#125;</span></span><br></pre></td></tr></table></figure>
 <p> 一般不支持空格等</p>
 <h2 id="服务器如何修改-Cookie"><a href="#服务器如何修改-Cookie" class="headerlink" title="服务器如何修改 Cookie"></a>服务器如何修改 Cookie</h2><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">    protected void updataCookie(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;//获取cookie值</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">        resp.getWriter().write(&quot;第一种方案：&quot;);</span></span><br><span class="line"><span class="code">        Cookie cookie = new Cookie(&quot;key1&quot;,&quot;newvalue1&quot;);</span></span><br><span class="line"><span class="code">        resp.addCookie(cookie);</span></span><br><span class="line"><span class="code">        resp.getWriter().write(&quot;key1的cookie值已经被修改好&quot;+&quot;&lt;br/&gt;&quot;);</span></span><br><span class="line"><span class="code">        resp.getWriter().write(&quot;第二种方案：&quot;);</span></span><br><span class="line"><span class="code">        Cookie cookie2 = CookieUtils.findCookie(&quot;key2&quot;, req.getCookies());</span></span><br><span class="line"><span class="code">        if (cookie2 != null) &#123;</span></span><br><span class="line"><span class="code">//            2、调用setValue()方法赋于新的Cookie值。</span></span><br><span class="line"><span class="code">            cookie2.setValue(&quot;newValue2&quot;);</span></span><br><span class="line"><span class="code">            resp.addCookie(cookie2);//不要忘了保存操作</span></span><br><span class="line"><span class="code">//        3、调用response.addCookie()通知客户端保存修改</span></span><br><span class="line"><span class="code">            resp.getWriter().write(&quot;key2的cookie值已经被修改好&quot;);</span></span><br><span class="line"><span class="code">        &#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    &#125;</span></span><br></pre></td></tr></table></figure>
-<h2 id="cookie的生命方法"><a href="#cookie的生命方法" class="headerlink" title="cookie的生命方法"></a>cookie的生命方法</h2>
+<h2 id="cookie的生命方法"><a href="#cookie的生命方法" class="headerlink" title="cookie的生命方法"></a>cookie的生命方法</h2><p>Cookie 的生命控制指的是如何管理<br>Cookie 什么时候被销毁（删除）<br>setMaxAge()<br>正数，表示在指定的秒数后过期 负数，表示浏览器一关，<br>Cookie 就会被删除（默认值是-1） 零，表示马上删除 Cookie</p>
+<h2 id="cookie的path"><a href="#cookie的path" class="headerlink" title="cookie的path"></a>cookie的path</h2><p>path属性是根据请求的地址进行过滤<br>Cookie 的 path 属性可以有效的过滤哪些<br>Cookie 可以发送给服务器。哪些不发。<br>path 属性是通过请求的地址来进行有效的过滤。<br>CookieA path=/工程路径<br>CookieB path=/工程路径/abc 请求地址如下：<br> <a href="http://ip:port/工程路径/a.html">http://ip:port/工程路径/a.html</a><br> CookieA 发送 CookieB 不发送<br>  <a href="http://ip:port/工程路径/abc/a.html">http://ip:port/工程路径/abc/a.html</a><br>  CookieA 发送 CookieB 发送</p>
+<h1 id="cookie免用户名登录"><a href="#cookie免用户名登录" class="headerlink" title="cookie免用户名登录"></a>cookie免用户名登录</h1><pre><code class="md">    protected void login(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
+//            1.获取请求
+//            2.调用service.xxx处理业务
+//            3.login()方法返回处理结果判断是否成功
+//            成功条到成功页面
+//            失败返回登录界面
+        String username = req.getParameter(&quot;username&quot;);
+        String password = req.getParameter(&quot;password&quot;);
+        User loginUser = userService.login(new User(null,username,password,null));
+        //如果等于null，说明登录失败
+        if (loginUser == null)&#123;
+            //调回登录界面
+            System.out.println(&quot;登录失败&quot;);
+            req.setAttribute(&quot;msg&quot;,&quot;用户名或密码错误&quot;);
+            req.setAttribute(&quot;username&quot;,username);
+            req.getRequestDispatcher(&quot;/index.jsp&quot;).forward(req,resp);
+        &#125;
+        else
+        &#123;
+            //登录成功
+            System.out.println(&quot;用户名为[&quot;+username+&quot;]欢迎&quot;);
+            System.out.println(&quot;登录成功&quot;);
+            Cookie cookie = new Cookie(&quot;username&quot;,username);
+            Cookie cookie1 = new Cookie(&quot;password&quot;,password);
+            cookie.setMaxAge(60*60*12*7);//当前cookie一周内有效
+            cookie1.setMaxAge(10);//密码的cookie
+            resp.addCookie(cookie);
+            resp.addCookie(cookie1);
+            int pageNo = WebUtils.parseInt(req.getParameter(&quot;pageNo&quot;),1);
+            int pageSize = WebUtils.parseInt(req.getParameter(&quot;pageSize&quot;), Page.PAGE_SIZE);
+            //2.调用BuyeService.page(pageNo,pageSize);page对象
+            Page&lt;Byue&gt; page = byueService.page(pageNo,pageSize);
+            page.setUrl(&quot;clientByueServlet?action=page&quot;);
+            //3.保存到request域中
+            req.setAttribute(&quot;page&quot;,page);
+            req.getRequestDispatcher(&quot;/pages/home.jsp&quot;).forward(req,resp);
+
+        &#125;
+</code></pre>
+
         </div>
         
             <div class="kratos-copyright text-center clearfix">
@@ -322,7 +363,7 @@
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
-        <a href="/tags/HTML/" style="font-size: 0.8em;">HTML</a> <a href="/tags/HTTP/" style="font-size: 0.63em;">HTTP</a> <a href="/tags/JAVA/" style="font-size: 0.67em;">JAVA</a> <a href="/tags/JAVASCRIPT/" style="font-size: 0.6em;">JAVASCRIPT</a> <a href="/tags/Tomcat/" style="font-size: 0.73em;">Tomcat</a> <a href="/tags/c%E8%AF%AD%E8%A8%80/" style="font-size: 0.6em;">c语言</a> <a href="/tags/git/" style="font-size: 0.6em;">git</a> <a href="/tags/java/" style="font-size: 0.67em;">java</a> <a href="/tags/javascript/" style="font-size: 0.7em;">javascript</a> <a href="/tags/jquery/" style="font-size: 0.67em;">jquery</a> <a href="/tags/jsp/" style="font-size: 0.73em;">jsp</a> <a href="/tags/linux/" style="font-size: 0.63em;">linux</a> <a href="/tags/servlet/" style="font-size: 0.77em;">servlet</a> <a href="/tags/win/" style="font-size: 0.6em;">win</a> <a href="/tags/%E4%B8%BB%E9%A2%98/" style="font-size: 0.6em;">主题</a> <a href="/tags/%E5%92%95%E5%92%95%E5%92%95/" style="font-size: 0.63em;">咕咕咕</a> <a href="/tags/%E5%BF%83%E5%BE%97/" style="font-size: 0.6em;">心得</a> <a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 0.6em;">感悟</a>
+        <a href="/tags/HTML/" style="font-size: 0.8em;">HTML</a> <a href="/tags/HTTP/" style="font-size: 0.63em;">HTTP</a> <a href="/tags/JAVA/" style="font-size: 0.66em;">JAVA</a> <a href="/tags/JAVASCRIPT/" style="font-size: 0.6em;">JAVASCRIPT</a> <a href="/tags/Tomcat/" style="font-size: 0.74em;">Tomcat</a> <a href="/tags/c%E8%AF%AD%E8%A8%80/" style="font-size: 0.6em;">c语言</a> <a href="/tags/git/" style="font-size: 0.6em;">git</a> <a href="/tags/java/" style="font-size: 0.71em;">java</a> <a href="/tags/javascript/" style="font-size: 0.71em;">javascript</a> <a href="/tags/jquery/" style="font-size: 0.69em;">jquery</a> <a href="/tags/jsp/" style="font-size: 0.74em;">jsp</a> <a href="/tags/linux/" style="font-size: 0.63em;">linux</a> <a href="/tags/servlet/" style="font-size: 0.77em;">servlet</a> <a href="/tags/win/" style="font-size: 0.6em;">win</a> <a href="/tags/%E4%B8%BB%E9%A2%98/" style="font-size: 0.6em;">主题</a> <a href="/tags/%E5%92%95%E5%92%95%E5%92%95/" style="font-size: 0.63em;">咕咕咕</a> <a href="/tags/%E5%BF%83%E5%BE%97/" style="font-size: 0.6em;">心得</a> <a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 0.6em;">感悟</a>
       </div>
   </aside>
 
