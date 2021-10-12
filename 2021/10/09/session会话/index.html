@@ -24,7 +24,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-10-09T11:30:48.000Z">
-<meta property="article:modified_time" content="2021-10-11T09:24:14.799Z">
+<meta property="article:modified_time" content="2021-10-12T09:11:53.009Z">
 <meta property="article:author" content="white-x">
 <meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
@@ -166,7 +166,7 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1633944254799"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1634029913009"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
@@ -177,7 +177,7 @@
 <h1 id="Session的存活时长"><a href="#Session的存活时长" class="headerlink" title="Session的存活时长"></a>Session的存活时长</h1><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">session-config</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;session-timeout&gt;30&lt;/session-timeout&gt;</span></span><br><span class="line"><span class="code">&lt;/session-config&gt;</span></span><br><span class="line"><span class="code">    protected void defaultLife(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;</span></span><br><span class="line"><span class="code">        // 存活</span></span><br><span class="line"><span class="code">        int maxInactiveInterval=req.getSession().getMaxInactiveInterval();</span></span><br><span class="line"><span class="code">        resp.getWriter().write(&quot;Session的默认超时时长&quot;+maxInactiveInterval);</span></span><br><span class="line"><span class="code">        //以秒为计数单位</span></span><br><span class="line"><span class="code">    &#125;</span></span><br></pre></td></tr></table></figure>
 <p>默认存活时长1800秒<br>如果说web工程中要修改，可以在web.xml中修改默认修改<br>session.invalidate();//马上超时</p>
 <h1 id="浏览器和Session之间关联的内幕"><a href="#浏览器和Session之间关联的内幕" class="headerlink" title="浏览器和Session之间关联的内幕"></a>浏览器和Session之间关联的内幕</h1><p>session会话放到内存中<br>request.write()返回客户端，返回cookie<br>session是cookie值<br>每次创建session会话会创建一个cookie值，JSESSION值一直为是新创建出来的id值<br>浏览器解析数据，马上创建一个cookie数据<br>每次请求把session的id值发送给服务器，通过Cookie值找到创建好的Session对象，并返回</p>
-<h1 id="表单重复提交–验证码"><a href="#表单重复提交–验证码" class="headerlink" title="表单重复提交–验证码"></a>表单重复提交–验证码</h1><p>已经引入架包给服务器，注册界面已生成验证码<br>点击验证只适用与谷歌，以接入</p>
+<h1 id="表单重复提交–验证码"><a href="#表单重复提交–验证码" class="headerlink" title="表单重复提交–验证码"></a>表单重复提交–验证码</h1><p>已经引入架包给服务器，注册界面已生成验证码<br>点击验证只适用与谷歌，以接入+d=</p>
 
         </div>
         
@@ -269,7 +269,7 @@
                     <a class="tag-none-link" href="/tags/java/" rel="tag">java</a>
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2021-10-11</span>
+                <span>最后编辑：2021-10-12</span>
                 </div>
             </div>
         </footer>
@@ -281,6 +281,10 @@
                 <a title=" cookie机制" href="/2021/10/08/cookie机制/">&lt; 上一篇</a>
             </div>
             
+            
+            <div class="nav-next clearfix">
+                <a title=" filter拦截" href="/2021/10/12/filter拦截/">下一篇 &gt;</a>
+            </div>
             
         </nav>
     
@@ -352,6 +356,12 @@
         
           
           
+            <a class="list-group-item" href="/2021/10/12/filter%E6%8B%A6%E6%88%AA/"><i class="fa  fa-book"></i> filter拦截</a>
+            
+          
+        
+          
+          
             <a class="list-group-item" href="/2021/10/09/session%E4%BC%9A%E8%AF%9D/"><i class="fa  fa-book"></i> session会话</a>
             
           
@@ -375,11 +385,7 @@
           
         
           
-          
-            <a class="list-group-item" href="/2021/10/02/%E6%A8%A1%E5%9D%97/"><i class="fa  fa-book"></i> 模块</a>
             
-          
-        
           
             
           
