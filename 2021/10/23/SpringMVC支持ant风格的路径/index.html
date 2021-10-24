@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
-  <title>SpringMVC支持ant风格的路径 | (*´∇｀*)白筱の猫舍</title>
+  <title>SpringMVC支持ant风格的路径和参数请求 | (*´∇｀*)白筱の猫舍</title>
   <meta name="author" content="white-x" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -17,14 +17,14 @@
   
   <meta name="description" content="ant风格的路径？：表示任意的单个字符*：表示任意的0个或多个字符：表示任意的一层或多层目录注意：在使用时，只能使用&#x2F;**&#x2F;xxx的方式 springMVC支持路径中的占位符号原始方式：&#x2F;deleteUser?id&#x3D;1rest方式：&#x2F;deleteUser&#x2F;1 SpringMVC路径中的占位符常用于RESTful风格中，当请求路径中将某些数据通过路径的方式传输到服务器中，就可以在相应的@Reques">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SpringMVC支持ant风格的路径">
+<meta property="og:title" content="SpringMVC支持ant风格的路径和参数请求">
 <meta property="og:url" content="https://whitexb.github.io/2021/10/23/SpringMVC%E6%94%AF%E6%8C%81ant%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%B7%AF%E5%BE%84/index.html">
 <meta property="og:site_name" content="(*´∇｀*)白筱の猫舍">
 <meta property="og:description" content="ant风格的路径？：表示任意的单个字符*：表示任意的0个或多个字符：表示任意的一层或多层目录注意：在使用时，只能使用&#x2F;**&#x2F;xxx的方式 springMVC支持路径中的占位符号原始方式：&#x2F;deleteUser?id&#x3D;1rest方式：&#x2F;deleteUser&#x2F;1 SpringMVC路径中的占位符常用于RESTful风格中，当请求路径中将某些数据通过路径的方式传输到服务器中，就可以在相应的@Reques">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-10-23T10:15:04.000Z">
-<meta property="article:modified_time" content="2021-10-24T10:38:41.179Z">
+<meta property="article:modified_time" content="2021-10-24T12:41:46.766Z">
 <meta property="article:author" content="white-x">
 <meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
@@ -147,7 +147,7 @@
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center">SpringMVC支持ant风格的路径</h1>
+                <h1 class="kratos-entry-title text-center">SpringMVC支持ant风格的路径和参数请求</h1>
             
             
             <ul class="kratos-post-meta text-center">
@@ -157,7 +157,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        ~4.30K
+                        ~4.83K
                     
                     字
                 </li>
@@ -166,7 +166,7 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1635071921179"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1635079306766"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
@@ -176,9 +176,11 @@
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">&quot;@&#123;/testRest/1/admin&#125;&quot;</span>&gt;</span></span>测试路径中的占位符--&gt;/testRest<span class="xml"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">//路径请求传递参数</span><br><span class="line"><span class="code">    @RequestMapping(</span></span><br><span class="line"><span class="code">            &quot;/testRest/&#123;id&#125;/&#123;username&#125;&quot;</span></span><br><span class="line"><span class="code">    )</span></span><br><span class="line"><span class="code">    public String testRest(</span></span><br><span class="line"><span class="code">            @PathVariable(&quot;id&quot;) String id,</span></span><br><span class="line"><span class="code">            @PathVariable(&quot;username&quot;) String username)</span></span><br><span class="line"><span class="code">    &#123;</span></span><br><span class="line"><span class="code">        System.out.println(&quot;id:&quot;+id+&quot;,username:&quot;+username);</span></span><br><span class="line"><span class="code">        System.out.println(&quot;路径请求&quot;);</span></span><br><span class="line"><span class="code">        return &quot;success&quot;;</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code">        //最终输出的内容为--&gt;id:1,username:admin</span></span><br></pre></td></tr></table></figure>
 <h1 id="SpringMVC获取请求参数"><a href="#SpringMVC获取请求参数" class="headerlink" title="SpringMVC获取请求参数"></a>SpringMVC获取请求参数</h1><h2 id="通过ServletAPI获取"><a href="#通过ServletAPI获取" class="headerlink" title="通过ServletAPI获取"></a>通过ServletAPI获取</h2><p>将HttpServletRequest作为控制器方法的形参，此时HttpServletRequest类型的参数表示封装了当前请求的请求报文的对象</p>
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@RequestMapping(&quot;/testParam&quot;) </span><br><span class="line">public String testParam(HttpServletRequest request)&#123; </span><br><span class="line"><span class="code">    String username = request.getParameter(&quot;username&quot;); </span></span><br><span class="line"><span class="code">    String password = request.getParameter(&quot;password&quot;); </span></span><br><span class="line"><span class="code">    System.out.println(&quot;username:&quot;+username+&quot;,password:&quot;+password); </span></span><br><span class="line"><span class="code">    return &quot;success&quot;; </span></span><br><span class="line"><span class="code">    &#125;</span></span><br></pre></td></tr></table></figure>
+<p>使用原生的方法就是在侮辱springMVC。</p>
 <h2 id="通过控制器方法的形参获取请求参数"><a href="#通过控制器方法的形参获取请求参数" class="headerlink" title="通过控制器方法的形参获取请求参数"></a>通过控制器方法的形参获取请求参数</h2><p>在控制器方法的形参位置，设置和请求参数同名的形参，当浏览器发送请求，匹配到请求映射时，在DispatcherServlet中就会将请求参数赋值给相应的形参</p>
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">&quot;@&#123;/testParam(username=&#x27;admin&#x27;,password=123456)&#125;&quot;</span>&gt;</span></span>测试获取请求参数-- &gt;/testParam<span class="xml"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">@RequestMapping(&quot;/testParam&quot;) </span><br><span class="line">public String testParam(String username, String password)&#123; </span><br><span class="line"><span class="code">    System.out.println(&quot;username:&quot;+username+&quot;,password:&quot;+password); </span></span><br><span class="line"><span class="code">    return &quot;success&quot;; </span></span><br><span class="line"><span class="code">    &#125;</span></span><br></pre></td></tr></table></figure>
-<p>注：若请求所传输的请求参数中有多个同名的请求参数，此时可以在控制器方法的形参中设置字符串数组或者字符串类型的形参接收此请求参数若使用字符串数组类型的形参，此参数的数组中包含了每一个数据若使用字符串类型的形参，此参数的值为每个数据中间使用逗号拼接的结果。</p>
+<p>注：若请求所传输的请求参数中有多个同名的请求参数，此时可以在控制器方法的形参中设置字符串数组或者字符串类型的形参接收此请求参数若使用字符串数组类型的形参，此参数的数组中包含了每一个数据若使用字符串类型的形参，此参数的值为每个数据中间使用逗号拼接的结果。<br>get请求会将复选框的内容拼接到请求地址中 以数组的形式接受</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@RequestMapping(&quot;/testParam&quot;)</span><br><span class="line">//SpringMVC子自带的</span><br><span class="line">//若请求参数中可以在控制器方法的形参位置设置一个字符串类型，做字符串类型数组接受此数组</span><br><span class="line">public  String testParam(String username,String password,String[] hobby)&#123;</span><br><span class="line"><span class="code">    System.out.println(&quot;username:&quot;+username+&quot;,password：&quot;+password+&quot;,hobby:&quot;+hobby);</span></span><br><span class="line"><span class="code">    System.out.println(&quot;函数传参数&quot;);</span></span><br><span class="line"><span class="code">    System.out.println(hobby[1]);//数组单个输出</span></span><br><span class="line"><span class="code">    System.out.println(Arrays.toString(hobby));//数组整体输出</span></span><br><span class="line"><span class="code">    return &quot;success&quot;;</span></span><br><span class="line"><span class="code">&#125;</span></span><br></pre></td></tr></table></figure>
 <h2 id="RequestParam"><a href="#RequestParam" class="headerlink" title="@RequestParam"></a>@RequestParam</h2><p>@RequestParam是将请求参数和控制器方法的形参创建映射关系<br>@RequestParam注解一共有三个属性：<br>value：指定为形参赋值的请求参数的参数名<br>required：设置是否必须传输此请求参数，默认值为true<br>若设置为true时，则当前请求必须传输value所指定的请求参数，若没有传输该请求参数，且没有设置<br>defaultValue属性，则页面报错400：Required String parameter ‘xxx’ is not present；若设置为<br>false，则当前请求不是必须传输value所指定的请求参数，若没有传输，则注解所标识的形参的值为<br>null<br>defaultValue：不管required属性值为true或false，当value所指定的请求参数没有传输或传输的值<br>为””时，则使用默认值为形参赋值</p>
 <h2 id="RequestHeader"><a href="#RequestHeader" class="headerlink" title="@RequestHeader"></a>@RequestHeader</h2><p>@RequestHeader是将请求头信息和控制器方法的形参创建映射关系<br>@RequestHeader注解一共有三个属性：value、required、defaultValue，用法同@RequestParam</p>
 <h2 id="CookieValue"><a href="#CookieValue" class="headerlink" title="@CookieValue"></a>@CookieValue</h2><p>@CookieValue是将cookie数据和控制器方法的形参创建映射关系<br>@CookieValue注解一共有三个属性：value、required、defaultValue，用法同@RequestParam</p>
@@ -255,7 +257,7 @@
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
             const hostUrl       = "https://whitexb.github.io/2021/10/23/SpringMVC%E6%94%AF%E6%8C%81ant%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%B7%AF%E5%BE%84/";
-            const title         = "「SpringMVC支持ant风格的路径」";
+            const title         = "「SpringMVC支持ant风格的路径和参数请求」";
             const excerpt       = `ant风格的路径？：表示任意的单个字符*：表示任意的0个或多个字符：表示任意的一层或多层目录注意：在使用时，只能使用/**/xxx的方式
 springMVC支持路径中的占位符号原始方式：/deleteUser?id=1rest方式：/...`;
             let _URL;
@@ -362,7 +364,7 @@ springMVC支持路径中的占位符号原始方式：/deleteUser?id=1rest方式
         
           
           
-            <a class="list-group-item" href="/2021/10/23/SpringMVC%E6%94%AF%E6%8C%81ant%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%B7%AF%E5%BE%84/"><i class="fa  fa-book"></i> SpringMVC支持ant风格的路径</a>
+            <a class="list-group-item" href="/2021/10/23/SpringMVC%E6%94%AF%E6%8C%81ant%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%B7%AF%E5%BE%84/"><i class="fa  fa-book"></i> SpringMVC支持ant风格的路径和参数请求</a>
             
           
         
