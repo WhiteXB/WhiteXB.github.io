@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
-  <title>计算机设计大赛国赛答辩复盘 | (*´∇｀*)白筱の猫舍</title>
+  <title>HttpMessageConverter | (*´∇｀*)白筱の猫舍</title>
   <meta name="author" content="white-x" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -13,21 +13,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="感悟, 经验" />
+    <meta name="keywords" content="框架" />
   
-  <meta name="description" content="答辩反思 不要一个人孤军奋战 答辩经验太少 准备不充分">
+  <meta name="description" content="HttpMessageConverter，报文信息转换器，将请求报文转换为Java对象，或将Java对象转换为响应报文HttpMessageConverter提供了两个注解和两个类型：@RequestBody，@ResponseBody，RequestEntity，ResponseEntity @RequestBody@RequestBody可以获取请求体，需要在控制器方法设置一个形参，使用@Re">
 <meta property="og:type" content="article">
-<meta property="og:title" content="计算机设计大赛国赛答辩复盘">
-<meta property="og:url" content="https://whitexb.github.io/2021/07/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B%E5%9B%BD%E8%B5%9B%E7%AD%94%E8%BE%A9%E5%A4%8D%E7%9B%98/index.html">
+<meta property="og:title" content="HttpMessageConverter">
+<meta property="og:url" content="https://whitexb.github.io/2021/10/28/HttpMessageConverter/index.html">
 <meta property="og:site_name" content="(*´∇｀*)白筱の猫舍">
-<meta property="og:description" content="答辩反思 不要一个人孤军奋战 答辩经验太少 准备不充分">
+<meta property="og:description" content="HttpMessageConverter，报文信息转换器，将请求报文转换为Java对象，或将Java对象转换为响应报文HttpMessageConverter提供了两个注解和两个类型：@RequestBody，@ResponseBody，RequestEntity，ResponseEntity @RequestBody@RequestBody可以获取请求体，需要在控制器方法设置一个形参，使用@Re">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
-<meta property="article:published_time" content="2021-07-25T13:17:22.000Z">
-<meta property="article:modified_time" content="2021-08-01T18:34:11.939Z">
+<meta property="article:published_time" content="2021-10-28T12:21:59.000Z">
+<meta property="article:modified_time" content="2021-10-28T12:32:42.265Z">
 <meta property="article:author" content="white-x">
-<meta property="article:tag" content="经验">
-<meta property="article:tag" content="感悟">
+<meta property="article:tag" content="框架">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta name="twitter:site" content="@null">
@@ -148,17 +147,17 @@
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center">计算机设计大赛国赛答辩复盘</h1>
+                <h1 class="kratos-entry-title text-center">HttpMessageConverter</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><i class="fa fa-calendar"></i> 2021-07-25</li>
+                <li><i class="fa fa-calendar"></i> 2021-10-28</li>
                 <li><i class="fa fa-user"></i> 作者 white-x</li>
                 <li>
                     <i class="fa fa-edit"></i> 
                     
                     
-                        29
+                        ~4.12K
                     
                     字
                 </li>
@@ -167,15 +166,32 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1627842851939"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1635424362265"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
-            <h1 id="答辩反思"><a href="#答辩反思" class="headerlink" title="答辩反思"></a>答辩反思</h1><ol>
-<li>不要一个人孤军奋战</li>
-<li>答辩经验太少</li>
-<li>准备不充分</li>
-</ol>
+            <p>HttpMessageConverter，报文信息转换器，将请求报文转换为Java对象，或将Java对象转换为响应报文<br>HttpMessageConverter提供了两个注解和两个类型：@RequestBody，@ResponseBody，<br>RequestEntity，<br>ResponseEntity</p>
+<h1 id="RequestBody"><a href="#RequestBody" class="headerlink" title="@RequestBody"></a>@RequestBody</h1><p>@RequestBody可以获取请求体，需要在控制器方法设置一个形参，使用@RequestBody进行标识，当前请求的请求体就会为当前注解所标识的形参赋值</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">form</span> <span class="attr">th:action</span>=<span class="string">&quot;@&#123;/testRequestBody&#125;&quot;</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span>&gt;</span></span> </span><br><span class="line"><span class="code">        用户名：&lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;&lt;br&gt; </span></span><br><span class="line"><span class="code">        密码：&lt;input type=&quot;password&quot; name=&quot;password&quot;&gt;&lt;br&gt; </span></span><br><span class="line"><span class="code">        &lt;input type=&quot;submit&quot;&gt; </span></span><br><span class="line"><span class="code">&lt;/form&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@RequestMapping(&quot;/testRequestBody&quot;) </span><br><span class="line">public String testRequestBody(@RequestBody String requestBody)&#123;</span><br><span class="line"><span class="code">     System.out.println(&quot;requestBody:&quot;+requestBody);</span></span><br><span class="line"><span class="code">      return &quot;success&quot;; </span></span><br><span class="line"><span class="code">      &#125;</span></span><br></pre></td></tr></table></figure>
+<p>输出结果：<br>requestBody:username=admin&amp;password=123456</p>
+<h1 id="RequestEntity"><a href="#RequestEntity" class="headerlink" title="RequestEntity"></a>RequestEntity</h1><p>RequestEntity封装请求报文的一种类型，需要在控制器方法的形参中设置该类型的形参，当前请求的请求报文就会赋值给该形参，可以通过getHeaders()获取请求头信息，通过getBody()获取请求体信息</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@RequestMapping(&quot;/testRequestEntity&quot;) </span><br><span class="line">public String testRequestEntity(RequestEntity<span class="xml"><span class="tag">&lt;<span class="name">String</span>&gt;</span></span> requestEntity)&#123; </span><br><span class="line"><span class="code">    System.out.println(&quot;requestHeader:&quot;+requestEntity.getHeaders()); </span></span><br><span class="line"><span class="code">    System.out.println(&quot;requestBody:&quot;+requestEntity.getBody());</span></span><br><span class="line"><span class="code">     return &quot;success&quot;; </span></span><br><span class="line"><span class="code">     &#125;</span></span><br></pre></td></tr></table></figure>
+<p>输出结果： requestHeader:[host:”localhost:8080”, connection:”keep-alive”, content-length:”27”,cache-control:”max-age=0”, sec-ch-ua:”” Not A;Brand”;v=”99”, “Chromium”;v=”90”, “GoogleChrome”;v=”90””, sec-ch-ua-mobile:”?0”, upgrade-insecure-requests:”1”, origin:”<a href="http://localhost:8080&quot;">http://localhost:8080&quot;</a>, user-agent:”Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, likeGecko) Chrome/90.0.4430.93 Safari/537.36”] requestBody:username=admin&amp;password=123</p>
+<h1 id="ResponseBody"><a href="#ResponseBody" class="headerlink" title="@ResponseBody"></a>@ResponseBody</h1><p>@ResponseBody用于标识一个控制器方法，可以将该方法的返回值直接作为响应报文的响应体响应到浏览器</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@ResponseBody </span><br><span class="line">public String testResponseBody()&#123; </span><br><span class="line"><span class="code">    return &quot;success&quot;; </span></span><br><span class="line"><span class="code">    &#125;</span></span><br></pre></td></tr></table></figure>
+<p>结果：浏览器页面显示success</p>
+<h1 id="SpringMVC处理json"><a href="#SpringMVC处理json" class="headerlink" title="SpringMVC处理json"></a>SpringMVC处理json</h1><p>@ResponseBody处理json的步骤：</p>
+<h2 id="导入jackson的依赖"><a href="#导入jackson的依赖" class="headerlink" title="导入jackson的依赖"></a>导入jackson的依赖</h2><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span> </span><br><span class="line"><span class="code">    &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt; &lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;</span></span><br><span class="line"><span class="code">    &lt;version&gt;2.12.1&lt;/version&gt; </span></span><br><span class="line"><span class="code"> &lt;/dependency&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="在SpringMVC的核心配置文件中开启mvc的注解驱动"><a href="#在SpringMVC的核心配置文件中开启mvc的注解驱动" class="headerlink" title="在SpringMVC的核心配置文件中开启mvc的注解驱动"></a>在SpringMVC的核心配置文件中开启mvc的注解驱动</h2><p>此时在HandlerAdaptor中会自动装配一个消息转换器：MappingJackson2HttpMessageConverter，可以将响应到浏览器的Java对象转换为Json格<br>式的字符串</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mvc:annotation-driven</span> /&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="在处理器方法上使用-ResponseBody注解进行标识"><a href="#在处理器方法上使用-ResponseBody注解进行标识" class="headerlink" title="在处理器方法上使用@ResponseBody注解进行标识"></a>在处理器方法上使用@ResponseBody注解进行标识</h2><h2 id="将Java对象直接作为控制器方法的返回值返回，就会自动转换为Json格式的字符串"><a href="#将Java对象直接作为控制器方法的返回值返回，就会自动转换为Json格式的字符串" class="headerlink" title="将Java对象直接作为控制器方法的返回值返回，就会自动转换为Json格式的字符串"></a>将Java对象直接作为控制器方法的返回值返回，就会自动转换为Json格式的字符串</h2><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@RequestMapping(&quot;/testResponseUser&quot;) </span><br><span class="line">@ResponseBody public User testResponseUser()&#123; </span><br><span class="line"><span class="code">    return new User(1001,&quot;admin&quot;,&quot;123456&quot;,23,&quot;男&quot;); </span></span><br><span class="line"><span class="code">    &#125;</span></span><br></pre></td></tr></table></figure>
+<p>浏览器的页面中展示的结果：<br>{“id”:1001,”username”:”admin”,”password”:”123456”,”age”:23,”sex”:”男”}</p>
+<h1 id="SpringMVC处理ajax"><a href="#SpringMVC处理ajax" class="headerlink" title="SpringMVC处理ajax"></a>SpringMVC处理ajax</h1><h2 id="请求超链接："><a href="#请求超链接：" class="headerlink" title="请求超链接："></a>请求超链接：</h2><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span> </span><br><span class="line"><span class="code">     &lt;a th:href=&quot;@&#123;/testAjax&#125;&quot; @click=&quot;testAjax&quot;&gt;testAjax&lt;/a&gt;&lt;br&gt; </span></span><br><span class="line"><span class="code">&lt;/div&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="通过vue和axios处理点击事件："><a href="#通过vue和axios处理点击事件：" class="headerlink" title="通过vue和axios处理点击事件："></a>通过vue和axios处理点击事件：</h2><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">th:src</span>=<span class="string">&quot;@&#123;/static/js/vue.js&#125;&quot;</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"> <span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">th:src</span>=<span class="string">&quot;@&#123;/static/js/axios.min.js&#125;&quot;</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span> </span><br><span class="line">  var vue = new Vue(&#123; </span><br><span class="line"><span class="code">    el:&quot;#app&quot;,</span></span><br><span class="line"><span class="code">    methods:&#123; testAjax:function (event) </span></span><br><span class="line"><span class="code">    &#123;</span></span><br><span class="line"><span class="code">         axios(&#123; method:&quot;post&quot;,</span></span><br><span class="line"><span class="code">          url:event.target.href,</span></span><br><span class="line"><span class="code">           params:&#123; username:&quot;admin&quot;, password:&quot;123456&quot; &#125; </span></span><br><span class="line"><span class="code">           &#125;).then(function (response) &#123; </span></span><br><span class="line"><span class="code">               alert(response.data); </span></span><br><span class="line"><span class="code">               &#125;); event.preventDefault(); </span></span><br><span class="line"><span class="code">               &#125; </span></span><br><span class="line"><span class="code">       &#125; </span></span><br><span class="line"><span class="code">&#125;); </span></span><br><span class="line"><span class="code">   &lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="控制器方法："><a href="#控制器方法：" class="headerlink" title="控制器方法："></a>控制器方法：</h2><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@RequestMapping(&quot;/testAjax&quot;) </span><br><span class="line">@ResponseBody </span><br><span class="line">public String testAjax(String username, String password)&#123;</span><br><span class="line"><span class="code">     System.out.println(&quot;username:&quot;+username+&quot;,password:&quot;+password); </span></span><br><span class="line"><span class="code">     return &quot;hello,ajax&quot;; </span></span><br><span class="line"><span class="code">     &#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="RestController注解"><a href="#RestController注解" class="headerlink" title="@RestController注解"></a>@RestController注解</h2><p>@RestController注解是springMVC提供的一个复合注解，标识在控制器的类上，就相当于为类添加了@Controller注解，并且为其中的每个方法添加了@ResponseBody注解</p>
+<h2 id="ResponseEntity"><a href="#ResponseEntity" class="headerlink" title="ResponseEntity"></a>ResponseEntity</h2><p>ResponseEntity用于控制器方法的返回值类型，该控制器方法的返回值就是响应到浏览器的响应报文.</p>
 
         </div>
         
@@ -231,7 +247,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "https://whitexb.github.io/2021/07/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B%E5%9B%BD%E8%B5%9B%E7%AD%94%E8%BE%A9%E5%A4%8D%E7%9B%98/",
+                text: "https://whitexb.github.io/2021/10/28/HttpMessageConverter/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -243,14 +259,9 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "https://whitexb.github.io/2021/07/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B%E5%9B%BD%E8%B5%9B%E7%AD%94%E8%BE%A9%E5%A4%8D%E7%9B%98/";
-            const title         = "「计算机设计大赛国赛答辩复盘」";
-            const excerpt       = `答辩反思
-不要一个人孤军奋战
-答辩经验太少
-准备不充分
-
-`;
+            const hostUrl       = "https://whitexb.github.io/2021/10/28/HttpMessageConverter/";
+            const title         = "「HttpMessageConverter」";
+            const excerpt       = `HttpMessageConverter，报文信息转换器，将请求报文转换为Java对象，或将Java对象转换为响应报文HttpMessageConverter提供了两个注解和两个类型：@RequestBody，@ResponseBod...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -269,10 +280,10 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/%E6%84%9F%E6%82%9F/" rel="tag">感悟</a>, <a class="tag-none-link" href="/tags/%E7%BB%8F%E9%AA%8C/" rel="tag">经验</a>
+                    <a class="tag-none-link" href="/tags/%E6%A1%86%E6%9E%B6/" rel="tag">框架</a>
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2021-08-02</span>
+                <span>最后编辑：2021-10-28</span>
                 </div>
             </div>
         </footer>
@@ -281,13 +292,9 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" 有关《白筱の猫舍》旧站点" href="/2021/07/22/旧站点/">&lt; 上一篇</a>
+                <a title=" RESTful" href="/2021/10/27/RESTful/">&lt; 上一篇</a>
             </div>
             
-            
-            <div class="nav-next clearfix">
-                <a title=" linux+kali+burp" href="/2021/07/30/linux+kali+burp/">下一篇 &gt;</a>
-            </div>
             
         </nav>
     
@@ -329,7 +336,7 @@
         <span class="toc-progress-bar"></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AD%94%E8%BE%A9%E5%8F%8D%E6%80%9D"><span class="toc-text">答辩反思</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#RequestBody"><span class="toc-text">@RequestBody</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#RequestEntity"><span class="toc-text">RequestEntity</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ResponseBody"><span class="toc-text">@ResponseBody</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SpringMVC%E5%A4%84%E7%90%86json"><span class="toc-text">SpringMVC处理json</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5jackson%E7%9A%84%E4%BE%9D%E8%B5%96"><span class="toc-text">导入jackson的依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8SpringMVC%E7%9A%84%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E5%BC%80%E5%90%AFmvc%E7%9A%84%E6%B3%A8%E8%A7%A3%E9%A9%B1%E5%8A%A8"><span class="toc-text">在SpringMVC的核心配置文件中开启mvc的注解驱动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8%E5%A4%84%E7%90%86%E5%99%A8%E6%96%B9%E6%B3%95%E4%B8%8A%E4%BD%BF%E7%94%A8-ResponseBody%E6%B3%A8%E8%A7%A3%E8%BF%9B%E8%A1%8C%E6%A0%87%E8%AF%86"><span class="toc-text">在处理器方法上使用@ResponseBody注解进行标识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%86Java%E5%AF%B9%E8%B1%A1%E7%9B%B4%E6%8E%A5%E4%BD%9C%E4%B8%BA%E6%8E%A7%E5%88%B6%E5%99%A8%E6%96%B9%E6%B3%95%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC%E8%BF%94%E5%9B%9E%EF%BC%8C%E5%B0%B1%E4%BC%9A%E8%87%AA%E5%8A%A8%E8%BD%AC%E6%8D%A2%E4%B8%BAJson%E6%A0%BC%E5%BC%8F%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">将Java对象直接作为控制器方法的返回值返回，就会自动转换为Json格式的字符串</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SpringMVC%E5%A4%84%E7%90%86ajax"><span class="toc-text">SpringMVC处理ajax</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E8%B6%85%E9%93%BE%E6%8E%A5%EF%BC%9A"><span class="toc-text">请求超链接：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E8%BF%87vue%E5%92%8Caxios%E5%A4%84%E7%90%86%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6%EF%BC%9A"><span class="toc-text">通过vue和axios处理点击事件：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E5%99%A8%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-text">控制器方法：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RestController%E6%B3%A8%E8%A7%A3"><span class="toc-text">@RestController注解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ResponseEntity"><span class="toc-text">ResponseEntity</span></a></li></ol></li></ol>
     </div>
 </aside>
                 
