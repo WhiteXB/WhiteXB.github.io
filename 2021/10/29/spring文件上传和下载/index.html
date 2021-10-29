@@ -24,7 +24,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-10-29T06:10:02.000Z">
-<meta property="article:modified_time" content="2021-10-29T06:16:13.141Z">
+<meta property="article:modified_time" content="2021-10-29T10:37:51.474Z">
 <meta property="article:author" content="white-x">
 <meta property="article:tag" content="框架">
 <meta name="twitter:card" content="summary">
@@ -166,7 +166,7 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1635488173141"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1635503871474"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
@@ -176,6 +176,7 @@
 <h2 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h2><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload --&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span> </span><br><span class="line"><span class="code">        &lt;groupId&gt;commons-fileupload&lt;/groupId&gt; </span></span><br><span class="line"><span class="code">        &lt;artifactId&gt;commons-fileupload&lt;/artifactId&gt; </span></span><br><span class="line"><span class="code">        &lt;version&gt;1.3.1&lt;/version&gt; </span></span><br><span class="line"><span class="code">&lt;/dependency&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="在SpringMVC的配置文件中添加配置"><a href="#在SpringMVC的配置文件中添加配置" class="headerlink" title="在SpringMVC的配置文件中添加配置"></a>在SpringMVC的配置文件中添加配置</h2><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--必须通过文件解析器的解析才能将文件转换为MultipartFile对象--&gt; </span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;multipartResolver&quot;</span> <span class="attr">class</span>=<span class="string">&quot;org.springframework.web.multipart.commons.CommonsMultipartResolver&quot;</span>&gt;</span></span> <span class="xml"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 <h2 id="控制器方法"><a href="#控制器方法" class="headerlink" title="控制器方法"></a>控制器方法</h2><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">@RequestMapping(&quot;/testUp&quot;)</span><br><span class="line">   public String testUp(MultipartFile photo, HttpSession session) throws IOException &#123;</span><br><span class="line"><span class="code">       //获取上传的文件的文件名</span></span><br><span class="line"><span class="code">       String fileName = photo.getOriginalFilename();</span></span><br><span class="line"><span class="code">       //获取上传的文件的后缀名</span></span><br><span class="line"><span class="code">       String suffixName = fileName.substring(fileName.lastIndexOf(&quot;.&quot;));</span></span><br><span class="line"><span class="code">       //将UUID作为文件名</span></span><br><span class="line"><span class="code">       String uuid = UUID.randomUUID().toString().replaceAll(&quot;-&quot;,&quot;&quot;);</span></span><br><span class="line"><span class="code">       //将uuid和后缀名拼接后的结果作为最终的文件名</span></span><br><span class="line"><span class="code">       fileName = uuid + suffixName;</span></span><br><span class="line"><span class="code">       //通过ServletContext获取服务器中photo目录的路径</span></span><br><span class="line"><span class="code">       ServletContext servletContext = session.getServletContext();</span></span><br><span class="line"><span class="code">       String photoPath = servletContext.getRealPath(&quot;photo&quot;);</span></span><br><span class="line"><span class="code">       File file = new File(photoPath);</span></span><br><span class="line"><span class="code">       //判断photoPath所对应路径是否存在</span></span><br><span class="line"><span class="code">       if(!file.exists())&#123;</span></span><br><span class="line"><span class="code">           //若不存在，则创建目录</span></span><br><span class="line"><span class="code">           file.mkdir();</span></span><br><span class="line"><span class="code">       &#125;</span></span><br><span class="line"><span class="code">       String finalPath = photoPath + File.separator + fileName;</span></span><br><span class="line"><span class="code">       //上传文件</span></span><br><span class="line"><span class="code">       photo.transferTo(new File(finalPath));</span></span><br><span class="line"><span class="code">       return &quot;success&quot;;</span></span><br></pre></td></tr></table></figure>
+
         </div>
         
             <div class="kratos-copyright text-center clearfix">
@@ -331,7 +332,7 @@
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E9%A1%B9%E7%9B%AE/">小项目</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/">教程文档</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">55</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E9%A1%B9%E7%9B%AE/">小项目</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/">教程文档</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">58</span></li></ul>
   </aside>
 
 
@@ -354,6 +355,18 @@
         
           
           
+            <a class="list-group-item" href="/2021/10/29/SpringMVC%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/"><i class="fa  fa-book"></i> SpringMVC执行流程</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/10/29/%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AESpringMVC/"><i class="fa  fa-book"></i> 注解配置SpringMVC</a>
+            
+          
+        
+          
+          
             <a class="list-group-item" href="/2021/10/29/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%99%A8/"><i class="fa  fa-book"></i> 异常处理器</a>
             
           
@@ -371,17 +384,9 @@
           
         
           
-          
-            <a class="list-group-item" href="/2021/10/28/HttpMessageConverter/"><i class="fa  fa-book"></i> HttpMessageConverter</a>
             
           
-        
-          
-          
-            <a class="list-group-item" href="/2021/10/27/RESTful/"><i class="fa  fa-book"></i> RESTful</a>
             
-          
-        
           
             
           
