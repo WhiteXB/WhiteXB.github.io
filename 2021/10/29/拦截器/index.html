@@ -15,16 +15,16 @@
   
     <meta name="keywords" content="框架" />
   
-  <meta name="description" content="拦截器的配置SpringMVC中的拦截器用于拦截控制器方法的执行SpringMVC中的拦截器需要实现HandlerInterceptorSpringMVC的拦截器必须在SpringMVC的配置文件中进行配置： 12345678&lt;bean class&#x3D;&quot;com.atguigu.interceptor.FirstInterceptor&quot;&gt;&lt;&#x2F;bean&gt; &amp;l">
+  <meta name="description" content="拦截器的配置SpringMVC中的拦截器用于拦截控制器方法的执行 SpringMVC中的拦截器需要实现HandlerInterceptorSpringMVC的拦截器必须在SpringMVC的配置文件中进行配置： 12345678&lt;bean class&#x3D;&quot;com.atguigu.interceptor.FirstInterceptor&quot;&gt;&lt;&#x2F;bean&gt; &amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="拦截器">
 <meta property="og:url" content="https://whitexb.github.io/2021/10/29/%E6%8B%A6%E6%88%AA%E5%99%A8/index.html">
 <meta property="og:site_name" content="(*´∇｀*)白筱の猫舍">
-<meta property="og:description" content="拦截器的配置SpringMVC中的拦截器用于拦截控制器方法的执行SpringMVC中的拦截器需要实现HandlerInterceptorSpringMVC的拦截器必须在SpringMVC的配置文件中进行配置： 12345678&lt;bean class&#x3D;&quot;com.atguigu.interceptor.FirstInterceptor&quot;&gt;&lt;&#x2F;bean&gt; &amp;l">
+<meta property="og:description" content="拦截器的配置SpringMVC中的拦截器用于拦截控制器方法的执行 SpringMVC中的拦截器需要实现HandlerInterceptorSpringMVC的拦截器必须在SpringMVC的配置文件中进行配置： 12345678&lt;bean class&#x3D;&quot;com.atguigu.interceptor.FirstInterceptor&quot;&gt;&lt;&#x2F;bean&gt; &amp;">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-10-29T06:39:06.000Z">
-<meta property="article:modified_time" content="2021-10-29T06:40:52.044Z">
+<meta property="article:modified_time" content="2021-10-29T07:58:11.981Z">
 <meta property="article:author" content="white-x">
 <meta property="article:tag" content="框架">
 <meta name="twitter:card" content="summary">
@@ -157,7 +157,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        1121
+                        1113
                     
                     字
                 </li>
@@ -166,14 +166,16 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1635489652044"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1635494291981"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
-            <h1 id="拦截器的配置"><a href="#拦截器的配置" class="headerlink" title="拦截器的配置"></a>拦截器的配置</h1><p>SpringMVC中的拦截器用于拦截控制器方法的执行<br>SpringMVC中的拦截器需要实现HandlerInterceptor<br>SpringMVC的拦截器必须在SpringMVC的配置文件中进行配置：</p>
+            <h1 id="拦截器的配置"><a href="#拦截器的配置" class="headerlink" title="拦截器的配置"></a>拦截器的配置</h1><p>SpringMVC中的拦截器用于拦截控制器方法的执行</p>
+<p>SpringMVC中的拦截器需要实现HandlerInterceptor<br>SpringMVC的拦截器必须在SpringMVC的配置文件中进行配置：</p>
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">&quot;com.atguigu.interceptor.FirstInterceptor&quot;</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span> </span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">ref</span> <span class="attr">bean</span>=<span class="string">&quot;firstInterceptor&quot;</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">ref</span>&gt;</span></span> </span><br><span class="line">&lt;!-- 以上两种配置方式都是对DispatcherServlet所处理的所有的请求进行拦截 --&gt; <span class="xml"><span class="tag">&lt;<span class="name">mvc:interceptor</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mvc:mapping</span> <span class="attr">path</span>=<span class="string">&quot;/**&quot;</span>/&gt;</span></span> </span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mvc:exclude-mapping</span> <span class="attr">path</span>=<span class="string">&quot;/testRequestEntity&quot;</span>/&gt;</span></span> </span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">ref</span> <span class="attr">bean</span>=<span class="string">&quot;firstInterceptor&quot;</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">ref</span>&gt;</span></span> </span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">mvc:interceptor</span>&gt;</span></span></span><br><span class="line"> &lt;!--以上配置方式可以通过ref或bean标签设置拦截器，通过mvc:mapping设置需要拦截的请求，通过 mvc:exclude-mapping设置需要排除的请求，即不需要拦截的请求 --&gt;</span><br></pre></td></tr></table></figure>
 <h1 id="拦截器的三个抽象方法"><a href="#拦截器的三个抽象方法" class="headerlink" title="拦截器的三个抽象方法"></a>拦截器的三个抽象方法</h1><p>SpringMVC中的拦截器有三个抽象方法：<br>preHandle：控制器方法执行之前执行preHandle()，其boolean类型的返回值表示是否拦截或放行，返<br>回true为放行，即调用控制器方法；返回false表示拦截，即不调用控制器方法<br>postHandle：控制器方法执行之后执行postHandle()<br>afterComplation：处理完视图和模型数据，渲染视图完毕之后执行afterComplation()</p>
-<h1 id="多个拦截器的执行顺序"><a href="#多个拦截器的执行顺序" class="headerlink" title="多个拦截器的执行顺序"></a>多个拦截器的执行顺序</h1><p>a&gt;若每个拦截器的preHandle()都返回true<br>此时多个拦截器的执行顺序和拦截器在SpringMVC的配置文件的配置顺序有关：<br>preHandle()会按照配置的顺序执行，而postHandle()和afterComplation()会按照配置的反序执行<br>b&gt;若某个拦截器的preHandle()返回了falsepreHandle()返回false和它之前的拦截器的preHandle()都会执行，postHandle()都不执行，返回false<br>的拦截器之前的拦截器的afterComplation()会执行</p>
+<h1 id="多个拦截器的执行顺序"><a href="#多个拦截器的执行顺序" class="headerlink" title="多个拦截器的执行顺序"></a>多个拦截器的执行顺序</h1><h2 id="若每个拦截器的preHandle-都返回true"><a href="#若每个拦截器的preHandle-都返回true" class="headerlink" title="若每个拦截器的preHandle()都返回true"></a>若每个拦截器的preHandle()都返回true</h2><p>此时多个拦截器的执行顺序和拦截器在SpringMVC的配置文件的配置顺序有关：<br>preHandle()会按照配置的顺序执行，而postHandle()和afterComplation()会按照配置的反序执行</p>
+<h2 id="若某个拦截器的preHandle-返回了falsepreHandle-返回false和它之前的拦截器的preHandle-都会执行，postHandle-都不执行，返回false"><a href="#若某个拦截器的preHandle-返回了falsepreHandle-返回false和它之前的拦截器的preHandle-都会执行，postHandle-都不执行，返回false" class="headerlink" title="若某个拦截器的preHandle()返回了falsepreHandle()返回false和它之前的拦截器的preHandle()都会执行，postHandle()都不执行，返回false"></a>若某个拦截器的preHandle()返回了falsepreHandle()返回false和它之前的拦截器的preHandle()都会执行，postHandle()都不执行，返回false</h2><p>的拦截器之前的拦截器的afterComplation()会执行</p>
 
         </div>
         
@@ -243,8 +245,9 @@
             const twitterBase   = "https://twitter.com/intent/tweet?";
             const hostUrl       = "https://whitexb.github.io/2021/10/29/%E6%8B%A6%E6%88%AA%E5%99%A8/";
             const title         = "「拦截器」";
-            const excerpt       = `拦截器的配置SpringMVC中的拦截器用于拦截控制器方法的执行SpringMVC中的拦截器需要实现HandlerInterceptorSpringMVC的拦截器必须在SpringMVC的配置文件中进行配置：
-12345678&lt;...`;
+            const excerpt       = `拦截器的配置SpringMVC中的拦截器用于拦截控制器方法的执行
+SpringMVC中的拦截器需要实现HandlerInterceptorSpringMVC的拦截器必须在SpringMVC的配置文件中进行配置：
+12345678&lt...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -323,7 +326,7 @@
         <span class="toc-progress-bar"></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8B%A6%E6%88%AA%E5%99%A8%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="toc-text">拦截器的配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8B%A6%E6%88%AA%E5%99%A8%E7%9A%84%E4%B8%89%E4%B8%AA%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="toc-text">拦截器的三个抽象方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%9A%E4%B8%AA%E6%8B%A6%E6%88%AA%E5%99%A8%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F"><span class="toc-text">多个拦截器的执行顺序</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8B%A6%E6%88%AA%E5%99%A8%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="toc-text">拦截器的配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8B%A6%E6%88%AA%E5%99%A8%E7%9A%84%E4%B8%89%E4%B8%AA%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="toc-text">拦截器的三个抽象方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%9A%E4%B8%AA%E6%8B%A6%E6%88%AA%E5%99%A8%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F"><span class="toc-text">多个拦截器的执行顺序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8B%A5%E6%AF%8F%E4%B8%AA%E6%8B%A6%E6%88%AA%E5%99%A8%E7%9A%84preHandle-%E9%83%BD%E8%BF%94%E5%9B%9Etrue"><span class="toc-text">若每个拦截器的preHandle()都返回true</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8B%A5%E6%9F%90%E4%B8%AA%E6%8B%A6%E6%88%AA%E5%99%A8%E7%9A%84preHandle-%E8%BF%94%E5%9B%9E%E4%BA%86falsepreHandle-%E8%BF%94%E5%9B%9Efalse%E5%92%8C%E5%AE%83%E4%B9%8B%E5%89%8D%E7%9A%84%E6%8B%A6%E6%88%AA%E5%99%A8%E7%9A%84preHandle-%E9%83%BD%E4%BC%9A%E6%89%A7%E8%A1%8C%EF%BC%8CpostHandle-%E9%83%BD%E4%B8%8D%E6%89%A7%E8%A1%8C%EF%BC%8C%E8%BF%94%E5%9B%9Efalse"><span class="toc-text">若某个拦截器的preHandle()返回了falsepreHandle()返回false和它之前的拦截器的preHandle()都会执行，postHandle()都不执行，返回false</span></a></li></ol></li></ol>
     </div>
 </aside>
                 
