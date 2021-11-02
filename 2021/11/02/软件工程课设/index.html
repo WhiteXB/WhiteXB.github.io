@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
-  <title>java开发实战(第二十二天) | (*´∇｀*)白筱の猫舍</title>
+  <title>软件工程课设 | (*´∇｀*)白筱の猫舍</title>
   <meta name="author" content="white-x" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -13,21 +13,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="Tomcat, servlet" />
+    <meta name="keywords" content="java, spring" />
   
-  <meta name="description" content="Tomcat目录bin 可执行程序conf 配置文件logs 日志信息lib jar包temp 零时数据webapps web工程 Tomcat默认端口8080修改方式 conf目录 server.xml配置文件找到修改port1-65535 1000以内系统 8000以外 修改完端口要重启tomacat 应用部署方式1.直接放到webapps 2.bin目录下的localhost文件内 1234">
+  <meta name="description" content="搭建githun云共享">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java开发实战(第二十二天)">
-<meta property="og:url" content="https://whitexb.github.io/2021/08/25/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%BA%8C%E5%A4%A9)/index.html">
+<meta property="og:title" content="软件工程课设">
+<meta property="og:url" content="https://whitexb.github.io/2021/11/02/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E8%AF%BE%E8%AE%BE/index.html">
 <meta property="og:site_name" content="(*´∇｀*)白筱の猫舍">
-<meta property="og:description" content="Tomcat目录bin 可执行程序conf 配置文件logs 日志信息lib jar包temp 零时数据webapps web工程 Tomcat默认端口8080修改方式 conf目录 server.xml配置文件找到修改port1-65535 1000以内系统 8000以外 修改完端口要重启tomacat 应用部署方式1.直接放到webapps 2.bin目录下的localhost文件内 1234">
+<meta property="og:description" content="搭建githun云共享">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
-<meta property="article:published_time" content="2021-08-25T03:39:36.000Z">
-<meta property="article:modified_time" content="2021-08-26T03:23:51.804Z">
+<meta property="article:published_time" content="2021-11-02T10:46:21.000Z">
+<meta property="article:modified_time" content="2021-11-02T10:46:54.983Z">
 <meta property="article:author" content="white-x">
-<meta property="article:tag" content="Tomcat">
-<meta property="article:tag" content="servlet">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="spring">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta name="twitter:site" content="@null">
@@ -152,17 +152,17 @@
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center">java开发实战(第二十二天)</h1>
+                <h1 class="kratos-entry-title text-center">软件工程课设</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><i class="fa fa-calendar"></i> 2021-08-25</li>
+                <li><i class="fa fa-calendar"></i> 2021-11-02</li>
                 <li><i class="fa fa-user"></i> 作者 white-x</li>
                 <li>
                     <i class="fa fa-edit"></i> 
                     
                     
-                        770
+                        11
                     
                     字
                 </li>
@@ -171,25 +171,11 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1629948231804"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1635850014983"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
-            <h1 id="Tomcat目录"><a href="#Tomcat目录" class="headerlink" title="Tomcat目录"></a>Tomcat目录</h1><p>bin 可执行程序<br>conf 配置文件<br>logs 日志信息<br>lib jar包<br>temp 零时数据<br>webapps web工程</p>
-<h2 id="Tomcat默认端口8080"><a href="#Tomcat默认端口8080" class="headerlink" title="Tomcat默认端口8080"></a>Tomcat默认端口8080</h2><p>修改方式 conf目录 server.xml配置文件<br>找到<br><Connector port="8080" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443"/><br>修改port1-65535 1000以内系统 8000以外 修改完端口要重启tomacat</p>
-<h2 id="应用部署方式"><a href="#应用部署方式" class="headerlink" title="应用部署方式"></a>应用部署方式</h2><p>1.直接放到webapps</p>
-<p>2.bin目录下的localhost文件内</p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">Context</span> <span class="attr">path</span>=<span class="string">&quot;/abc&quot;</span> <span class="attr">docBase</span>=<span class="string">&quot;D:\tomcat\apache-tomcat-8.5.69-1\.idea&quot;</span> /&gt;</span></span></span><br><span class="line">配置访问路径</span><br><span class="line">&lt;!--Context表示一个工程的上下文</span><br><span class="line">path表示工程的访问路径：/abc</span><br><span class="line">docbase表示工程目录在哪里--&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="默认访问"><a href="#默认访问" class="headerlink" title="默认访问"></a>默认访问</h2><p>root/index.jsp</p>
-<h1 id="idea开发"><a href="#idea开发" class="headerlink" title="idea开发"></a>idea开发</h1><p>一般在idea完成之后在web目录创建lib目录<br>用来存放第三方的jar包还需要自己配置导入</p>
-<p>web文件专门用来存放web工程比如html css js</p>
-<p>web - inf 受服务器保护的目录，浏览器无法直接访问改目录</p>
-<p>web.xml 它是整个动态web工程的配置部署描述文件可以自这些配置很多web工程组件<br>servlet程序<br>Filter过滤器<br>Listener监听器<br>session超时<br>…<br>等等</p>
-<h3 id="添加第三方架包"><a href="#添加第三方架包" class="headerlink" title="添加第三方架包"></a>添加第三方架包</h3><p>将jar包导入lib里面然后 add as library 使用最后一个<br>module library idea导入lib架包</p>
-<h3 id="代码补全方法"><a href="#代码补全方法" class="headerlink" title="代码补全方法"></a>代码补全方法</h3><p>输入特定字符然后Tab补全<br>需要按alt+/自动提示<br>ctrl+/注释<br>idea的快捷键非常智能<br>需要长时间的熟悉</p>
-<h3 id="移除依赖"><a href="#移除依赖" class="headerlink" title="移除依赖"></a>移除依赖</h3><p>file<br> projectstructure<br>  dependencies<br>   减号移除依赖</p>
-
+            <h1 id="搭建githun云共享"><a href="#搭建githun云共享" class="headerlink" title="搭建githun云共享"></a>搭建githun云共享</h1>
         </div>
         
             <div class="kratos-copyright text-center clearfix">
@@ -244,7 +230,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "https://whitexb.github.io/2021/08/25/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%BA%8C%E5%A4%A9)/",
+                text: "https://whitexb.github.io/2021/11/02/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E8%AF%BE%E8%AE%BE/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -256,10 +242,9 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "https://whitexb.github.io/2021/08/25/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%BA%8C%E5%A4%A9)/";
-            const title         = "「java开发实战(第二十二天)」";
-            const excerpt       = `Tomcat目录bin 可执行程序conf 配置文件logs 日志信息lib jar包temp 零时数据webapps web工程
-Tomcat默认端口8080修改方式 conf目录 server.xml配置文件找到修改port1-6...`;
+            const hostUrl       = "https://whitexb.github.io/2021/11/02/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E8%AF%BE%E8%AE%BE/";
+            const title         = "「软件工程课设」";
+            const excerpt       = `搭建githun云共享`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -278,10 +263,10 @@ Tomcat默认端口8080修改方式 conf目录 server.xml配置文件找到修改
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/Tomcat/" rel="tag">Tomcat</a>, <a class="tag-none-link" href="/tags/servlet/" rel="tag">servlet</a>
+                    <a class="tag-none-link" href="/tags/java/" rel="tag">java</a>, <a class="tag-none-link" href="/tags/spring/" rel="tag">spring</a>
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2021-08-26</span>
+                <span>最后编辑：2021-11-02</span>
                 </div>
             </div>
         </footer>
@@ -290,13 +275,9 @@ Tomcat默认端口8080修改方式 conf目录 server.xml配置文件找到修改
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" java开发实战(第二十一天)" href="/2021/08/24/java开发实战(第二十一天)/">&lt; 上一篇</a>
+                <a title=" 恋爱盲盒项目" href="/2021/11/01/恋爱盲盒项目/">&lt; 上一篇</a>
             </div>
             
-            
-            <div class="nav-next clearfix">
-                <a title=" java开发实战(第二十三天)" href="/2021/08/26/java开发实战(第二十三天)/">下一篇 &gt;</a>
-            </div>
             
         </nav>
     
@@ -329,6 +310,18 @@ Tomcat默认端口8080修改方式 conf目录 server.xml配置文件找到修改
 </aside>
             
                     <div class="sticky-area">
+                
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix">
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar"></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%90%AD%E5%BB%BAgithun%E4%BA%91%E5%85%B1%E4%BA%AB"><span class="toc-text">搭建githun云共享</span></a></li></ol>
+    </div>
+</aside>
                 
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
