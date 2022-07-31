@@ -3,7 +3,8 @@
     <head>
   <!-- 元数据 -->
   <meta charset="utf-8">
-  <link rel="icon" href="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
+  
+  
   <title>java开发实战(第十天) | (*´∇｀*)白筱の猫舍</title>
   <meta name="author" content="white-x" />
   <meta http-equiv="Cache-Control" content="no-transform" />
@@ -22,7 +23,6 @@
 <meta property="og:site_name" content="(*´∇｀*)白筱の猫舍">
 <meta property="og:description" content="源码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-08-12T16:53:46.000Z">
 <meta property="article:modified_time" content="2021-08-16T13:20:10.969Z">
 <meta property="article:author" content="white-x">
@@ -30,8 +30,6 @@
 <meta property="article:tag" content="HTML">
 <meta property="article:tag" content="javascript">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
-<meta name="twitter:site" content="@null">
   
   <!-- 站点验证相关 -->
   
@@ -40,32 +38,49 @@
     
   
   <!-- 样式表文件 -->
-  <link rel="stylesheet" id="kratos-css" href="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/css/kratosr.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" media="all"></script>
   
-    <link rel="stylesheet" id="highlight-css" href="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/css/highlight/light.min.css" type="text/css" media="all">
-  
-  
-  <link rel="stylesheet" id="fontawe-css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
-  <link rel="stylesheet" id="nprogress-css" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="darkmode-css" href="/css/kr-color-dark.min.css" media="(prefers-color-scheme: dark)"></script>
+    <script src="/js/kr-dark.min.js"></script>
   
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/light.min.css" media="all"></script>
   
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></script>
+  <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></script>
   
   
-    <link rel="stylesheet" id="darkmode-css" href="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/css/kr-dark.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/vendors/aplayer@1.10.1/dist/APlayer.min.css"></script>
+  
+  
+    <link rel="stylesheet" href="/vendors/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"></script>
   
   <!-- 不得不预先加载的一些JS文件 -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="/vendors/jquery@3.6.0/dist/jquery.min.js"></script>
   
-    <script src="https://cdn.jsdelivr.net/npm/qrcode_js@1.0.0/qrcode.min.js"></script>
+    <script src="/vendors/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+  
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('/images/banner.webp');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('/images/bg.webp');
+        }
+      }
+    
+  </style>
   
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 
-    
+    <body class="custom-background">
         <div id="kratos-wrapper">
     <div id="kratos-page">
         <div id="kratos-header">
@@ -76,38 +91,37 @@
                             <ul id="kratos-primary-menu" class="sf-menu">
                                 
                                     
-                                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
                                     
-                                
+                                        
+                                            <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+                                        
                                     
-                                        <li><a href="/archives/"><i class="fa fa-file"></i>猿の力</a></li>
+                                        
+                                            <li><a href="/archives/"><i class="fa fa-file"></i>猿の力</a></li>
+                                        
                                     
-                                
+                                        
+                                            <li><a href="/friends/"><i class="fa fa-paw"></i>喵喵喵</a></li>
+                                        
                                     
-                                        <li><a href="/friends/"><i class="fa fa-paw"></i>喵喵喵</a></li>
-                                    
-                                
-                                    
-                                        <li><a target="_blank" rel="noopener" href="https://space.bilibili.com/33440117"><i class="fa fa-paw"></i>bilibili</a></li>
-                                    
-                                
-                                    
-                                        <li>
-                                            <a><i class="fa fa-link"></i>链接</a>
-                                            <ul class="sub-menu">
-                                                
+                                        
+                                            <li>
+                                                <a><i class="fa fa-link"></i>链接</a>
+                                                <ul class="sub-menu">
                                                     
-                                                
+                                                        
                                                     
-                                                        <li><a target="_blank" rel="noopener" href="https://www.white-x.top/WhiteXB-old-html/">作者博客</a></li>
+                                                        
+                                                            <li><a target="_blank" rel="noopener" href="https://www.white-x.top/WhiteXB-old-html/">作者博客</a></li>
+                                                        
                                                     
-                                                
+                                                        
+                                                            <li><a target="_blank" rel="noopener" href="https://github.com/WhiteXB/WhiteXB.io">项目链接</a></li>
+                                                        
                                                     
-                                                        <li><a target="_blank" rel="noopener" href="https://github.com/WhiteXB/WhiteXB.io">项目链接</a></li>
-                                                    
-                                                
-                                            </ul>
-                                        </li>
+                                                </ul>
+                                            </li>
+                                        
                                     
                                 
                             </ul>
@@ -149,16 +163,20 @@
 
         
 
-            <article>
+            <article itemscope itemtype="https://schema.org/Article">
+    
+    <link itemprop="mainEntityOfPage" href="https://whitexb.github.io/2021/08/13/java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98(%E7%AC%AC%E5%8D%81%E5%A4%A9)/">
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center">java开发实战(第十天)</h1>
+                <h1 class="kratos-entry-title text-center" itemprop="name headline">java开发实战(第十天)</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><i class="fa fa-calendar"></i> 2021-08-13</li>
-                <li><i class="fa fa-user"></i> 作者 white-x</li>
+                <li><time datetime="2021-08-12T16:53:46.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2021-08-13</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">white-x</span>
+                </li>
                 <li>
                     <i class="fa fa-edit"></i> 
                     
@@ -171,23 +189,28 @@
             </ul>
         </header>
         <div class="kratos-post-content">
+            
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1629120010969"></time> 前，其中的内容可能需要更新。
+                <div class="icon"><i class="fa fa-warning"></i></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1629120010969"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
+            
+                <div class="kratos-post-inner-toc">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%BA%90%E7%A0%81"><span class="toc-number">1.</span> <span class="toc-text">源码</span></a></li></ol>
+                </div>
+            
             <hr />
-            <h1 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h1><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span></span><br><span class="line"><span class="code">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</span></span><br><span class="line"><span class="code">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span></span><br><span class="line"><span class="code">    &lt;script type=&quot;text/javascript&quot;&gt;</span></span><br><span class="line"><span class="code">        </span></span><br><span class="line"><span class="code">        </span></span><br><span class="line"><span class="code">        /*window.onload= function()&#123;</span></span><br><span class="line"><span class="code">            var bjnObj = document.getElementById(&quot;btn01&quot;);</span></span><br><span class="line"><span class="code">            bjnObj.onclick=function d ()&#123;</span></span><br><span class="line"><span class="code">                alert(&quot;合法&quot;);</span></span><br><span class="line"><span class="code">            &#125;              </span></span><br><span class="line"><span class="code">         &#125;</span></span><br><span class="line"><span class="code">        window.onload= function()&#123;</span></span><br><span class="line"><span class="code">            var btnObj = document.getElementById(&quot;btn02&quot;);//定义对象</span></span><br><span class="line"><span class="code">            // alert(btnObj);</span></span><br><span class="line"><span class="code">            btnObj.onclick = function a ()&#123;//定义方法</span></span><br><span class="line"><span class="code">                alert(&quot;动态点击&quot;);</span></span><br><span class="line"><span class="code">            &#125;           </span></span><br><span class="line"><span class="code">         &#125;*/</span></span><br><span class="line"><span class="code">       // var patt =new RegExp(&quot;1&quot;);和下面的写法相同正则表达式</span></span><br><span class="line"><span class="code">       //var patt =/e/;</span></span><br><span class="line"><span class="code">       // alert(patt)</span></span><br><span class="line"><span class="code">       // var str = &quot;abe1cd&quot;;</span></span><br><span class="line"><span class="code">       //alert(patt.test(str));</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"></span><br><span class="line"><span class="code">       function onclickFun()&#123;</span></span><br><span class="line"><span class="code">           var newObj =document.getElementById(&quot;newObj&quot;);</span></span><br><span class="line"><span class="code">           //alert(newObj.value);</span></span><br><span class="line"><span class="code">           var usernameText =newObj.value;</span></span><br><span class="line"><span class="code">           //验证文本是否合法</span></span><br><span class="line"><span class="code">           var patt =/^\w&#123;5,12&#125;$/;//5-12个字符串正则表达式</span></span><br><span class="line"><span class="code">           /*test()方法用于测试某个字符串是否匹配*/</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">           var usenaemspanObj = document.getElementById(&quot;usenaemspan&quot;);&#123;</span></span><br><span class="line"><span class="code">               //alert(usenaemspanObj.innerHTML);//innerHTML表示标签中的内容</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">               usenaemspanObj.innerHTML=&quot;标签修改&quot;//可读可写可赋值</span></span><br><span class="line"><span class="code">           &#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">           if(patt.test(usernameText))&#123;</span></span><br><span class="line"><span class="code">               alert(&quot;用户名合法&quot;);</span></span><br><span class="line"><span class="code">               usenaemspanObj.innerHTML=&quot;&lt;img src=\&quot;../images/123.png\&quot; width=\&quot;20\&quot; height=\&quot;20\&quot;&gt;&quot;//在此处需要转义</span></span><br><span class="line"><span class="code">            &#125;</span></span><br><span class="line"><span class="code">               else&#123;</span></span><br><span class="line"><span class="code">               alert(&quot;用户名不合法&quot;);</span></span><br><span class="line"><span class="code">               usenaemspanObj.innerHTML=&quot;&lt;img src=\&quot;../images/123.png\&quot; width=\&quot;40\&quot; height=\&quot;40\&quot;&gt;&quot;//vsc在此处需要转义</span></span><br><span class="line"><span class="code">               &#125;</span></span><br><span class="line"><span class="code">        &#125;</span></span><br><span class="line"><span class="code">        </span></span><br><span class="line"><span class="code">           </span></span><br><span class="line"><span class="code">        function checkAll()&#123;//同一个js写全才不报错</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">            var hobbies = document.getElementsByName(&quot;hobby&quot;);//name返回元素集合</span></span><br><span class="line"><span class="code">            //alert(hobbies.length);返回个数</span></span><br><span class="line"><span class="code">            //alert(hobbies[0].value);//input cpp</span></span><br><span class="line"><span class="code">            //集合中每个元素都是dom对象 有序</span></span><br><span class="line"><span class="code">            //checked=&quot;checked&quot;选中状态 checked可读可选</span></span><br><span class="line"><span class="code">            for(var i = 0; i &lt; hobbies.length ; i++)&#123;</span></span><br><span class="line"><span class="code">                hobbies[i].checked=true;</span></span><br><span class="line"><span class="code">            &#125;</span></span><br><span class="line"><span class="code">            </span></span><br><span class="line"><span class="code">           &#125;//全选</span></span><br><span class="line"><span class="code">           function checkNO()</span></span><br><span class="line"><span class="code">           &#123;</span></span><br><span class="line"><span class="code">            var hobbies = document.getElementsByName(&quot;hobby&quot;);//name返回元素集合</span></span><br><span class="line"><span class="code">            for(var i = 0; i &lt; hobbies.length ; i++)&#123;</span></span><br><span class="line"><span class="code">                hobbies[i].checked=false;</span></span><br><span class="line"><span class="code">            &#125;</span></span><br><span class="line"><span class="code">           &#125;//全不选</span></span><br><span class="line"><span class="code">           function checkReverse()&#123;         </span></span><br><span class="line"><span class="code">            var hobbies = document.getElementsByName(&quot;hobby&quot;);//name返回元素集合</span></span><br><span class="line"><span class="code">            for(var i = 0; i &lt; hobbies.length ; i++)&#123;</span></span><br><span class="line"><span class="code">                hobbies[i].checked = !hobbies[i].checked;//比if更容易判断</span></span><br><span class="line"><span class="code">                /*if(hobbies[i].checked==false)</span></span><br><span class="line"><span class="code">                hobbies[i].checked=true;</span></span><br><span class="line"><span class="code">                else</span></span><br><span class="line"><span class="code">                hobbies[i].checked=false;*/</span></span><br><span class="line"><span class="code">            &#125;</span></span><br><span class="line"><span class="code">           &#125;//反选</span></span><br><span class="line"><span class="code">           </span></span><br><span class="line"><span class="code">    function checkAll1()</span></span><br><span class="line"><span class="code">    &#123;</span></span><br><span class="line"><span class="code">        var hobbies =document.getElementsByTagName(&quot;input&quot;)//指定标签名查询并返回集合</span></span><br><span class="line"><span class="code">        for(var i = 0; i &lt; hobbies.length ; i++)&#123;</span></span><br><span class="line"><span class="code">            hobbies[i].checked = !hobbies[i].checked;//比if更容易判断</span></span><br><span class="line"><span class="code">            /*if(hobbies[i].checked==false)</span></span><br><span class="line"><span class="code">            hobbies[i].checked=true;</span></span><br><span class="line"><span class="code">            else</span></span><br><span class="line"><span class="code">            hobbies[i].checked=false;*/</span></span><br><span class="line"><span class="code">        &#125;</span></span><br><span class="line"><span class="code">       &#125;//反选</span></span><br><span class="line"><span class="code">    </span></span><br><span class="line"><span class="code">    //创建标签</span></span><br><span class="line"><span class="code">    window.onload=function()&#123;</span></span><br><span class="line"><span class="code">        var divObj = document.createElement(&quot;div&quot;);</span></span><br><span class="line"><span class="code">        divObj.innerHTML =&quot;白筱1231321&quot;;</span></span><br><span class="line"><span class="code">        document.body.appendChild=(&quot;divObj&quot;)</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code">    </span></span><br><span class="line"><span class="code">    </span></span><br><span class="line"><span class="code">    &lt;/script&gt;</span></span><br><span class="line"><span class="code">    &lt;title&gt;DOM模型&lt;/title&gt;</span></span><br><span class="line"><span class="code">&lt;/head&gt;</span></span><br><span class="line"><span class="code">&lt;body&gt;  </span></span><br><span class="line"><span class="code">    &lt;a href=&quot;www.white-x.top&quot;&gt;白筱&lt;/a&gt;</span></span><br><span class="line"><span class="code">    &lt;h1 align=center&gt;标题&lt;/h1&gt;</span></span><br><span class="line"><span class="code">    用户名&lt;input type=&quot;text&quot; id=&quot;newObj&quot; value=&quot;&quot;&gt;</span></span><br><span class="line"><span class="code">    &lt;span style=&quot;color: red;&quot; id=&quot;usenaemspan&quot;&gt;&lt;/span&gt;</span></span><br><span class="line"><span class="code">    &lt;button onclick=&quot;onclickFun()&quot;&gt;校验&lt;/button&gt;&lt;br&gt;</span></span><br><span class="line"><span class="code">    &lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;cpp&quot;&gt;cpp</span></span><br><span class="line"><span class="code">    &lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;java&quot;&gt;java</span></span><br><span class="line"><span class="code">    &lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;js&quot;&gt;js</span></span><br><span class="line"><span class="code">    &lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;python&quot;&gt;python</span></span><br><span class="line"><span class="code">    &lt;br&gt;</span></span><br><span class="line"><span class="code">    &lt;button onclick=&quot;checkAll()&quot;&gt;全选&lt;/button&gt;</span></span><br><span class="line"><span class="code">    &lt;button onclick=&quot;checkNO()&quot;&gt;全不选&lt;/button&gt;</span></span><br><span class="line"><span class="code">    &lt;button onclick=&quot;checkReverse()&quot;&gt;反选&lt;/button&gt;</span></span><br><span class="line"><span class="code">&lt;br&gt;</span></span><br><span class="line"><span class="code">    &lt;input type=&quot;checkbox&quot;  value=&quot;cpp&quot;&gt;1</span></span><br><span class="line"><span class="code">    &lt;input type=&quot;checkbox&quot;  value=&quot;java&quot;&gt;2</span></span><br><span class="line"><span class="code">    &lt;input type=&quot;checkbox&quot; value=&quot;js&quot;&gt;3</span></span><br><span class="line"><span class="code">    &lt;input type=&quot;checkbox&quot;  value=&quot;python&quot;&gt;4</span></span><br><span class="line"><span class="code">    &lt;button onclick=&quot;checkAll1()&quot;&gt;反选&lt;/button&gt;</span></span><br><span class="line"><span class="code">&lt;/body&gt;</span></span><br><span class="line"><span class="code">&lt;/html&gt;</span></span><br><span class="line"><span class="code"></span></span><br></pre></td></tr></table></figure>
+            <div itemprop="articleBody"><h1 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h1><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span></span><br><span class="line"><span class="code">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</span></span><br><span class="line"><span class="code">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span></span><br><span class="line"><span class="code">    &lt;script type=&quot;text/javascript&quot;&gt;</span></span><br><span class="line"><span class="code">        </span></span><br><span class="line"><span class="code">        </span></span><br><span class="line"><span class="code">        /*window.onload= function()&#123;</span></span><br><span class="line"><span class="code">            var bjnObj = document.getElementById(&quot;btn01&quot;);</span></span><br><span class="line"><span class="code">            bjnObj.onclick=function d ()&#123;</span></span><br><span class="line"><span class="code">                alert(&quot;合法&quot;);</span></span><br><span class="line"><span class="code">            &#125;              </span></span><br><span class="line"><span class="code">         &#125;</span></span><br><span class="line"><span class="code">        window.onload= function()&#123;</span></span><br><span class="line"><span class="code">            var btnObj = document.getElementById(&quot;btn02&quot;);//定义对象</span></span><br><span class="line"><span class="code">            // alert(btnObj);</span></span><br><span class="line"><span class="code">            btnObj.onclick = function a ()&#123;//定义方法</span></span><br><span class="line"><span class="code">                alert(&quot;动态点击&quot;);</span></span><br><span class="line"><span class="code">            &#125;           </span></span><br><span class="line"><span class="code">         &#125;*/</span></span><br><span class="line"><span class="code">       // var patt =new RegExp(&quot;1&quot;);和下面的写法相同正则表达式</span></span><br><span class="line"><span class="code">       //var patt =/e/;</span></span><br><span class="line"><span class="code">       // alert(patt)</span></span><br><span class="line"><span class="code">       // var str = &quot;abe1cd&quot;;</span></span><br><span class="line"><span class="code">       //alert(patt.test(str));</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"></span><br><span class="line"><span class="code">       function onclickFun()&#123;</span></span><br><span class="line"><span class="code">           var newObj =document.getElementById(&quot;newObj&quot;);</span></span><br><span class="line"><span class="code">           //alert(newObj.value);</span></span><br><span class="line"><span class="code">           var usernameText =newObj.value;</span></span><br><span class="line"><span class="code">           //验证文本是否合法</span></span><br><span class="line"><span class="code">           var patt =/^\w&#123;5,12&#125;$/;//5-12个字符串正则表达式</span></span><br><span class="line"><span class="code">           /*test()方法用于测试某个字符串是否匹配*/</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">           var usenaemspanObj = document.getElementById(&quot;usenaemspan&quot;);&#123;</span></span><br><span class="line"><span class="code">               //alert(usenaemspanObj.innerHTML);//innerHTML表示标签中的内容</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">               usenaemspanObj.innerHTML=&quot;标签修改&quot;//可读可写可赋值</span></span><br><span class="line"><span class="code">           &#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">           if(patt.test(usernameText))&#123;</span></span><br><span class="line"><span class="code">               alert(&quot;用户名合法&quot;);</span></span><br><span class="line"><span class="code">               usenaemspanObj.innerHTML=&quot;&lt;img src=\&quot;../images/123.png\&quot; width=\&quot;20\&quot; height=\&quot;20\&quot;&gt;&quot;//在此处需要转义</span></span><br><span class="line"><span class="code">            &#125;</span></span><br><span class="line"><span class="code">               else&#123;</span></span><br><span class="line"><span class="code">               alert(&quot;用户名不合法&quot;);</span></span><br><span class="line"><span class="code">               usenaemspanObj.innerHTML=&quot;&lt;img src=\&quot;../images/123.png\&quot; width=\&quot;40\&quot; height=\&quot;40\&quot;&gt;&quot;//vsc在此处需要转义</span></span><br><span class="line"><span class="code">               &#125;</span></span><br><span class="line"><span class="code">        &#125;</span></span><br><span class="line"><span class="code">        </span></span><br><span class="line"><span class="code">           </span></span><br><span class="line"><span class="code">        function checkAll()&#123;//同一个js写全才不报错</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">            var hobbies = document.getElementsByName(&quot;hobby&quot;);//name返回元素集合</span></span><br><span class="line"><span class="code">            //alert(hobbies.length);返回个数</span></span><br><span class="line"><span class="code">            //alert(hobbies[0].value);//input cpp</span></span><br><span class="line"><span class="code">            //集合中每个元素都是dom对象 有序</span></span><br><span class="line"><span class="code">            //checked=&quot;checked&quot;选中状态 checked可读可选</span></span><br><span class="line"><span class="code">            for(var i = 0; i &lt; hobbies.length ; i++)&#123;</span></span><br><span class="line"><span class="code">                hobbies[i].checked=true;</span></span><br><span class="line"><span class="code">            &#125;</span></span><br><span class="line"><span class="code">            </span></span><br><span class="line"><span class="code">           &#125;//全选</span></span><br><span class="line"><span class="code">           function checkNO()</span></span><br><span class="line"><span class="code">           &#123;</span></span><br><span class="line"><span class="code">            var hobbies = document.getElementsByName(&quot;hobby&quot;);//name返回元素集合</span></span><br><span class="line"><span class="code">            for(var i = 0; i &lt; hobbies.length ; i++)&#123;</span></span><br><span class="line"><span class="code">                hobbies[i].checked=false;</span></span><br><span class="line"><span class="code">            &#125;</span></span><br><span class="line"><span class="code">           &#125;//全不选</span></span><br><span class="line"><span class="code">           function checkReverse()&#123;         </span></span><br><span class="line"><span class="code">            var hobbies = document.getElementsByName(&quot;hobby&quot;);//name返回元素集合</span></span><br><span class="line"><span class="code">            for(var i = 0; i &lt; hobbies.length ; i++)&#123;</span></span><br><span class="line"><span class="code">                hobbies[i].checked = !hobbies[i].checked;//比if更容易判断</span></span><br><span class="line"><span class="code">                /*if(hobbies[i].checked==false)</span></span><br><span class="line"><span class="code">                hobbies[i].checked=true;</span></span><br><span class="line"><span class="code">                else</span></span><br><span class="line"><span class="code">                hobbies[i].checked=false;*/</span></span><br><span class="line"><span class="code">            &#125;</span></span><br><span class="line"><span class="code">           &#125;//反选</span></span><br><span class="line"><span class="code">           </span></span><br><span class="line"><span class="code">    function checkAll1()</span></span><br><span class="line"><span class="code">    &#123;</span></span><br><span class="line"><span class="code">        var hobbies =document.getElementsByTagName(&quot;input&quot;)//指定标签名查询并返回集合</span></span><br><span class="line"><span class="code">        for(var i = 0; i &lt; hobbies.length ; i++)&#123;</span></span><br><span class="line"><span class="code">            hobbies[i].checked = !hobbies[i].checked;//比if更容易判断</span></span><br><span class="line"><span class="code">            /*if(hobbies[i].checked==false)</span></span><br><span class="line"><span class="code">            hobbies[i].checked=true;</span></span><br><span class="line"><span class="code">            else</span></span><br><span class="line"><span class="code">            hobbies[i].checked=false;*/</span></span><br><span class="line"><span class="code">        &#125;</span></span><br><span class="line"><span class="code">       &#125;//反选</span></span><br><span class="line"><span class="code">    </span></span><br><span class="line"><span class="code">    //创建标签</span></span><br><span class="line"><span class="code">    window.onload=function()&#123;</span></span><br><span class="line"><span class="code">        var divObj = document.createElement(&quot;div&quot;);</span></span><br><span class="line"><span class="code">        divObj.innerHTML =&quot;白筱1231321&quot;;</span></span><br><span class="line"><span class="code">        document.body.appendChild=(&quot;divObj&quot;)</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code">    </span></span><br><span class="line"><span class="code">    </span></span><br><span class="line"><span class="code">    &lt;/script&gt;</span></span><br><span class="line"><span class="code">    &lt;title&gt;DOM模型&lt;/title&gt;</span></span><br><span class="line"><span class="code">&lt;/head&gt;</span></span><br><span class="line"><span class="code">&lt;body&gt;  </span></span><br><span class="line"><span class="code">    &lt;a href=&quot;www.white-x.top&quot;&gt;白筱&lt;/a&gt;</span></span><br><span class="line"><span class="code">    &lt;h1 align=center&gt;标题&lt;/h1&gt;</span></span><br><span class="line"><span class="code">    用户名&lt;input type=&quot;text&quot; id=&quot;newObj&quot; value=&quot;&quot;&gt;</span></span><br><span class="line"><span class="code">    &lt;span style=&quot;color: red;&quot; id=&quot;usenaemspan&quot;&gt;&lt;/span&gt;</span></span><br><span class="line"><span class="code">    &lt;button onclick=&quot;onclickFun()&quot;&gt;校验&lt;/button&gt;&lt;br&gt;</span></span><br><span class="line"><span class="code">    &lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;cpp&quot;&gt;cpp</span></span><br><span class="line"><span class="code">    &lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;java&quot;&gt;java</span></span><br><span class="line"><span class="code">    &lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;js&quot;&gt;js</span></span><br><span class="line"><span class="code">    &lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;python&quot;&gt;python</span></span><br><span class="line"><span class="code">    &lt;br&gt;</span></span><br><span class="line"><span class="code">    &lt;button onclick=&quot;checkAll()&quot;&gt;全选&lt;/button&gt;</span></span><br><span class="line"><span class="code">    &lt;button onclick=&quot;checkNO()&quot;&gt;全不选&lt;/button&gt;</span></span><br><span class="line"><span class="code">    &lt;button onclick=&quot;checkReverse()&quot;&gt;反选&lt;/button&gt;</span></span><br><span class="line"><span class="code">&lt;br&gt;</span></span><br><span class="line"><span class="code">    &lt;input type=&quot;checkbox&quot;  value=&quot;cpp&quot;&gt;1</span></span><br><span class="line"><span class="code">    &lt;input type=&quot;checkbox&quot;  value=&quot;java&quot;&gt;2</span></span><br><span class="line"><span class="code">    &lt;input type=&quot;checkbox&quot; value=&quot;js&quot;&gt;3</span></span><br><span class="line"><span class="code">    &lt;input type=&quot;checkbox&quot;  value=&quot;python&quot;&gt;4</span></span><br><span class="line"><span class="code">    &lt;button onclick=&quot;checkAll1()&quot;&gt;反选&lt;/button&gt;</span></span><br><span class="line"><span class="code">&lt;/body&gt;</span></span><br><span class="line"><span class="code">&lt;/html&gt;</span></span><br><span class="line"><span class="code"></span></span><br></pre></td></tr></table></figure></div>
         </div>
         
             <div class="kratos-copyright text-center clearfix">
-                <h5>本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+                <h5 itemprop="copyrightNotice">本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
             </div>
         
         <footer class="kratos-entry-footer clearfix">
             
                 <div class="post-like-donate text-center clearfix" id="post-like-donate">
-                
-                    <a class="donate" href="javascript:;"><i class="fa fa-bitcoin"></i> 打赏</a>
                 
                 
                     <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
@@ -267,7 +290,7 @@
                     <a class="tag-none-link" href="/tags/HTML/" rel="tag">HTML</a>, <a class="tag-none-link" href="/tags/javascript/" rel="tag">javascript</a>, <a class="tag-none-link" href="/tags/%E7%BB%8F%E9%AA%8C/" rel="tag">经验</a>
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2021-08-16</span>
+                    <time datetime="2021-08-16T13:20:10.969Z" itemprop="dateModified">最后编辑：2021-08-16</time>
                 </div>
             </div>
         </footer>
@@ -306,11 +329,37 @@
     <div class="photo-background"></div>
     <div class="photo-wrapper clearfix">
         <div class="photo-wrapper-tip text-center">
-            <img class="about-photo" src="/images/avatar.webp" />
+            <img class="about-photo" src="/images/avatar.webp" loading="lazy" decoding="auto" />
         </div>
     </div>
     <div class="textwidget">
         <p class="text-center"></p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                93
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                5
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                34
+            </span>
+        </a>
     </div>
 </aside>
             
@@ -321,7 +370,7 @@
     <h4 class="widget-title no-after">
         <i class="fa fa-compass"></i>
         文章目录
-        <span class="toc-progress-bar"></span>
+        <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
     </h4>
     <div class="textwidget">
         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%BA%90%E7%A0%81"><span class="toc-text">源码</span></a></li></ol>
@@ -570,26 +619,42 @@
     </div>
 </div>
 <footer>
-    
-    <link rel="stylesheet" href="./live2d/css/live2d.css" /><!-- live2d看板娘在themes的source中替换 -->
-    <body class="custom-background">
-        <div id="landlord">
-            <div class="message" style="opacity:0"></div>
-            <canvas id="live2d" width="300" height="450" class="live2d"></canvas>
-            <div class="hide-button">隐藏</div>
-        </div>
-        <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-        <script type="text/javascript">
-            var message_Path = './live2d/'
-            var home_Path = 'https://white-x.top/'
-        </script>
-        <script type="text/javascript" src="./live2d/js/live2d.js"></script>
-        <script type="text/javascript" src="./live2d/js/message.js"></script>
-        <script type="text/javascript">
-            loadlive2d("live2d", "./live2d/model/leimu/leimu.model.json");
-        </script>
-
     <div id="footer"  class="ap-lrc"  >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                        <li><a href="mailto:www741740071@163.com"><i class="fa fa-envelope"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://t.me/18992210106"><i class="fa fa-telegram"></i></a></li>
+                        
+                        
+                        
+                        <li><a target="_blank" rel="me" href="https://nya.one/@WhiteXB"><i class="fa fa fa-share-alt-square"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://github.com/WhiteXB"><i class="fa fa-github"></i></a></li>
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2022 (*´∇｀*)白筱の猫舍 版权所有.</li>
+                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by white-x.</li>
+                        </div>
+                        <div>
+                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+                            <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
+                        </div>
+                        <div>
+                            
+                            
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="kr-tool text-center">
             <div class="tool">
                 
@@ -616,60 +681,29 @@
                 <span class="fa fa-chevron-up"></span>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 footer-list text-center">
-                    <ul class="kratos-social-icons">
-                        
-                        <li><a href="mailto:www741740071@163.com"><i class="fa fa-envelope"></i></a></li>
-                        <li><a target="_blank" rel="nofollow" href="https://t.me/18992210106"><i class="fa fa-telegram"></i></a></li>
-                        
-                        
-                        
-                        <li><a target="_blank" rel="me" href="https://nya.one/@WhiteXB"><i class="fa fa fa-share-alt-square"></i></a></li>
-                        <li><a target="_blank" rel="nofollow" href="https://github.com/WhiteXB"><i class="fa fa-github"></i></a></li>
-                        
-                    </ul>
-                    <ul class="kratos-copyright">
-                        <div>
-                            <li>&copy; 2022 (*´∇｀*)白筱の猫舍 版权所有.</li>
-                            <li>本站已运行<span id="span_dt">Loading...</span></li>
-                        </div>
-                        <div>
-                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
-                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by white-x.</li>
-                        </div>
-                        <div>
-                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
-                            <li>Hosted on <a href="https://www.white-x.top" target="_blank">Github Pages</a></li>
-                        </div>
-                        <div>
-                            
-                            
-                        </div>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </div>
 </footer>
 </div>
 </div>
 
-        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
-<script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
+        <script defer src="/vendors/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
+<script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+<script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
 
-    <div>
-        <canvas id="snow"></canvas>
-        <script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/snow.min.js"></script>
-    </div>
 
-<script async src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/candy.min.js"></script>
+    <script async src="/js/candy.min.js"></script>
 
-    <script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+
+
+    <script defer src="/vendors/aplayer@1.10.1/dist/APlayer.min.js"></script>
     
-    <script defer src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <script defer src="/vendors/meting@2.0.1/dist/Meting.min.js"></script>
     <meting-js
         server="netease"
         type="playlist"
@@ -681,22 +715,16 @@
 
 
 
-    <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script defer src="/vendors/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
-<script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/kratosr.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/pjax.min.js"></script>
-
-    <script defer src="https://cdn.jsdelivr.net/npm/layui-src@2.5.5/dist/layui.all.js"></script>
-
-
-    <script defer src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/kr-dark.min.js"></script>
+<script defer src="/vendors/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script defer src="/js/kratosr.min.js"></script>
+<script defer src="/js/pjax.min.js"></script>
 
 
 
 <!-- Extra support for third-party plguins  -->
 
 
-        
     </body>
 </html>

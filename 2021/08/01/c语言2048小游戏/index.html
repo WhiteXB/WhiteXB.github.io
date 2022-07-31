@@ -3,7 +3,8 @@
     <head>
   <!-- 元数据 -->
   <meta charset="utf-8">
-  <link rel="icon" href="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
+  
+  
   <title>c语言2048小游戏 | (*´∇｀*)白筱の猫舍</title>
   <meta name="author" content="white-x" />
   <meta http-equiv="Cache-Control" content="no-transform" />
@@ -22,15 +23,12 @@
 <meta property="og:site_name" content="(*´∇｀*)白筱の猫舍">
 <meta property="og:description" content="cpp环境搭建正常安装c环境后 增加easyx库 vsc配置需要Visual Studio 2019 Developer Command Prompt v16.6.3 源码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-08-01T12:04:40.000Z">
 <meta property="article:modified_time" content="2021-08-01T15:34:32.426Z">
 <meta property="article:author" content="white-x">
 <meta property="article:tag" content="c语言">
 <meta property="article:tag" content="项目">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
-<meta name="twitter:site" content="@null">
   
   <!-- 站点验证相关 -->
   
@@ -39,32 +37,49 @@
     
   
   <!-- 样式表文件 -->
-  <link rel="stylesheet" id="kratos-css" href="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/css/kratosr.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" media="all"></script>
   
-    <link rel="stylesheet" id="highlight-css" href="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/css/highlight/light.min.css" type="text/css" media="all">
-  
-  
-  <link rel="stylesheet" id="fontawe-css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
-  <link rel="stylesheet" id="nprogress-css" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="darkmode-css" href="/css/kr-color-dark.min.css" media="(prefers-color-scheme: dark)"></script>
+    <script src="/js/kr-dark.min.js"></script>
   
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/light.min.css" media="all"></script>
   
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></script>
+  <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></script>
   
   
-    <link rel="stylesheet" id="darkmode-css" href="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/css/kr-dark.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/vendors/aplayer@1.10.1/dist/APlayer.min.css"></script>
+  
+  
+    <link rel="stylesheet" href="/vendors/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"></script>
   
   <!-- 不得不预先加载的一些JS文件 -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="/vendors/jquery@3.6.0/dist/jquery.min.js"></script>
   
-    <script src="https://cdn.jsdelivr.net/npm/qrcode_js@1.0.0/qrcode.min.js"></script>
+    <script src="/vendors/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+  
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('/images/banner.webp');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('/images/bg.webp');
+        }
+      }
+    
+  </style>
   
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 
-    
+    <body class="custom-background">
         <div id="kratos-wrapper">
     <div id="kratos-page">
         <div id="kratos-header">
@@ -75,38 +90,37 @@
                             <ul id="kratos-primary-menu" class="sf-menu">
                                 
                                     
-                                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
                                     
-                                
+                                        
+                                            <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+                                        
                                     
-                                        <li><a href="/archives/"><i class="fa fa-file"></i>猿の力</a></li>
+                                        
+                                            <li><a href="/archives/"><i class="fa fa-file"></i>猿の力</a></li>
+                                        
                                     
-                                
+                                        
+                                            <li><a href="/friends/"><i class="fa fa-paw"></i>喵喵喵</a></li>
+                                        
                                     
-                                        <li><a href="/friends/"><i class="fa fa-paw"></i>喵喵喵</a></li>
-                                    
-                                
-                                    
-                                        <li><a target="_blank" rel="noopener" href="https://space.bilibili.com/33440117"><i class="fa fa-paw"></i>bilibili</a></li>
-                                    
-                                
-                                    
-                                        <li>
-                                            <a><i class="fa fa-link"></i>链接</a>
-                                            <ul class="sub-menu">
-                                                
+                                        
+                                            <li>
+                                                <a><i class="fa fa-link"></i>链接</a>
+                                                <ul class="sub-menu">
                                                     
-                                                
+                                                        
                                                     
-                                                        <li><a target="_blank" rel="noopener" href="https://www.white-x.top/WhiteXB-old-html/">作者博客</a></li>
+                                                        
+                                                            <li><a target="_blank" rel="noopener" href="https://www.white-x.top/WhiteXB-old-html/">作者博客</a></li>
+                                                        
                                                     
-                                                
+                                                        
+                                                            <li><a target="_blank" rel="noopener" href="https://github.com/WhiteXB/WhiteXB.io">项目链接</a></li>
+                                                        
                                                     
-                                                        <li><a target="_blank" rel="noopener" href="https://github.com/WhiteXB/WhiteXB.io">项目链接</a></li>
-                                                    
-                                                
-                                            </ul>
-                                        </li>
+                                                </ul>
+                                            </li>
+                                        
                                     
                                 
                             </ul>
@@ -148,16 +162,20 @@
 
         
 
-            <article>
+            <article itemscope itemtype="https://schema.org/Article">
+    
+    <link itemprop="mainEntityOfPage" href="https://whitexb.github.io/2021/08/01/c%E8%AF%AD%E8%A8%802048%E5%B0%8F%E6%B8%B8%E6%88%8F/">
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center">c语言2048小游戏</h1>
+                <h1 class="kratos-entry-title text-center" itemprop="name headline">c语言2048小游戏</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><i class="fa fa-calendar"></i> 2021-08-01</li>
-                <li><i class="fa fa-user"></i> 作者 white-x</li>
+                <li><time datetime="2021-08-01T12:04:40.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2021-08-01</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">white-x</span>
+                </li>
                 <li>
                     <i class="fa fa-edit"></i> 
                     
@@ -170,25 +188,30 @@
             </ul>
         </header>
         <div class="kratos-post-content">
+            
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1627832072426"></time> 前，其中的内容可能需要更新。
+                <div class="icon"><i class="fa fa-warning"></i></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1627832072426"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
+            
+                <div class="kratos-post-inner-toc">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#cpp%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text">cpp环境搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#vsc%E9%85%8D%E7%BD%AE%E9%9C%80%E8%A6%81"><span class="toc-number">2.</span> <span class="toc-text">vsc配置需要</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%BA%90%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text">源码</span></a></li></ol>
+                </div>
+            
             <hr />
-            <h1 id="cpp环境搭建"><a href="#cpp环境搭建" class="headerlink" title="cpp环境搭建"></a>cpp环境搭建</h1><p>正常安装c环境后 增加easyx库</p>
+            <div itemprop="articleBody"><h1 id="cpp环境搭建"><a href="#cpp环境搭建" class="headerlink" title="cpp环境搭建"></a>cpp环境搭建</h1><p>正常安装c环境后 增加easyx库</p>
 <h1 id="vsc配置需要"><a href="#vsc配置需要" class="headerlink" title="vsc配置需要"></a>vsc配置需要</h1><p>Visual Studio 2019 Developer Command Prompt v16.6.3</p>
-<h1 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br></pre></td><td class="code"><pre><span class="line">//2048游戏</span><br><span class="line">//FOR YOU</span><br><span class="line">//作者白筱</span><br><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;conio.h&gt;</span><br><span class="line">#include&lt;graphics.h&gt;//文件库</span><br><span class="line">#define MAX_SIZE 4 //格子数量</span><br><span class="line">#define GRID_WIDTH 100  //格子宽度</span><br><span class="line">#define INTERVAL 15 //格子间隔</span><br><span class="line">#define WIN_SIZE MAX_SIZE*GRID_WIDTH+5*INTERVAL</span><br><span class="line">enum Color//枚举颜色  2048 2的11次方</span><br><span class="line">&#123;</span><br><span class="line">	zero = RGB(202,241,248),</span><br><span class="line">	twoto1  = RGB(145,224,239),</span><br><span class="line">	twoto2  = RGB(0,180,215),</span><br><span class="line">	twoto3  = RGB(0,120,183),</span><br><span class="line">	twoto4  = RGB(3,4,96),</span><br><span class="line">	twoto5  = RGB(101,125,129),</span><br><span class="line">	twoto6  = RGB(160,201,195),</span><br><span class="line">	twoto7  = RGB(226,180,183),</span><br><span class="line">	twoto8  = RGB(226,180,183),</span><br><span class="line">	twoto9  = RGB(189,99,125),</span><br><span class="line">	twoto10  = RGB(205,198,229),</span><br><span class="line">	twoto11  = RGB(119,118,188),</span><br><span class="line">	bk = RGB(3,76,95),</span><br><span class="line">&#125;;</span><br><span class="line">Color arr[13] = &#123;zero,twoto1,twoto2,twoto3,twoto4,twoto5,twoto6,twoto7,twoto8,twoto9,twoto10,twoto11,bk&#125;;</span><br><span class="line">int num[12] = &#123; 0,2,4,8,16,32,64,128,256,512,1024,2048 &#125;;//颜色数据建立联系</span><br><span class="line">int map[MAX_SIZE][MAX_SIZE];//数据存储</span><br><span class="line">POINT pos[MAX_SIZE][MAX_SIZE];</span><br><span class="line">char usrkey=0;</span><br><span class="line">int RandTwoFour()//随即生成一个数字2or4</span><br><span class="line">&#123;</span><br><span class="line">	if(rand()%10==0)</span><br><span class="line">	&#123;</span><br><span class="line">		return 4;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		return 2;</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br><span class="line">void CreateNumber()</span><br><span class="line">&#123;</span><br><span class="line">	while(1)</span><br><span class="line">	&#123;</span><br><span class="line">	  int x = rand() % MAX_SIZE;</span><br><span class="line">	  int y = rand() % MAX_SIZE;</span><br><span class="line">	  if(map[x][y] == 0)</span><br><span class="line">	  &#123;</span><br><span class="line">		map[x][y]=RandTwoFour();</span><br><span class="line">	    break;</span><br><span class="line">	  &#125;</span><br><span class="line">	&#125;	</span><br><span class="line">&#125;</span><br><span class="line">void GameInit()//初始化坐标</span><br><span class="line">&#123;</span><br><span class="line">	srand(GetTickCount());</span><br><span class="line">	for(int i=0;i&lt;MAX_SIZE;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		for(int k=0;k&lt;MAX_SIZE;k++)</span><br><span class="line">		&#123;</span><br><span class="line">			map[i][k] = 0;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	for(int i=0;i&lt; MAX_SIZE ;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		for(int k=0;k&lt; MAX_SIZE ;k++)</span><br><span class="line">		&#123;</span><br><span class="line">			pos[i][k].x=(k*GRID_WIDTH)+((k+1)*INTERVAL);</span><br><span class="line">			pos[i][k].y=(i*GRID_WIDTH)+((i+1)*INTERVAL);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	//产生两个数据</span><br><span class="line">	CreateNumber();</span><br><span class="line">	CreateNumber();</span><br><span class="line">&#125;</span><br><span class="line">void GameDrw()</span><br><span class="line">&#123;</span><br><span class="line">	setbkcolor(Color::bk);</span><br><span class="line">	cleardevice();</span><br><span class="line">	for(int i=0;i&lt; MAX_SIZE ;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		for(int k=0;k&lt; MAX_SIZE ;k++)</span><br><span class="line">		&#123;</span><br><span class="line">			for(int q=0;q&lt;12;q++)</span><br><span class="line">			&#123;</span><br><span class="line">                if(map[i][k] == num[q])//给予方块对应颜色</span><br><span class="line">			  &#123;</span><br><span class="line">				 DWORD tempcolor = arr[q];</span><br><span class="line">			     setfillcolor(tempcolor);</span><br><span class="line">			     solidrectangle(pos[i][k].x, pos[i][k].y, pos[i][k].x + GRID_WIDTH , pos[i][k].y + GRID_WIDTH);</span><br><span class="line">				 if(num[q]!=0)</span><br><span class="line">				 &#123;</span><br><span class="line">					 char number[5]=&quot;&quot;;</span><br><span class="line">					 sprintf(number,&quot;%d&quot;,num[q]);</span><br><span class="line">					 setbkmode(TRANSPARENT);//透明</span><br><span class="line">					 settextstyle(50,0,&quot;黑体&quot;);//字体属性</span><br><span class="line">					 settextcolor(RGB(0,0,0));//颜色</span><br><span class="line">					 int temp =textwidth(number);</span><br><span class="line">					 temp = (GRID_WIDTH-temp)/2;</span><br><span class="line">					 outtextxy(pos[i][k].x+temp,pos[i][k].y+25,number);</span><br><span class="line">				 &#125;</span><br><span class="line">			  &#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void moveup()//向上</span><br><span class="line">&#123;</span><br><span class="line">	for(int i=0;i&lt;MAX_SIZE;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		int temp = 0;</span><br><span class="line">		for(int begin=1;begin&lt;MAX_SIZE;begin++)</span><br><span class="line">		&#123;</span><br><span class="line">			if(map[begin][i]!=0)</span><br><span class="line">			&#123;</span><br><span class="line">				if(map[temp][i]==0)</span><br><span class="line">				&#123;</span><br><span class="line">					map[temp][i]= map[begin][i];</span><br><span class="line">					map[begin][i]=0;</span><br><span class="line">				&#125;</span><br><span class="line">				else</span><br><span class="line">				if(map[temp][i]==map[begin][i])</span><br><span class="line">				&#123;</span><br><span class="line">					map[temp][i]+=map[begin][i];</span><br><span class="line">					map[begin][i]=0;</span><br><span class="line">					temp++;</span><br><span class="line">				&#125;</span><br><span class="line">				else</span><br><span class="line">				&#123;</span><br><span class="line">					map[temp + 1][i]=map[begin][i];</span><br><span class="line">					if(temp+1!=begin)</span><br><span class="line">					&#123;</span><br><span class="line">						map[begin][i]=0;</span><br><span class="line">					&#125;</span><br><span class="line">					temp++;</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void movedown()//下移</span><br><span class="line">&#123;</span><br><span class="line">	for (int i = 0; i &lt; MAX_SIZE; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		int temp = MAX_SIZE-1;</span><br><span class="line">		for (int begin = MAX_SIZE-2; begin&gt;=0; begin--)</span><br><span class="line">		&#123;</span><br><span class="line">			if (map[begin][i] != 0)</span><br><span class="line">			&#123;</span><br><span class="line">				if (map[temp][i] == 0)</span><br><span class="line">				&#123;</span><br><span class="line">					map[temp][i] = map[begin][i];</span><br><span class="line">					map[begin][i] = 0;</span><br><span class="line">				&#125;</span><br><span class="line">				else if (map[temp][i] == map[begin][i])</span><br><span class="line">				&#123;</span><br><span class="line">					map[temp][i] += map[begin][i];</span><br><span class="line">					map[begin][i] = 0;</span><br><span class="line">				&#125;</span><br><span class="line">				else</span><br><span class="line">				&#123;</span><br><span class="line">					map[temp - 1][i] = map[begin][i];</span><br><span class="line">					if (temp - 1 != begin)</span><br><span class="line">					&#123;</span><br><span class="line">						map[begin][i] = 0;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				temp--;</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line">void moveleft()//左移</span><br><span class="line">&#123;</span><br><span class="line">	for (int i = 0; i &lt; MAX_SIZE; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		int temp = 0;</span><br><span class="line">		for (int begin = 1; begin &lt; MAX_SIZE; begin++)</span><br><span class="line">		&#123;</span><br><span class="line">			if (map[i][begin] != 0)</span><br><span class="line">			&#123;</span><br><span class="line">				if (map[i][temp] == 0)</span><br><span class="line">				&#123;</span><br><span class="line">					map[i][temp] = map[i][begin];</span><br><span class="line">					map[i][begin] = 0;</span><br><span class="line">				&#125;</span><br><span class="line">				else if (map[i][temp] == map[i][begin])</span><br><span class="line">				&#123;</span><br><span class="line">					map[i][temp] += map[i][begin];</span><br><span class="line">					map[i][begin] = 0;</span><br><span class="line">				&#125;</span><br><span class="line">				else</span><br><span class="line">				&#123;</span><br><span class="line">					map[i][temp+1] = map[i][begin];</span><br><span class="line">					if (temp + 1 != begin)</span><br><span class="line">					&#123;</span><br><span class="line">						map[i][begin] = 0;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				temp++;</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line">void moveright()//右移</span><br><span class="line">&#123;</span><br><span class="line">for (int i = 0; i &lt; MAX_SIZE; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		int temp = MAX_SIZE-1;</span><br><span class="line">		for (int begin = MAX_SIZE-2; begin&gt;=0; begin--)</span><br><span class="line">		&#123;</span><br><span class="line">			if (map[i][begin] != 0)</span><br><span class="line">			&#123;</span><br><span class="line">				if (map[i][temp] == 0)</span><br><span class="line">				&#123;</span><br><span class="line">					map[i][temp] = map[i][begin];</span><br><span class="line">					map[i][begin] = 0;</span><br><span class="line">				&#125;</span><br><span class="line">				else if (map[i][temp] == map[i][begin])</span><br><span class="line">				&#123;</span><br><span class="line">					map[i][temp] += map[i][begin];</span><br><span class="line">					map[i][begin] = 0;</span><br><span class="line">				&#125;</span><br><span class="line">				else</span><br><span class="line">				&#123;</span><br><span class="line">					map[i][temp-1] = map[i][begin];</span><br><span class="line">					if (temp - 1 != begin)</span><br><span class="line">					&#123;</span><br><span class="line">						map[i][begin] = 0;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				temp--;</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void keyControl()</span><br><span class="line">&#123;</span><br><span class="line">	usrkey  =  _getch();</span><br><span class="line">	switch (usrkey)</span><br><span class="line">	&#123;</span><br><span class="line">	case 75:</span><br><span class="line">	case &#x27;A&#x27;:</span><br><span class="line">	case &#x27;a&#x27;:</span><br><span class="line">		moveleft();CreateNumber();</span><br><span class="line">		break;	</span><br><span class="line">	case 77:</span><br><span class="line">	case &#x27;d&#x27;:</span><br><span class="line">	case &#x27;D&#x27;:</span><br><span class="line">		moveright();CreateNumber();</span><br><span class="line">		break;</span><br><span class="line">	case 80:</span><br><span class="line">	case &#x27;s&#x27;:</span><br><span class="line">	case &#x27;S&#x27;:</span><br><span class="line">		movedown();CreateNumber();</span><br><span class="line">		break;</span><br><span class="line">	case 72:</span><br><span class="line">	case &#x27;w&#x27;:</span><br><span class="line">	case &#x27;W&#x27;:</span><br><span class="line">		moveup();CreateNumber();</span><br><span class="line">		break;</span><br><span class="line">	default:</span><br><span class="line">		break;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	initgraph(WIN_SIZE,WIN_SIZE,SHOWCONSOLE);//创建一个窗口</span><br><span class="line">    GameInit();//初始化坐标</span><br><span class="line">    </span><br><span class="line">    while (1)</span><br><span class="line">	&#123;</span><br><span class="line">		GameDrw();</span><br><span class="line">		keyControl();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br></pre></td><td class="code"><pre><span class="line">//2048游戏</span><br><span class="line">//FOR YOU</span><br><span class="line">//作者白筱</span><br><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;conio.h&gt;</span><br><span class="line">#include&lt;graphics.h&gt;//文件库</span><br><span class="line">#define MAX_SIZE 4 //格子数量</span><br><span class="line">#define GRID_WIDTH 100  //格子宽度</span><br><span class="line">#define INTERVAL 15 //格子间隔</span><br><span class="line">#define WIN_SIZE MAX_SIZE*GRID_WIDTH+5*INTERVAL</span><br><span class="line">enum Color//枚举颜色  2048 2的11次方</span><br><span class="line">&#123;</span><br><span class="line">	zero = RGB(202,241,248),</span><br><span class="line">	twoto1  = RGB(145,224,239),</span><br><span class="line">	twoto2  = RGB(0,180,215),</span><br><span class="line">	twoto3  = RGB(0,120,183),</span><br><span class="line">	twoto4  = RGB(3,4,96),</span><br><span class="line">	twoto5  = RGB(101,125,129),</span><br><span class="line">	twoto6  = RGB(160,201,195),</span><br><span class="line">	twoto7  = RGB(226,180,183),</span><br><span class="line">	twoto8  = RGB(226,180,183),</span><br><span class="line">	twoto9  = RGB(189,99,125),</span><br><span class="line">	twoto10  = RGB(205,198,229),</span><br><span class="line">	twoto11  = RGB(119,118,188),</span><br><span class="line">	bk = RGB(3,76,95),</span><br><span class="line">&#125;;</span><br><span class="line">Color arr[13] = &#123;zero,twoto1,twoto2,twoto3,twoto4,twoto5,twoto6,twoto7,twoto8,twoto9,twoto10,twoto11,bk&#125;;</span><br><span class="line">int num[12] = &#123; 0,2,4,8,16,32,64,128,256,512,1024,2048 &#125;;//颜色数据建立联系</span><br><span class="line">int map[MAX_SIZE][MAX_SIZE];//数据存储</span><br><span class="line">POINT pos[MAX_SIZE][MAX_SIZE];</span><br><span class="line">char usrkey=0;</span><br><span class="line">int RandTwoFour()//随即生成一个数字2or4</span><br><span class="line">&#123;</span><br><span class="line">	if(rand()%10==0)</span><br><span class="line">	&#123;</span><br><span class="line">		return 4;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		return 2;</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br><span class="line">void CreateNumber()</span><br><span class="line">&#123;</span><br><span class="line">	while(1)</span><br><span class="line">	&#123;</span><br><span class="line">	  int x = rand() % MAX_SIZE;</span><br><span class="line">	  int y = rand() % MAX_SIZE;</span><br><span class="line">	  if(map[x][y] == 0)</span><br><span class="line">	  &#123;</span><br><span class="line">		map[x][y]=RandTwoFour();</span><br><span class="line">	    break;</span><br><span class="line">	  &#125;</span><br><span class="line">	&#125;	</span><br><span class="line">&#125;</span><br><span class="line">void GameInit()//初始化坐标</span><br><span class="line">&#123;</span><br><span class="line">	srand(GetTickCount());</span><br><span class="line">	for(int i=0;i&lt;MAX_SIZE;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		for(int k=0;k&lt;MAX_SIZE;k++)</span><br><span class="line">		&#123;</span><br><span class="line">			map[i][k] = 0;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	for(int i=0;i&lt; MAX_SIZE ;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		for(int k=0;k&lt; MAX_SIZE ;k++)</span><br><span class="line">		&#123;</span><br><span class="line">			pos[i][k].x=(k*GRID_WIDTH)+((k+1)*INTERVAL);</span><br><span class="line">			pos[i][k].y=(i*GRID_WIDTH)+((i+1)*INTERVAL);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	//产生两个数据</span><br><span class="line">	CreateNumber();</span><br><span class="line">	CreateNumber();</span><br><span class="line">&#125;</span><br><span class="line">void GameDrw()</span><br><span class="line">&#123;</span><br><span class="line">	setbkcolor(Color::bk);</span><br><span class="line">	cleardevice();</span><br><span class="line">	for(int i=0;i&lt; MAX_SIZE ;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		for(int k=0;k&lt; MAX_SIZE ;k++)</span><br><span class="line">		&#123;</span><br><span class="line">			for(int q=0;q&lt;12;q++)</span><br><span class="line">			&#123;</span><br><span class="line">                if(map[i][k] == num[q])//给予方块对应颜色</span><br><span class="line">			  &#123;</span><br><span class="line">				 DWORD tempcolor = arr[q];</span><br><span class="line">			     setfillcolor(tempcolor);</span><br><span class="line">			     solidrectangle(pos[i][k].x, pos[i][k].y, pos[i][k].x + GRID_WIDTH , pos[i][k].y + GRID_WIDTH);</span><br><span class="line">				 if(num[q]!=0)</span><br><span class="line">				 &#123;</span><br><span class="line">					 char number[5]=&quot;&quot;;</span><br><span class="line">					 sprintf(number,&quot;%d&quot;,num[q]);</span><br><span class="line">					 setbkmode(TRANSPARENT);//透明</span><br><span class="line">					 settextstyle(50,0,&quot;黑体&quot;);//字体属性</span><br><span class="line">					 settextcolor(RGB(0,0,0));//颜色</span><br><span class="line">					 int temp =textwidth(number);</span><br><span class="line">					 temp = (GRID_WIDTH-temp)/2;</span><br><span class="line">					 outtextxy(pos[i][k].x+temp,pos[i][k].y+25,number);</span><br><span class="line">				 &#125;</span><br><span class="line">			  &#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void moveup()//向上</span><br><span class="line">&#123;</span><br><span class="line">	for(int i=0;i&lt;MAX_SIZE;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		int temp = 0;</span><br><span class="line">		for(int begin=1;begin&lt;MAX_SIZE;begin++)</span><br><span class="line">		&#123;</span><br><span class="line">			if(map[begin][i]!=0)</span><br><span class="line">			&#123;</span><br><span class="line">				if(map[temp][i]==0)</span><br><span class="line">				&#123;</span><br><span class="line">					map[temp][i]= map[begin][i];</span><br><span class="line">					map[begin][i]=0;</span><br><span class="line">				&#125;</span><br><span class="line">				else</span><br><span class="line">				if(map[temp][i]==map[begin][i])</span><br><span class="line">				&#123;</span><br><span class="line">					map[temp][i]+=map[begin][i];</span><br><span class="line">					map[begin][i]=0;</span><br><span class="line">					temp++;</span><br><span class="line">				&#125;</span><br><span class="line">				else</span><br><span class="line">				&#123;</span><br><span class="line">					map[temp + 1][i]=map[begin][i];</span><br><span class="line">					if(temp+1!=begin)</span><br><span class="line">					&#123;</span><br><span class="line">						map[begin][i]=0;</span><br><span class="line">					&#125;</span><br><span class="line">					temp++;</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void movedown()//下移</span><br><span class="line">&#123;</span><br><span class="line">	for (int i = 0; i &lt; MAX_SIZE; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		int temp = MAX_SIZE-1;</span><br><span class="line">		for (int begin = MAX_SIZE-2; begin&gt;=0; begin--)</span><br><span class="line">		&#123;</span><br><span class="line">			if (map[begin][i] != 0)</span><br><span class="line">			&#123;</span><br><span class="line">				if (map[temp][i] == 0)</span><br><span class="line">				&#123;</span><br><span class="line">					map[temp][i] = map[begin][i];</span><br><span class="line">					map[begin][i] = 0;</span><br><span class="line">				&#125;</span><br><span class="line">				else if (map[temp][i] == map[begin][i])</span><br><span class="line">				&#123;</span><br><span class="line">					map[temp][i] += map[begin][i];</span><br><span class="line">					map[begin][i] = 0;</span><br><span class="line">				&#125;</span><br><span class="line">				else</span><br><span class="line">				&#123;</span><br><span class="line">					map[temp - 1][i] = map[begin][i];</span><br><span class="line">					if (temp - 1 != begin)</span><br><span class="line">					&#123;</span><br><span class="line">						map[begin][i] = 0;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				temp--;</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line">void moveleft()//左移</span><br><span class="line">&#123;</span><br><span class="line">	for (int i = 0; i &lt; MAX_SIZE; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		int temp = 0;</span><br><span class="line">		for (int begin = 1; begin &lt; MAX_SIZE; begin++)</span><br><span class="line">		&#123;</span><br><span class="line">			if (map[i][begin] != 0)</span><br><span class="line">			&#123;</span><br><span class="line">				if (map[i][temp] == 0)</span><br><span class="line">				&#123;</span><br><span class="line">					map[i][temp] = map[i][begin];</span><br><span class="line">					map[i][begin] = 0;</span><br><span class="line">				&#125;</span><br><span class="line">				else if (map[i][temp] == map[i][begin])</span><br><span class="line">				&#123;</span><br><span class="line">					map[i][temp] += map[i][begin];</span><br><span class="line">					map[i][begin] = 0;</span><br><span class="line">				&#125;</span><br><span class="line">				else</span><br><span class="line">				&#123;</span><br><span class="line">					map[i][temp+1] = map[i][begin];</span><br><span class="line">					if (temp + 1 != begin)</span><br><span class="line">					&#123;</span><br><span class="line">						map[i][begin] = 0;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				temp++;</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line">void moveright()//右移</span><br><span class="line">&#123;</span><br><span class="line">for (int i = 0; i &lt; MAX_SIZE; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		int temp = MAX_SIZE-1;</span><br><span class="line">		for (int begin = MAX_SIZE-2; begin&gt;=0; begin--)</span><br><span class="line">		&#123;</span><br><span class="line">			if (map[i][begin] != 0)</span><br><span class="line">			&#123;</span><br><span class="line">				if (map[i][temp] == 0)</span><br><span class="line">				&#123;</span><br><span class="line">					map[i][temp] = map[i][begin];</span><br><span class="line">					map[i][begin] = 0;</span><br><span class="line">				&#125;</span><br><span class="line">				else if (map[i][temp] == map[i][begin])</span><br><span class="line">				&#123;</span><br><span class="line">					map[i][temp] += map[i][begin];</span><br><span class="line">					map[i][begin] = 0;</span><br><span class="line">				&#125;</span><br><span class="line">				else</span><br><span class="line">				&#123;</span><br><span class="line">					map[i][temp-1] = map[i][begin];</span><br><span class="line">					if (temp - 1 != begin)</span><br><span class="line">					&#123;</span><br><span class="line">						map[i][begin] = 0;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				temp--;</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void keyControl()</span><br><span class="line">&#123;</span><br><span class="line">	usrkey  =  _getch();</span><br><span class="line">	switch (usrkey)</span><br><span class="line">	&#123;</span><br><span class="line">	case 75:</span><br><span class="line">	case &#x27;A&#x27;:</span><br><span class="line">	case &#x27;a&#x27;:</span><br><span class="line">		moveleft();CreateNumber();</span><br><span class="line">		break;	</span><br><span class="line">	case 77:</span><br><span class="line">	case &#x27;d&#x27;:</span><br><span class="line">	case &#x27;D&#x27;:</span><br><span class="line">		moveright();CreateNumber();</span><br><span class="line">		break;</span><br><span class="line">	case 80:</span><br><span class="line">	case &#x27;s&#x27;:</span><br><span class="line">	case &#x27;S&#x27;:</span><br><span class="line">		movedown();CreateNumber();</span><br><span class="line">		break;</span><br><span class="line">	case 72:</span><br><span class="line">	case &#x27;w&#x27;:</span><br><span class="line">	case &#x27;W&#x27;:</span><br><span class="line">		moveup();CreateNumber();</span><br><span class="line">		break;</span><br><span class="line">	default:</span><br><span class="line">		break;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	initgraph(WIN_SIZE,WIN_SIZE,SHOWCONSOLE);//创建一个窗口</span><br><span class="line">    GameInit();//初始化坐标</span><br><span class="line">    </span><br><span class="line">    while (1)</span><br><span class="line">	&#123;</span><br><span class="line">		GameDrw();</span><br><span class="line">		keyControl();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
         </div>
         
             <div class="kratos-copyright text-center clearfix">
-                <h5>本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+                <h5 itemprop="copyrightNotice">本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
             </div>
         
         <footer class="kratos-entry-footer clearfix">
             
                 <div class="post-like-donate text-center clearfix" id="post-like-donate">
-                
-                    <a class="donate" href="javascript:;"><i class="fa fa-bitcoin"></i> 打赏</a>
                 
                 
                     <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
@@ -270,7 +293,7 @@ vsc配置需要Visual Studio 2019 Developer Command Prompt v16.6.3
                     <a class="tag-none-link" href="/tags/c%E8%AF%AD%E8%A8%80/" rel="tag">c语言</a>, <a class="tag-none-link" href="/tags/%E9%A1%B9%E7%9B%AE/" rel="tag">项目</a>
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2021-08-01</span>
+                    <time datetime="2021-08-01T15:34:32.426Z" itemprop="dateModified">最后编辑：2021-08-01</time>
                 </div>
             </div>
         </footer>
@@ -309,11 +332,37 @@ vsc配置需要Visual Studio 2019 Developer Command Prompt v16.6.3
     <div class="photo-background"></div>
     <div class="photo-wrapper clearfix">
         <div class="photo-wrapper-tip text-center">
-            <img class="about-photo" src="/images/avatar.webp" />
+            <img class="about-photo" src="/images/avatar.webp" loading="lazy" decoding="auto" />
         </div>
     </div>
     <div class="textwidget">
         <p class="text-center"></p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                93
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                5
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                34
+            </span>
+        </a>
     </div>
 </aside>
             
@@ -324,7 +373,7 @@ vsc配置需要Visual Studio 2019 Developer Command Prompt v16.6.3
     <h4 class="widget-title no-after">
         <i class="fa fa-compass"></i>
         文章目录
-        <span class="toc-progress-bar"></span>
+        <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
     </h4>
     <div class="textwidget">
         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#cpp%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-text">cpp环境搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#vsc%E9%85%8D%E7%BD%AE%E9%9C%80%E8%A6%81"><span class="toc-text">vsc配置需要</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%BA%90%E7%A0%81"><span class="toc-text">源码</span></a></li></ol>
@@ -573,26 +622,42 @@ vsc配置需要Visual Studio 2019 Developer Command Prompt v16.6.3
     </div>
 </div>
 <footer>
-    
-    <link rel="stylesheet" href="./live2d/css/live2d.css" /><!-- live2d看板娘在themes的source中替换 -->
-    <body class="custom-background">
-        <div id="landlord">
-            <div class="message" style="opacity:0"></div>
-            <canvas id="live2d" width="300" height="450" class="live2d"></canvas>
-            <div class="hide-button">隐藏</div>
-        </div>
-        <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-        <script type="text/javascript">
-            var message_Path = './live2d/'
-            var home_Path = 'https://white-x.top/'
-        </script>
-        <script type="text/javascript" src="./live2d/js/live2d.js"></script>
-        <script type="text/javascript" src="./live2d/js/message.js"></script>
-        <script type="text/javascript">
-            loadlive2d("live2d", "./live2d/model/leimu/leimu.model.json");
-        </script>
-
     <div id="footer"  class="ap-lrc"  >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                        <li><a href="mailto:www741740071@163.com"><i class="fa fa-envelope"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://t.me/18992210106"><i class="fa fa-telegram"></i></a></li>
+                        
+                        
+                        
+                        <li><a target="_blank" rel="me" href="https://nya.one/@WhiteXB"><i class="fa fa fa-share-alt-square"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://github.com/WhiteXB"><i class="fa fa-github"></i></a></li>
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2022 (*´∇｀*)白筱の猫舍 版权所有.</li>
+                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by white-x.</li>
+                        </div>
+                        <div>
+                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+                            <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
+                        </div>
+                        <div>
+                            
+                            
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="kr-tool text-center">
             <div class="tool">
                 
@@ -619,60 +684,29 @@ vsc配置需要Visual Studio 2019 Developer Command Prompt v16.6.3
                 <span class="fa fa-chevron-up"></span>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 footer-list text-center">
-                    <ul class="kratos-social-icons">
-                        
-                        <li><a href="mailto:www741740071@163.com"><i class="fa fa-envelope"></i></a></li>
-                        <li><a target="_blank" rel="nofollow" href="https://t.me/18992210106"><i class="fa fa-telegram"></i></a></li>
-                        
-                        
-                        
-                        <li><a target="_blank" rel="me" href="https://nya.one/@WhiteXB"><i class="fa fa fa-share-alt-square"></i></a></li>
-                        <li><a target="_blank" rel="nofollow" href="https://github.com/WhiteXB"><i class="fa fa-github"></i></a></li>
-                        
-                    </ul>
-                    <ul class="kratos-copyright">
-                        <div>
-                            <li>&copy; 2022 (*´∇｀*)白筱の猫舍 版权所有.</li>
-                            <li>本站已运行<span id="span_dt">Loading...</span></li>
-                        </div>
-                        <div>
-                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
-                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by white-x.</li>
-                        </div>
-                        <div>
-                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
-                            <li>Hosted on <a href="https://www.white-x.top" target="_blank">Github Pages</a></li>
-                        </div>
-                        <div>
-                            
-                            
-                        </div>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </div>
 </footer>
 </div>
 </div>
 
-        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
-<script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
+        <script defer src="/vendors/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
+<script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+<script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
 
-    <div>
-        <canvas id="snow"></canvas>
-        <script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/snow.min.js"></script>
-    </div>
 
-<script async src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/candy.min.js"></script>
+    <script async src="/js/candy.min.js"></script>
 
-    <script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+
+
+    <script defer src="/vendors/aplayer@1.10.1/dist/APlayer.min.js"></script>
     
-    <script defer src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <script defer src="/vendors/meting@2.0.1/dist/Meting.min.js"></script>
     <meting-js
         server="netease"
         type="playlist"
@@ -684,22 +718,16 @@ vsc配置需要Visual Studio 2019 Developer Command Prompt v16.6.3
 
 
 
-    <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script defer src="/vendors/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
-<script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/kratosr.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/pjax.min.js"></script>
-
-    <script defer src="https://cdn.jsdelivr.net/npm/layui-src@2.5.5/dist/layui.all.js"></script>
-
-
-    <script defer src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/kr-dark.min.js"></script>
+<script defer src="/vendors/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script defer src="/js/kratosr.min.js"></script>
+<script defer src="/js/pjax.min.js"></script>
 
 
 
 <!-- Extra support for third-party plguins  -->
 
 
-        
     </body>
 </html>

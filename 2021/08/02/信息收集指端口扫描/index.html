@@ -3,7 +3,8 @@
     <head>
   <!-- 元数据 -->
   <meta charset="utf-8">
-  <link rel="icon" href="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
+  
+  
   <title>信息收集指端口扫描 | (*´∇｀*)白筱の猫舍</title>
   <meta name="author" content="white-x" />
   <meta http-equiv="Cache-Control" content="no-transform" />
@@ -22,15 +23,12 @@
 <meta property="og:site_name" content="(*´∇｀*)白筱の猫舍">
 <meta property="og:description" content="nmap命令对指定ip进行端口扫描nmap -p[端口]-[端口] [ip]  linux kali环境下端口范围 1-65535 nmap命令常见端口服务默认端口公认端口(Well Known Ports)：0-1023，他们紧密绑定了一些服务；注册端口(Registered Ports)：1024-49151，他们松散的绑定了一些服务；动态&#x2F;私有：49152-65535，不为服务分配这些端口；">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-08-01T17:41:56.000Z">
 <meta property="article:modified_time" content="2021-08-01T18:34:13.011Z">
 <meta property="article:author" content="white-x">
 <meta property="article:tag" content="服务器">
 <meta property="article:tag" content="网络">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
-<meta name="twitter:site" content="@null">
   
   <!-- 站点验证相关 -->
   
@@ -39,32 +37,49 @@
     
   
   <!-- 样式表文件 -->
-  <link rel="stylesheet" id="kratos-css" href="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/css/kratosr.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" media="all"></script>
   
-    <link rel="stylesheet" id="highlight-css" href="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/css/highlight/light.min.css" type="text/css" media="all">
-  
-  
-  <link rel="stylesheet" id="fontawe-css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
-  <link rel="stylesheet" id="nprogress-css" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="darkmode-css" href="/css/kr-color-dark.min.css" media="(prefers-color-scheme: dark)"></script>
+    <script src="/js/kr-dark.min.js"></script>
   
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/light.min.css" media="all"></script>
   
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></script>
+  <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></script>
   
   
-    <link rel="stylesheet" id="darkmode-css" href="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/css/kr-dark.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/vendors/aplayer@1.10.1/dist/APlayer.min.css"></script>
+  
+  
+    <link rel="stylesheet" href="/vendors/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"></script>
   
   <!-- 不得不预先加载的一些JS文件 -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="/vendors/jquery@3.6.0/dist/jquery.min.js"></script>
   
-    <script src="https://cdn.jsdelivr.net/npm/qrcode_js@1.0.0/qrcode.min.js"></script>
+    <script src="/vendors/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+  
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('/images/banner.webp');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('/images/bg.webp');
+        }
+      }
+    
+  </style>
   
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 
-    
+    <body class="custom-background">
         <div id="kratos-wrapper">
     <div id="kratos-page">
         <div id="kratos-header">
@@ -75,38 +90,37 @@
                             <ul id="kratos-primary-menu" class="sf-menu">
                                 
                                     
-                                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
                                     
-                                
+                                        
+                                            <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+                                        
                                     
-                                        <li><a href="/archives/"><i class="fa fa-file"></i>猿の力</a></li>
+                                        
+                                            <li><a href="/archives/"><i class="fa fa-file"></i>猿の力</a></li>
+                                        
                                     
-                                
+                                        
+                                            <li><a href="/friends/"><i class="fa fa-paw"></i>喵喵喵</a></li>
+                                        
                                     
-                                        <li><a href="/friends/"><i class="fa fa-paw"></i>喵喵喵</a></li>
-                                    
-                                
-                                    
-                                        <li><a target="_blank" rel="noopener" href="https://space.bilibili.com/33440117"><i class="fa fa-paw"></i>bilibili</a></li>
-                                    
-                                
-                                    
-                                        <li>
-                                            <a><i class="fa fa-link"></i>链接</a>
-                                            <ul class="sub-menu">
-                                                
+                                        
+                                            <li>
+                                                <a><i class="fa fa-link"></i>链接</a>
+                                                <ul class="sub-menu">
                                                     
-                                                
+                                                        
                                                     
-                                                        <li><a target="_blank" rel="noopener" href="https://www.white-x.top/WhiteXB-old-html/">作者博客</a></li>
+                                                        
+                                                            <li><a target="_blank" rel="noopener" href="https://www.white-x.top/WhiteXB-old-html/">作者博客</a></li>
+                                                        
                                                     
-                                                
+                                                        
+                                                            <li><a target="_blank" rel="noopener" href="https://github.com/WhiteXB/WhiteXB.io">项目链接</a></li>
+                                                        
                                                     
-                                                        <li><a target="_blank" rel="noopener" href="https://github.com/WhiteXB/WhiteXB.io">项目链接</a></li>
-                                                    
-                                                
-                                            </ul>
-                                        </li>
+                                                </ul>
+                                            </li>
+                                        
                                     
                                 
                             </ul>
@@ -148,16 +162,20 @@
 
         
 
-            <article>
+            <article itemscope itemtype="https://schema.org/Article">
+    
+    <link itemprop="mainEntityOfPage" href="https://whitexb.github.io/2021/08/02/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E6%8C%87%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F/">
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center">信息收集指端口扫描</h1>
+                <h1 class="kratos-entry-title text-center" itemprop="name headline">信息收集指端口扫描</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><i class="fa fa-calendar"></i> 2021-08-02</li>
-                <li><i class="fa fa-user"></i> 作者 white-x</li>
+                <li><time datetime="2021-08-01T17:41:56.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2021-08-02</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">white-x</span>
+                </li>
                 <li>
                     <i class="fa fa-edit"></i> 
                     
@@ -170,12 +188,19 @@
             </ul>
         </header>
         <div class="kratos-post-content">
+            
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1627842853011"></time> 前，其中的内容可能需要更新。
+                <div class="icon"><i class="fa fa-warning"></i></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1627842853011"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
+            
+                <div class="kratos-post-inner-toc">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#nmap%E5%91%BD%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">nmap命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#nmap%E5%91%BD%E4%BB%A4%E5%B8%B8%E8%A7%81%E7%AB%AF%E5%8F%A3"><span class="toc-number">1.1.</span> <span class="toc-text">nmap命令常见端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E8%BA%AB%E7%BB%B4%E6%8A%A4"><span class="toc-number">1.2.</span> <span class="toc-text">自身维护</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E6%88%98%E6%B5%8B%E8%AF%95"><span class="toc-number">2.</span> <span class="toc-text">实战测试</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E6%B8%97%E9%80%8F"><span class="toc-number">2.1.</span> <span class="toc-text">文件共享服务端口渗透</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#NFS%E6%9C%8D%E5%8A%A1"><span class="toc-number">2.1.1.</span> <span class="toc-text">NFS服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Samba%E6%9C%8D%E5%8A%A1"><span class="toc-number">2.1.2.</span> <span class="toc-text">Samba服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LDAP%E5%8D%8F%E8%AE%AE"><span class="toc-number">2.1.3.</span> <span class="toc-text">LDAP协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E6%B8%97%E9%80%8F"><span class="toc-number">2.1.4.</span> <span class="toc-text">远程连接服务端口渗透</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Telnet%E6%9C%8D%E5%8A%A1"><span class="toc-number">2.1.5.</span> <span class="toc-text">Telnet服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5"><span class="toc-number">2.1.6.</span> <span class="toc-text">Windows远程连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VNC%E6%9C%8D%E5%8A%A1"><span class="toc-number">2.1.7.</span> <span class="toc-text">VNC服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pcanywhere%E6%9C%8D%E5%8A%A1"><span class="toc-number">2.1.8.</span> <span class="toc-text">Pcanywhere服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Web%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E6%B8%97%E9%80%8F"><span class="toc-number">2.1.9.</span> <span class="toc-text">Web应用服务端口渗透</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WebLogic"><span class="toc-number">2.1.10.</span> <span class="toc-text">WebLogic</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jboss"><span class="toc-number">2.1.11.</span> <span class="toc-text">Jboss</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Websphere"><span class="toc-number">2.1.12.</span> <span class="toc-text">Websphere</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GlassFish"><span class="toc-number">2.1.13.</span> <span class="toc-text">GlassFish</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkins"><span class="toc-number">2.1.14.</span> <span class="toc-text">Jenkins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Resin"><span class="toc-number">2.1.15.</span> <span class="toc-text">Resin</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jetty"><span class="toc-number">2.1.16.</span> <span class="toc-text">Jetty</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lotus"><span class="toc-number">2.1.17.</span> <span class="toc-text">Lotus</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.1.18.</span> <span class="toc-text">MySQL数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MSSQL%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.1.19.</span> <span class="toc-text">MSSQL数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PostgreSQL%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.1.20.</span> <span class="toc-text">PostgreSQL数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.1.21.</span> <span class="toc-text">MongoDB数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redis%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.1.22.</span> <span class="toc-text">Redis数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SysBase%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.1.23.</span> <span class="toc-text">SysBase数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DB2%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.1.24.</span> <span class="toc-text">DB2数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E6%B8%97%E9%80%8F"><span class="toc-number">2.1.25.</span> <span class="toc-text">邮件服务端口渗透</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#POP3%E5%8D%8F%E8%AE%AE"><span class="toc-number">2.1.26.</span> <span class="toc-text">POP3协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IMAP%E5%8D%8F%E8%AE%AE"><span class="toc-number">2.1.27.</span> <span class="toc-text">IMAP协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%B8%B8%E8%A7%81%E5%8D%8F%E8%AE%AE%E7%AB%AF%E5%8F%A3%E6%B8%97%E9%80%8F"><span class="toc-number">2.1.28.</span> <span class="toc-text">网络常见协议端口渗透</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DHCP%E6%9C%8D%E5%8A%A1"><span class="toc-number">2.1.29.</span> <span class="toc-text">DHCP服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SNMP%E5%8D%8F%E8%AE%AE"><span class="toc-number">2.1.30.</span> <span class="toc-text">SNMP协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hadoop%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1"><span class="toc-number">2.1.31.</span> <span class="toc-text">Hadoop文件服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Zookeeper%E6%9C%8D%E5%8A%A1"><span class="toc-number">2.1.32.</span> <span class="toc-text">Zookeeper服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Zabbix%E6%9C%8D%E5%8A%A1"><span class="toc-number">2.1.33.</span> <span class="toc-text">Zabbix服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#elasticsearch%E6%9C%8D%E5%8A%A1"><span class="toc-number">2.1.34.</span> <span class="toc-text">elasticsearch服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#memcache%E6%9C%8D%E5%8A%A1"><span class="toc-number">2.1.35.</span> <span class="toc-text">memcache服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RMI"><span class="toc-number">2.1.36.</span> <span class="toc-text">RMI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rsync%E6%9C%8D%E5%8A%A1"><span class="toc-number">2.1.37.</span> <span class="toc-text">Rsync服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Socket%E4%BB%A3%E7%90%86"><span class="toc-number">2.1.38.</span> <span class="toc-text">Socket代理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E6%96%87%E9%93%BE%E6%8E%A5%E4%BB%A5%E5%8F%8A%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B"><span class="toc-number">2.2.</span> <span class="toc-text">原文链接以及实战案例</span></a></li></ol></li></ol>
+                </div>
+            
             <hr />
-            <h1 id="nmap命令"><a href="#nmap命令" class="headerlink" title="nmap命令"></a>nmap命令</h1><p>对指定ip进行端口扫描<br>nmap -p[端口]-[端口] [ip]  linux kali环境下<br>端口范围 1-65535</p>
+            <div itemprop="articleBody"><h1 id="nmap命令"><a href="#nmap命令" class="headerlink" title="nmap命令"></a>nmap命令</h1><p>对指定ip进行端口扫描<br>nmap -p[端口]-[端口] [ip]  linux kali环境下<br>端口范围 1-65535</p>
 <h2 id="nmap命令常见端口"><a href="#nmap命令常见端口" class="headerlink" title="nmap命令常见端口"></a>nmap命令常见端口</h2><p>服务默认端口<br>公认端口(Well Known Ports)：0-1023，他们紧密绑定了一些服务；<br>注册端口(Registered Ports)：1024-49151，他们松散的绑定了一些服务；<br>动态/私有：49152-65535，不为服务分配这些端口；</p>
 <h2 id="自身维护"><a href="#自身维护" class="headerlink" title="自身维护"></a>自身维护</h2><p>扫描后可以设置过滤<br>在防火墙高级设置中添加入栈规则<br>放止漏洞被利用</p>
 <h1 id="实战测试"><a href="#实战测试" class="headerlink" title="实战测试"></a>实战测试</h1><p>便于查询ctrl+f 输入端口查询</p>
@@ -396,18 +421,16 @@
 <h3 id="Socket代理"><a href="#Socket代理" class="headerlink" title="Socket代理"></a>Socket代理</h3><p>默认端口：1080</p>
 <p>Socket代理针对代理来说没有什么漏洞，一般只是在渗透过程中作为我们的代理，进入内网，或者渗透域和林的时候有帮助。这里不做过多描述，但是可以尝试爆破一下代理的用户名和密码，万一运气好能登录，不也~~~~</p>
 <h2 id="原文链接以及实战案例"><a href="#原文链接以及实战案例" class="headerlink" title="原文链接以及实战案例"></a>原文链接以及实战案例</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/lgf01010/articles/9610411.html">https://www.cnblogs.com/lgf01010/articles/9610411.html</a></p>
-
+</div>
         </div>
         
             <div class="kratos-copyright text-center clearfix">
-                <h5>本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+                <h5 itemprop="copyrightNotice">本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
             </div>
         
         <footer class="kratos-entry-footer clearfix">
             
                 <div class="post-like-donate text-center clearfix" id="post-like-donate">
-                
-                    <a class="donate" href="javascript:;"><i class="fa fa-bitcoin"></i> 打赏</a>
                 
                 
                     <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
@@ -488,7 +511,7 @@ nmap命令常见端口服务默认端口公认端口(Well Known Ports)：0-1023�
                     <a class="tag-none-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">服务器</a>, <a class="tag-none-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a>
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2021-08-02</span>
+                    <time datetime="2021-08-01T18:34:13.011Z" itemprop="dateModified">最后编辑：2021-08-02</time>
                 </div>
             </div>
         </footer>
@@ -527,11 +550,37 @@ nmap命令常见端口服务默认端口公认端口(Well Known Ports)：0-1023�
     <div class="photo-background"></div>
     <div class="photo-wrapper clearfix">
         <div class="photo-wrapper-tip text-center">
-            <img class="about-photo" src="/images/avatar.webp" />
+            <img class="about-photo" src="/images/avatar.webp" loading="lazy" decoding="auto" />
         </div>
     </div>
     <div class="textwidget">
         <p class="text-center"></p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                93
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                5
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                34
+            </span>
+        </a>
     </div>
 </aside>
             
@@ -542,7 +591,7 @@ nmap命令常见端口服务默认端口公认端口(Well Known Ports)：0-1023�
     <h4 class="widget-title no-after">
         <i class="fa fa-compass"></i>
         文章目录
-        <span class="toc-progress-bar"></span>
+        <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
     </h4>
     <div class="textwidget">
         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#nmap%E5%91%BD%E4%BB%A4"><span class="toc-text">nmap命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#nmap%E5%91%BD%E4%BB%A4%E5%B8%B8%E8%A7%81%E7%AB%AF%E5%8F%A3"><span class="toc-text">nmap命令常见端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E8%BA%AB%E7%BB%B4%E6%8A%A4"><span class="toc-text">自身维护</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E6%88%98%E6%B5%8B%E8%AF%95"><span class="toc-text">实战测试</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E6%B8%97%E9%80%8F"><span class="toc-text">文件共享服务端口渗透</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#NFS%E6%9C%8D%E5%8A%A1"><span class="toc-text">NFS服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Samba%E6%9C%8D%E5%8A%A1"><span class="toc-text">Samba服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LDAP%E5%8D%8F%E8%AE%AE"><span class="toc-text">LDAP协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E6%B8%97%E9%80%8F"><span class="toc-text">远程连接服务端口渗透</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Telnet%E6%9C%8D%E5%8A%A1"><span class="toc-text">Telnet服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5"><span class="toc-text">Windows远程连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VNC%E6%9C%8D%E5%8A%A1"><span class="toc-text">VNC服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pcanywhere%E6%9C%8D%E5%8A%A1"><span class="toc-text">Pcanywhere服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Web%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E6%B8%97%E9%80%8F"><span class="toc-text">Web应用服务端口渗透</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WebLogic"><span class="toc-text">WebLogic</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jboss"><span class="toc-text">Jboss</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Websphere"><span class="toc-text">Websphere</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GlassFish"><span class="toc-text">GlassFish</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkins"><span class="toc-text">Jenkins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Resin"><span class="toc-text">Resin</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jetty"><span class="toc-text">Jetty</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lotus"><span class="toc-text">Lotus</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">MySQL数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MSSQL%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">MSSQL数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PostgreSQL%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">PostgreSQL数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">MongoDB数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redis%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">Redis数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SysBase%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">SysBase数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DB2%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">DB2数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E6%B8%97%E9%80%8F"><span class="toc-text">邮件服务端口渗透</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#POP3%E5%8D%8F%E8%AE%AE"><span class="toc-text">POP3协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IMAP%E5%8D%8F%E8%AE%AE"><span class="toc-text">IMAP协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%B8%B8%E8%A7%81%E5%8D%8F%E8%AE%AE%E7%AB%AF%E5%8F%A3%E6%B8%97%E9%80%8F"><span class="toc-text">网络常见协议端口渗透</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DHCP%E6%9C%8D%E5%8A%A1"><span class="toc-text">DHCP服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SNMP%E5%8D%8F%E8%AE%AE"><span class="toc-text">SNMP协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hadoop%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1"><span class="toc-text">Hadoop文件服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Zookeeper%E6%9C%8D%E5%8A%A1"><span class="toc-text">Zookeeper服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Zabbix%E6%9C%8D%E5%8A%A1"><span class="toc-text">Zabbix服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#elasticsearch%E6%9C%8D%E5%8A%A1"><span class="toc-text">elasticsearch服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#memcache%E6%9C%8D%E5%8A%A1"><span class="toc-text">memcache服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RMI"><span class="toc-text">RMI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rsync%E6%9C%8D%E5%8A%A1"><span class="toc-text">Rsync服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Socket%E4%BB%A3%E7%90%86"><span class="toc-text">Socket代理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E6%96%87%E9%93%BE%E6%8E%A5%E4%BB%A5%E5%8F%8A%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B"><span class="toc-text">原文链接以及实战案例</span></a></li></ol></li></ol>
@@ -791,26 +840,42 @@ nmap命令常见端口服务默认端口公认端口(Well Known Ports)：0-1023�
     </div>
 </div>
 <footer>
-    
-    <link rel="stylesheet" href="./live2d/css/live2d.css" /><!-- live2d看板娘在themes的source中替换 -->
-    <body class="custom-background">
-        <div id="landlord">
-            <div class="message" style="opacity:0"></div>
-            <canvas id="live2d" width="300" height="450" class="live2d"></canvas>
-            <div class="hide-button">隐藏</div>
-        </div>
-        <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-        <script type="text/javascript">
-            var message_Path = './live2d/'
-            var home_Path = 'https://white-x.top/'
-        </script>
-        <script type="text/javascript" src="./live2d/js/live2d.js"></script>
-        <script type="text/javascript" src="./live2d/js/message.js"></script>
-        <script type="text/javascript">
-            loadlive2d("live2d", "./live2d/model/leimu/leimu.model.json");
-        </script>
-
     <div id="footer"  class="ap-lrc"  >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                        <li><a href="mailto:www741740071@163.com"><i class="fa fa-envelope"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://t.me/18992210106"><i class="fa fa-telegram"></i></a></li>
+                        
+                        
+                        
+                        <li><a target="_blank" rel="me" href="https://nya.one/@WhiteXB"><i class="fa fa fa-share-alt-square"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://github.com/WhiteXB"><i class="fa fa-github"></i></a></li>
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2022 (*´∇｀*)白筱の猫舍 版权所有.</li>
+                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by white-x.</li>
+                        </div>
+                        <div>
+                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+                            <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
+                        </div>
+                        <div>
+                            
+                            
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="kr-tool text-center">
             <div class="tool">
                 
@@ -837,60 +902,29 @@ nmap命令常见端口服务默认端口公认端口(Well Known Ports)：0-1023�
                 <span class="fa fa-chevron-up"></span>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 footer-list text-center">
-                    <ul class="kratos-social-icons">
-                        
-                        <li><a href="mailto:www741740071@163.com"><i class="fa fa-envelope"></i></a></li>
-                        <li><a target="_blank" rel="nofollow" href="https://t.me/18992210106"><i class="fa fa-telegram"></i></a></li>
-                        
-                        
-                        
-                        <li><a target="_blank" rel="me" href="https://nya.one/@WhiteXB"><i class="fa fa fa-share-alt-square"></i></a></li>
-                        <li><a target="_blank" rel="nofollow" href="https://github.com/WhiteXB"><i class="fa fa-github"></i></a></li>
-                        
-                    </ul>
-                    <ul class="kratos-copyright">
-                        <div>
-                            <li>&copy; 2022 (*´∇｀*)白筱の猫舍 版权所有.</li>
-                            <li>本站已运行<span id="span_dt">Loading...</span></li>
-                        </div>
-                        <div>
-                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
-                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by white-x.</li>
-                        </div>
-                        <div>
-                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
-                            <li>Hosted on <a href="https://www.white-x.top" target="_blank">Github Pages</a></li>
-                        </div>
-                        <div>
-                            
-                            
-                        </div>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </div>
 </footer>
 </div>
 </div>
 
-        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
-<script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
+        <script defer src="/vendors/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
+<script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+<script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
 
-    <div>
-        <canvas id="snow"></canvas>
-        <script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/snow.min.js"></script>
-    </div>
 
-<script async src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/candy.min.js"></script>
+    <script async src="/js/candy.min.js"></script>
 
-    <script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+
+
+    <script defer src="/vendors/aplayer@1.10.1/dist/APlayer.min.js"></script>
     
-    <script defer src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <script defer src="/vendors/meting@2.0.1/dist/Meting.min.js"></script>
     <meting-js
         server="netease"
         type="playlist"
@@ -902,22 +936,16 @@ nmap命令常见端口服务默认端口公认端口(Well Known Ports)：0-1023�
 
 
 
-    <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script defer src="/vendors/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
-<script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/kratosr.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/pjax.min.js"></script>
-
-    <script defer src="https://cdn.jsdelivr.net/npm/layui-src@2.5.5/dist/layui.all.js"></script>
-
-
-    <script defer src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/kr-dark.min.js"></script>
+<script defer src="/vendors/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script defer src="/js/kratosr.min.js"></script>
+<script defer src="/js/pjax.min.js"></script>
 
 
 
 <!-- Extra support for third-party plguins  -->
 
 
-        
     </body>
 </html>

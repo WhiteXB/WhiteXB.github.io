@@ -3,7 +3,8 @@
     <head>
   <!-- 元数据 -->
   <meta charset="utf-8">
-  <link rel="icon" href="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
+  
+  
   <title>贪心算法 | (*´∇｀*)白筱の猫舍</title>
   <meta name="author" content="white-x" />
   <meta http-equiv="Cache-Control" content="no-transform" />
@@ -22,14 +23,11 @@
 <meta property="og:site_name" content="(*´∇｀*)白筱の猫舍">
 <meta property="og:description" content="活动安排问题[实验题目]使用贪心算法求解活动安排问题。问题描述：设有n个活动的集合E&#x3D;{1, 2, …, n}，其中每个活动都要求使用同一资源，而在同一时间内只有一个活动能使用这一资源。每个活动i都有一个要求使用该资源的起始时间si和一个结束时间fi，且si &lt;fi 。如果选择了活动i，则它在半开时间区间[si, fi)内占用资源。若区间[si, fi)与区间[sj, fj)不相交，则称活动">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
 <meta property="article:published_time" content="2021-12-08T04:24:53.000Z">
 <meta property="article:modified_time" content="2021-12-11T04:40:47.895Z">
 <meta property="article:author" content="white-x">
 <meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.gaoguang.com/uploads/allimg/180817/2-1PQF94P9.jpg">
-<meta name="twitter:site" content="@null">
   
   <!-- 站点验证相关 -->
   
@@ -38,32 +36,49 @@
     
   
   <!-- 样式表文件 -->
-  <link rel="stylesheet" id="kratos-css" href="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/css/kratosr.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" media="all"></script>
   
-    <link rel="stylesheet" id="highlight-css" href="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/css/highlight/light.min.css" type="text/css" media="all">
-  
-  
-  <link rel="stylesheet" id="fontawe-css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
-  <link rel="stylesheet" id="nprogress-css" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="darkmode-css" href="/css/kr-color-dark.min.css" media="(prefers-color-scheme: dark)"></script>
+    <script src="/js/kr-dark.min.js"></script>
   
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/light.min.css" media="all"></script>
   
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></script>
+  <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></script>
   
   
-    <link rel="stylesheet" id="darkmode-css" href="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/css/kr-dark.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/vendors/aplayer@1.10.1/dist/APlayer.min.css"></script>
+  
+  
+    <link rel="stylesheet" href="/vendors/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"></script>
   
   <!-- 不得不预先加载的一些JS文件 -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="/vendors/jquery@3.6.0/dist/jquery.min.js"></script>
   
-    <script src="https://cdn.jsdelivr.net/npm/qrcode_js@1.0.0/qrcode.min.js"></script>
+    <script src="/vendors/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+  
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('/images/banner.webp');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('/images/bg.webp');
+        }
+      }
+    
+  </style>
   
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 
-    
+    <body class="custom-background">
         <div id="kratos-wrapper">
     <div id="kratos-page">
         <div id="kratos-header">
@@ -74,38 +89,37 @@
                             <ul id="kratos-primary-menu" class="sf-menu">
                                 
                                     
-                                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
                                     
-                                
+                                        
+                                            <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+                                        
                                     
-                                        <li><a href="/archives/"><i class="fa fa-file"></i>猿の力</a></li>
+                                        
+                                            <li><a href="/archives/"><i class="fa fa-file"></i>猿の力</a></li>
+                                        
                                     
-                                
+                                        
+                                            <li><a href="/friends/"><i class="fa fa-paw"></i>喵喵喵</a></li>
+                                        
                                     
-                                        <li><a href="/friends/"><i class="fa fa-paw"></i>喵喵喵</a></li>
-                                    
-                                
-                                    
-                                        <li><a target="_blank" rel="noopener" href="https://space.bilibili.com/33440117"><i class="fa fa-paw"></i>bilibili</a></li>
-                                    
-                                
-                                    
-                                        <li>
-                                            <a><i class="fa fa-link"></i>链接</a>
-                                            <ul class="sub-menu">
-                                                
+                                        
+                                            <li>
+                                                <a><i class="fa fa-link"></i>链接</a>
+                                                <ul class="sub-menu">
                                                     
-                                                
+                                                        
                                                     
-                                                        <li><a target="_blank" rel="noopener" href="https://www.white-x.top/WhiteXB-old-html/">作者博客</a></li>
+                                                        
+                                                            <li><a target="_blank" rel="noopener" href="https://www.white-x.top/WhiteXB-old-html/">作者博客</a></li>
+                                                        
                                                     
-                                                
+                                                        
+                                                            <li><a target="_blank" rel="noopener" href="https://github.com/WhiteXB/WhiteXB.io">项目链接</a></li>
+                                                        
                                                     
-                                                        <li><a target="_blank" rel="noopener" href="https://github.com/WhiteXB/WhiteXB.io">项目链接</a></li>
-                                                    
-                                                
-                                            </ul>
-                                        </li>
+                                                </ul>
+                                            </li>
+                                        
                                     
                                 
                             </ul>
@@ -147,16 +161,20 @@
 
         
 
-            <article>
+            <article itemscope itemtype="https://schema.org/Article">
+    
+    <link itemprop="mainEntityOfPage" href="https://whitexb.github.io/2021/12/08/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/">
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center">贪心算法</h1>
+                <h1 class="kratos-entry-title text-center" itemprop="name headline">贪心算法</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><i class="fa fa-calendar"></i> 2021-12-08</li>
-                <li><i class="fa fa-user"></i> 作者 white-x</li>
+                <li><time datetime="2021-12-08T04:24:53.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2021-12-08</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">white-x</span>
+                </li>
                 <li>
                     <i class="fa fa-edit"></i> 
                     
@@ -169,25 +187,30 @@
             </ul>
         </header>
         <div class="kratos-post-content">
+            
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1639197647895"></time> 前，其中的内容可能需要更新。
+                <div class="icon"><i class="fa fa-warning"></i></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1639197647895"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
+            
+                <div class="kratos-post-inner-toc">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B4%BB%E5%8A%A8%E5%AE%89%E6%8E%92%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">活动安排问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#123"><span class="toc-number">2.</span> <span class="toc-text">123</span></a></li></ol>
+                </div>
+            
             <hr />
-            <h1 id="活动安排问题"><a href="#活动安排问题" class="headerlink" title="活动安排问题"></a>活动安排问题</h1><p>[实验题目]<br>使用贪心算法求解活动安排问题。<br>问题描述：设有n个活动的集合E={1, 2, …, n}，其中每个活动都要求使用同一资源，而在同一时间内只有一个活动能使用这一资源。每个活动i都有一个要求使用该资源的起始时间si和一个结束时间fi，且si &lt;fi 。如果选择了活动i，则它在半开时间区间[si, fi)内占用资源。若区间[si, fi)与区间[sj, fj)不相交，则称活动i与活动j是相容的。也就是说，当si≥fj或sj≥fi时，活动i与活动j相容。活动安排问题要求在所给的活动集合中选出最大的相容活动子集。<br>学时安排：2学时<br>实验目的<br> (1)了解最优子结构性质和贪心选择性质；<br> (2)掌握贪心法的设计思想并能熟练运用。<br>实验要求<br>(1)以活动最早结束时间作为贪心选择策略；<br>(2)确定每个活动的存储结构。<br>(3)使用快速排序算法对全部活动按照最早结束时间升序排序。<br>(4)设有如下一组活动，编写算法和程序，从中选出最大的相容活动子集。</p>
+            <div itemprop="articleBody"><h1 id="活动安排问题"><a href="#活动安排问题" class="headerlink" title="活动安排问题"></a>活动安排问题</h1><p>[实验题目]<br>使用贪心算法求解活动安排问题。<br>问题描述：设有n个活动的集合E={1, 2, …, n}，其中每个活动都要求使用同一资源，而在同一时间内只有一个活动能使用这一资源。每个活动i都有一个要求使用该资源的起始时间si和一个结束时间fi，且si &lt;fi 。如果选择了活动i，则它在半开时间区间[si, fi)内占用资源。若区间[si, fi)与区间[sj, fj)不相交，则称活动i与活动j是相容的。也就是说，当si≥fj或sj≥fi时，活动i与活动j相容。活动安排问题要求在所给的活动集合中选出最大的相容活动子集。<br>学时安排：2学时<br>实验目的<br> (1)了解最优子结构性质和贪心选择性质；<br> (2)掌握贪心法的设计思想并能熟练运用。<br>实验要求<br>(1)以活动最早结束时间作为贪心选择策略；<br>(2)确定每个活动的存储结构。<br>(3)使用快速排序算法对全部活动按照最早结束时间升序排序。<br>(4)设有如下一组活动，编写算法和程序，从中选出最大的相容活动子集。</p>
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">#proname:greedy<span class="emphasis">_act</span></span></span><br><span class="line"><span class="emphasis"><span class="section">    #author:zhj</span></span></span><br><span class="line"><span class="emphasis"><span class="section">    #time:2019.10.29</span></span></span><br><span class="line"><span class="emphasis"><span class="section">    #language:python</span></span></span><br><span class="line"><span class="emphasis"><span class="section">    #version:1.0</span></span></span><br><span class="line"><span class="emphasis"><span class="section">#arg:tuple=&gt;(0,1)</span></span></span><br><span class="line"><span class="emphasis"><span class="section">#return:tuple[1]=&gt;1</span></span></span><br><span class="line"><span class="emphasis"><span class="section">def takeSecond(elem):</span></span></span><br><span class="line"><span class="emphasis"><span class="section">    return elem[1]</span></span></span><br><span class="line"><span class="emphasis"><span class="section">#arg:lst_</span>id:[1,2,3,..,n]</span></span><br><span class="line"><span class="section">#    lst<span class="emphasis">_act:[(s[1],f[1]),(s[2],f[2]),...,(s[n],f[n])]</span></span></span><br><span class="line"><span class="emphasis"><span class="section">#return:sort of dict_</span>act</span></span><br><span class="line"><span class="section"># &#123;1:(,<span class="emphasis">*),2:(,<span class="strong">**),...,n:(,**</span>n)&#125;</span></span></span><br><span class="line"><span class="emphasis"><span class="section">def sortAct(lst_id,lst_act):</span></span></span><br><span class="line"><span class="emphasis"><span class="section">    lst_sort_act = lst_act</span></span></span><br><span class="line"><span class="emphasis"><span class="section">    lst_sort_act.sort(key=takeSecond)</span></span></span><br><span class="line"><span class="emphasis"><span class="section">    dict_act = dict(zip(lst_id,lst_sort_act))</span></span></span><br><span class="line"><span class="emphasis"><span class="section">    return dict_act#test:success</span></span></span><br><span class="line"><span class="emphasis"><span class="section">#arg:dict_act</span></span></span><br><span class="line"><span class="emphasis"><span class="section">#&#123;1:(,*</span>),2:(,<span class="strong">**),...,n:(,**</span>n)&#125;</span></span><br><span class="line"><span class="section">#return:gree of gree<span class="emphasis">_act[id:(,*),id:(,<span class="strong">**),...,id:(,**</span><span class="strong">**<span class="emphasis">*)]</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">def greedy(dict_act):</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">    true_id = []</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">    true_act = []</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">    #purpose: get the first to append the list</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">    true_ele_tuple = dict_act[1]</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">    true_id.append(1)</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">    true_act.append(true_ele_tuple)</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">    #purpose: get the  finish time of fist activity to divide element</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">    ele_divi = true_ele_tuple[1]</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">    for i in range(1,num_act):</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">#get the first act finish time</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">        id = int(1+i)</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">        #purpose:get the seconde activity to the last activity</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">        tuple_ele_act = dict_act[id]</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">        #print(tuple_ele_act) #test:success</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">        if (tuple_ele_act[0] &gt;= ele_divi):</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">            true_id.append(id)</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">            true_act.append(tuple_ele_act)</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">            ele_divi = tuple_ele_act[1]</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">    greedy_act = dict(zip(true_id,true_act))</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">    return greedy_act</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">#main</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">input_act = input(&quot;请输入活动的个数，n = &quot;)</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">num_act = int(input_act)</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">print(&quot;请分别输入开始时间s[i]和结束时间f[j]:&quot;)</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">lst_id = []</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">lst_act = []</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">for i in range(1,num_act+1):</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">    lst_id.append(i)</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">    input_start =eval(input(&quot;s[&quot;+str(i)+&quot;]=&quot;))</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">    input_finish =eval(input(&quot;f[&quot;+str(i)+&quot;]=&quot;))</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">    tuple = ()#purpose:def tuple to save the act_start and  act_finish</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">    tuple = (input_start,input_finish)</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">    lst_act.append(tuple)</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">    del tuple</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">    print(&quot;&quot;)</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">dict_act = sortAct(lst_id,lst_act)</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">print(&quot;按结束时间升序排列如下：&quot;)</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">print(&quot;序号----开始时间----结束时间&quot;)</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">for i in range(1,num_act+1):</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">    id = int(i)</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">    ele_tuple = dict_act[i]</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">    print(id,&quot;------&quot;,ele_tuple[0],&quot;----------&quot;,ele_tuple[1])</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">#test；success</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">greedy_act = greedy(dict_act)</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">#print(greedy_act)#test:success</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">true_id = list(greedy_act.keys())</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section"># print(true_id)#test:success</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">print(&quot;----------------------&quot;)</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">print(&quot;安排的活动序号依次为：&quot;)</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">printlen = len(true_id)</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">for id in true_id:</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">      tuple_print = greedy_act[id]</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="section">      print(id,&quot;    &quot;,tuple_print[0],&quot;------&gt;&quot;,tuple_print[1])</span></span></span></span></span><br></pre></td></tr></table></figure>
-<h1 id="123"><a href="#123" class="headerlink" title="123"></a>123</h1>
+<h1 id="123"><a href="#123" class="headerlink" title="123"></a>123</h1></div>
         </div>
         
             <div class="kratos-copyright text-center clearfix">
-                <h5>本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+                <h5 itemprop="copyrightNotice">本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
             </div>
         
         <footer class="kratos-entry-footer clearfix">
             
                 <div class="post-like-donate text-center clearfix" id="post-like-donate">
-                
-                    <a class="donate" href="javascript:;"><i class="fa fa-bitcoin"></i> 打赏</a>
                 
                 
                     <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
@@ -267,7 +290,7 @@
                     <a class="tag-none-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a>
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2021-12-11</span>
+                    <time datetime="2021-12-11T04:40:47.895Z" itemprop="dateModified">最后编辑：2021-12-11</time>
                 </div>
             </div>
         </footer>
@@ -306,11 +329,37 @@
     <div class="photo-background"></div>
     <div class="photo-wrapper clearfix">
         <div class="photo-wrapper-tip text-center">
-            <img class="about-photo" src="/images/avatar.webp" />
+            <img class="about-photo" src="/images/avatar.webp" loading="lazy" decoding="auto" />
         </div>
     </div>
     <div class="textwidget">
         <p class="text-center"></p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                93
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                5
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                34
+            </span>
+        </a>
     </div>
 </aside>
             
@@ -321,7 +370,7 @@
     <h4 class="widget-title no-after">
         <i class="fa fa-compass"></i>
         文章目录
-        <span class="toc-progress-bar"></span>
+        <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
     </h4>
     <div class="textwidget">
         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B4%BB%E5%8A%A8%E5%AE%89%E6%8E%92%E9%97%AE%E9%A2%98"><span class="toc-text">活动安排问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#123"><span class="toc-text">123</span></a></li></ol>
@@ -570,26 +619,42 @@
     </div>
 </div>
 <footer>
-    
-    <link rel="stylesheet" href="./live2d/css/live2d.css" /><!-- live2d看板娘在themes的source中替换 -->
-    <body class="custom-background">
-        <div id="landlord">
-            <div class="message" style="opacity:0"></div>
-            <canvas id="live2d" width="300" height="450" class="live2d"></canvas>
-            <div class="hide-button">隐藏</div>
-        </div>
-        <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-        <script type="text/javascript">
-            var message_Path = './live2d/'
-            var home_Path = 'https://white-x.top/'
-        </script>
-        <script type="text/javascript" src="./live2d/js/live2d.js"></script>
-        <script type="text/javascript" src="./live2d/js/message.js"></script>
-        <script type="text/javascript">
-            loadlive2d("live2d", "./live2d/model/leimu/leimu.model.json");
-        </script>
-
     <div id="footer"  class="ap-lrc"  >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                        <li><a href="mailto:www741740071@163.com"><i class="fa fa-envelope"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://t.me/18992210106"><i class="fa fa-telegram"></i></a></li>
+                        
+                        
+                        
+                        <li><a target="_blank" rel="me" href="https://nya.one/@WhiteXB"><i class="fa fa fa-share-alt-square"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://github.com/WhiteXB"><i class="fa fa-github"></i></a></li>
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2022 (*´∇｀*)白筱の猫舍 版权所有.</li>
+                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by white-x.</li>
+                        </div>
+                        <div>
+                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+                            <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
+                        </div>
+                        <div>
+                            
+                            
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="kr-tool text-center">
             <div class="tool">
                 
@@ -616,60 +681,29 @@
                 <span class="fa fa-chevron-up"></span>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 footer-list text-center">
-                    <ul class="kratos-social-icons">
-                        
-                        <li><a href="mailto:www741740071@163.com"><i class="fa fa-envelope"></i></a></li>
-                        <li><a target="_blank" rel="nofollow" href="https://t.me/18992210106"><i class="fa fa-telegram"></i></a></li>
-                        
-                        
-                        
-                        <li><a target="_blank" rel="me" href="https://nya.one/@WhiteXB"><i class="fa fa fa-share-alt-square"></i></a></li>
-                        <li><a target="_blank" rel="nofollow" href="https://github.com/WhiteXB"><i class="fa fa-github"></i></a></li>
-                        
-                    </ul>
-                    <ul class="kratos-copyright">
-                        <div>
-                            <li>&copy; 2022 (*´∇｀*)白筱の猫舍 版权所有.</li>
-                            <li>本站已运行<span id="span_dt">Loading...</span></li>
-                        </div>
-                        <div>
-                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
-                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by white-x.</li>
-                        </div>
-                        <div>
-                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
-                            <li>Hosted on <a href="https://www.white-x.top" target="_blank">Github Pages</a></li>
-                        </div>
-                        <div>
-                            
-                            
-                        </div>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </div>
 </footer>
 </div>
 </div>
 
-        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
-<script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
+        <script defer src="/vendors/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
+<script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+<script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
 
-    <div>
-        <canvas id="snow"></canvas>
-        <script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/snow.min.js"></script>
-    </div>
 
-<script async src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/candy.min.js"></script>
+    <script async src="/js/candy.min.js"></script>
 
-    <script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+
+
+    <script defer src="/vendors/aplayer@1.10.1/dist/APlayer.min.js"></script>
     
-    <script defer src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <script defer src="/vendors/meting@2.0.1/dist/Meting.min.js"></script>
     <meting-js
         server="netease"
         type="playlist"
@@ -681,22 +715,16 @@
 
 
 
-    <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script defer src="/vendors/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
-<script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/kratosr.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/pjax.min.js"></script>
-
-    <script defer src="https://cdn.jsdelivr.net/npm/layui-src@2.5.5/dist/layui.all.js"></script>
-
-
-    <script defer src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@1.6.5/source/js/kr-dark.min.js"></script>
+<script defer src="/vendors/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script defer src="/js/kratosr.min.js"></script>
+<script defer src="/js/pjax.min.js"></script>
 
 
 
 <!-- Extra support for third-party plguins  -->
 
 
-        
     </body>
 </html>
