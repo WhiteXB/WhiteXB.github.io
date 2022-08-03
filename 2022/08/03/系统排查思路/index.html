@@ -16,15 +16,15 @@
   
     <meta name="keywords" content="网络安全" />
   
-  <meta name="description" content="查看系统的基本信息查看内核win 和 linuxsysteminfo 查看用户信息计算机管理home 进程排查任务管理器ps命令 启动项排查win 注册表msconfiglinux etc&#x2F;init.d 服务排查server.mvcchkconfig–list系统服务是否正常 任务计划任务计划程序库 开机关机启动conclonb当前任务计划 防火墙配置规则和状态">
+  <meta name="description" content="密码刷题https:&#x2F;&#x2F;buuoj.cn&#x2F;  查看系统的基本信息查看内核win 和 linuxsysteminfo 查看用户信息计算机管理home 进程排查任务管理器ps命令 启动项排查win 注册表msconfiglinux etc&#x2F;init.d 服务排查server.mvcchkconfig–list系统服务是否正常 任务计划任务计划程序库 开机关机启动conclonb当前任务计划 防火墙配置">
 <meta property="og:type" content="article">
 <meta property="og:title" content="系统排查思路">
 <meta property="og:url" content="https://whitexb.github.io/2022/08/03/%E7%B3%BB%E7%BB%9F%E6%8E%92%E6%9F%A5%E6%80%9D%E8%B7%AF/index.html">
 <meta property="og:site_name" content="(*´∇｀*)白筱の猫舍">
-<meta property="og:description" content="查看系统的基本信息查看内核win 和 linuxsysteminfo 查看用户信息计算机管理home 进程排查任务管理器ps命令 启动项排查win 注册表msconfiglinux etc&#x2F;init.d 服务排查server.mvcchkconfig–list系统服务是否正常 任务计划任务计划程序库 开机关机启动conclonb当前任务计划 防火墙配置规则和状态">
+<meta property="og:description" content="密码刷题https:&#x2F;&#x2F;buuoj.cn&#x2F;  查看系统的基本信息查看内核win 和 linuxsysteminfo 查看用户信息计算机管理home 进程排查任务管理器ps命令 启动项排查win 注册表msconfiglinux etc&#x2F;init.d 服务排查server.mvcchkconfig–list系统服务是否正常 任务计划任务计划程序库 开机关机启动conclonb当前任务计划 防火墙配置">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-08-03T09:05:11.000Z">
-<meta property="article:modified_time" content="2022-08-03T09:10:00.231Z">
+<meta property="article:modified_time" content="2022-08-03T09:37:24.249Z">
 <meta property="article:author" content="white-x">
 <meta property="article:tag" content="网络安全">
 <meta name="twitter:card" content="summary">
@@ -179,7 +179,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        182
+                        285
                     
                     字
                 </li>
@@ -190,22 +190,25 @@
             
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1659517800231"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1659519444249"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             
                 <div class="kratos-post-inner-toc">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="toc-number">1.</span> <span class="toc-text">查看系统的基本信息</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF"><span class="toc-number">2.</span> <span class="toc-text">查看用户信息</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E6%8E%92%E6%9F%A5"><span class="toc-number">3.</span> <span class="toc-text">进程排查</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E9%A1%B9%E6%8E%92%E6%9F%A5"><span class="toc-number">4.</span> <span class="toc-text">启动项排查</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E6%8E%92%E6%9F%A5"><span class="toc-number">5.</span> <span class="toc-text">服务排查</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E8%AE%A1%E5%88%92"><span class="toc-number">6.</span> <span class="toc-text">任务计划</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99%E5%92%8C%E7%8A%B6%E6%80%81"><span class="toc-number">7.</span> <span class="toc-text">防火墙配置规则和状态</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%86%E7%A0%81%E5%88%B7%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">密码刷题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="toc-number">2.</span> <span class="toc-text">查看系统的基本信息</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF"><span class="toc-number">3.</span> <span class="toc-text">查看用户信息</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E6%8E%92%E6%9F%A5"><span class="toc-number">4.</span> <span class="toc-text">进程排查</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E9%A1%B9%E6%8E%92%E6%9F%A5"><span class="toc-number">5.</span> <span class="toc-text">启动项排查</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E6%8E%92%E6%9F%A5"><span class="toc-number">6.</span> <span class="toc-text">服务排查</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E8%AE%A1%E5%88%92"><span class="toc-number">7.</span> <span class="toc-text">任务计划</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99%E5%92%8C%E7%8A%B6%E6%80%81"><span class="toc-number">8.</span> <span class="toc-text">防火墙配置规则和状态</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E9%95%9C%E5%83%8F%E5%8E%BB%E5%81%9A"><span class="toc-number">9.</span> <span class="toc-text">内存镜像去做</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E6%A1%A3"><span class="toc-number">10.</span> <span class="toc-text">文档</span></a></li></ol>
                 </div>
             
             <hr />
-            <div itemprop="articleBody"><h1 id="查看系统的基本信息"><a href="#查看系统的基本信息" class="headerlink" title="查看系统的基本信息"></a>查看系统的基本信息</h1><p>查看内核<br>win 和 linux<br>systeminfo</p>
+            <div itemprop="articleBody"><h1 id="密码刷题"><a href="#密码刷题" class="headerlink" title="密码刷题"></a>密码刷题</h1><p><a target="_blank" rel="noopener" href="https://buuoj.cn/">https://buuoj.cn/</a> </p>
+<h1 id="查看系统的基本信息"><a href="#查看系统的基本信息" class="headerlink" title="查看系统的基本信息"></a>查看系统的基本信息</h1><p>查看内核<br>win 和 linux<br>systeminfo</p>
 <h1 id="查看用户信息"><a href="#查看用户信息" class="headerlink" title="查看用户信息"></a>查看用户信息</h1><p>计算机管理<br>home</p>
 <h1 id="进程排查"><a href="#进程排查" class="headerlink" title="进程排查"></a>进程排查</h1><p>任务管理器<br>ps命令</p>
 <h1 id="启动项排查"><a href="#启动项排查" class="headerlink" title="启动项排查"></a>启动项排查</h1><p>win 注册表msconfig<br>linux etc/init.d</p>
 <h1 id="服务排查"><a href="#服务排查" class="headerlink" title="服务排查"></a>服务排查</h1><p>server.mvc<br>chkconfig–list系统服务是否正常</p>
 <h1 id="任务计划"><a href="#任务计划" class="headerlink" title="任务计划"></a>任务计划</h1><p>任务计划程序库 开机关机启动<br>conclonb当前任务计划</p>
-<h1 id="防火墙配置规则和状态"><a href="#防火墙配置规则和状态" class="headerlink" title="防火墙配置规则和状态"></a>防火墙配置规则和状态</h1></div>
+<h1 id="防火墙配置规则和状态"><a href="#防火墙配置规则和状态" class="headerlink" title="防火墙配置规则和状态"></a>防火墙配置规则和状态</h1><h1 id="内存镜像去做"><a href="#内存镜像去做" class="headerlink" title="内存镜像去做"></a>内存镜像去做</h1><p>volatlllty工具<br>.raw .vmem .img</p>
+<h1 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h1><p><a target="_blank" rel="noopener" href="https://www.yuque.com/tiexue/liibwg/rn37ws">https://www.yuque.com/tiexue/liibwg/rn37ws</a> </p>
+</div>
         </div>
         
             <div class="kratos-copyright text-center clearfix">
@@ -272,11 +275,11 @@
             const twitterBase   = "https://twitter.com/intent/tweet?";
             const hostUrl       = "https://whitexb.github.io/2022/08/03/%E7%B3%BB%E7%BB%9F%E6%8E%92%E6%9F%A5%E6%80%9D%E8%B7%AF/";
             const title         = "「系统排查思路」";
-            const excerpt       = `查看系统的基本信息查看内核win 和 linuxsysteminfo
+            const excerpt       = `密码刷题https://buuoj.cn/ 
+查看系统的基本信息查看内核win 和 linuxsysteminfo
 查看用户信息计算机管理home
 进程排查任务管理器ps命令
-启动项排查win 注册表msconfiglinux etc/init.d
-服务排查server.mvcc...`;
+启动项排查win 注册表msconfiglinux etc...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -298,7 +301,7 @@
                     <a class="tag-none-link" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" rel="tag">网络安全</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2022-08-03T09:10:00.231Z" itemprop="dateModified">最后编辑：2022-08-03</time>
+                    <time datetime="2022-08-03T09:37:24.249Z" itemprop="dateModified">最后编辑：2022-08-03</time>
                 </div>
             </div>
         </footer>
@@ -377,7 +380,7 @@
         <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="toc-text">查看系统的基本信息</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF"><span class="toc-text">查看用户信息</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E6%8E%92%E6%9F%A5"><span class="toc-text">进程排查</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E9%A1%B9%E6%8E%92%E6%9F%A5"><span class="toc-text">启动项排查</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E6%8E%92%E6%9F%A5"><span class="toc-text">服务排查</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E8%AE%A1%E5%88%92"><span class="toc-text">任务计划</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99%E5%92%8C%E7%8A%B6%E6%80%81"><span class="toc-text">防火墙配置规则和状态</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%86%E7%A0%81%E5%88%B7%E9%A2%98"><span class="toc-text">密码刷题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="toc-text">查看系统的基本信息</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF"><span class="toc-text">查看用户信息</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E6%8E%92%E6%9F%A5"><span class="toc-text">进程排查</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E9%A1%B9%E6%8E%92%E6%9F%A5"><span class="toc-text">启动项排查</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E6%8E%92%E6%9F%A5"><span class="toc-text">服务排查</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E8%AE%A1%E5%88%92"><span class="toc-text">任务计划</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99%E5%92%8C%E7%8A%B6%E6%80%81"><span class="toc-text">防火墙配置规则和状态</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E9%95%9C%E5%83%8F%E5%8E%BB%E5%81%9A"><span class="toc-text">内存镜像去做</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E6%A1%A3"><span class="toc-text">文档</span></a></li></ol>
     </div>
 </aside>
                 
